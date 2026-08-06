@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "candidate": "C0026",
+  "parent": "C0025",
+  "render_method": "ACTUAL_HEADLESS_CHROMIUM_PAGE_SET_CONTENT_SELF_CONTAINED_SCRIPTS_REMOVED",
+  "checks": [
+    {"target": "pc_prices", "view": "desktop", "computed_styles_equal": true, "changed_pixels": 0, "pixel_rms": 0},
+    {"target": "apply_top", "view": "desktop", "computed_styles_equal": true, "changed_pixels": 0, "pixel_rms": 0},
+    {"target": "pc_prices", "view": "mobile", "computed_styles_equal": true, "changed_pixels": 0, "pixel_rms": 0},
+    {"target": "apply_top", "view": "mobile", "computed_styles_equal": true, "changed_pixels": 0, "pixel_rms": 0}
+  ],
+  "visual_evidence_zip_sha256": "594e83eba40ef1335d27d7e9d90e7aa4066f6720ad7428cfcd08b1dd41750c97",
+  "decision": "PASS",
+  "verified_scope": ["CSS cascade", "computed styles", "desktop static rendering", "mobile static rendering"],
+  "unverified_scope": ["actual URL navigation", "complete JavaScript runtime", "real device", "assistive technology", "user conversion"]
+}
