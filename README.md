@@ -12,6 +12,10 @@
 6. [`continuation/A17_HANDOFF.md`](continuation/A17_HANDOFF.md)
 7. [`ai/NEXT_ACTION.md`](ai/NEXT_ACTION.md)
 
+## 새 AI 대화에서 보낼 문장
+
+> `wkdeogks115-blip/DH-` 저장소를 열고 `AI_START_HERE.md`부터 순서대로 읽어. Active Control R0003과 Active Preview C0009A D2를 잠그고, C0025는 승격되지 않은 Review Candidate로 유지한 뒤 `ai/NEXT_ACTION.md`의 C0026 작업을 계속 진행해. `/upgrade-auto` 없이는 승격·배포하지 마.
+
 ## 현재 잠금 상태
 
 ```text
