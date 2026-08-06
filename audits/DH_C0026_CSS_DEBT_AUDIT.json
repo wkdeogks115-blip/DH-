@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "candidate": "C0026",
+  "parent": "C0025",
+  "decision": "PASS",
+  "parent_total_css_bytes": 167629,
+  "candidate_total_css_bytes": 161325,
+  "byte_reduction": 6304,
+  "byte_reduction_percent": 3.761,
+  "target_raw_literal_before": 98,
+  "target_raw_literal_after": 37,
+  "target_raw_literal_reduction": 61,
+  "categories_before": {"spacing": 64, "radius": 10, "typography": 24},
+  "categories_after": {"spacing": 27, "radius": 3, "typography": 7},
+  "token_missing": [],
+  "application_token_consumption_verified": true
+}
