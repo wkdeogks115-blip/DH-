@@ -31,14 +31,22 @@
 
 - Active Control: R0003
 - Active Preview: C0009A D2
-- Review Candidate: C0025
+- Review Candidate: C0026
+- Direct Parent / Design Rollback: C0025
+- Functional Rollback: C0022
+- Latest Answer Pack: R22
+- Latest Handoff: A18
 - Production: HOLD
 - Browser URL Runtime: UNVERIFIED
 - External Preview: DEFERRED_BY_USER
 
+C0026은 GitHub에 저장됐지만 Active가 아니다.
+
 ## Continuation command
 
 사용자가 `계속 진행`, `그다음 진행`, `알아서 다음`이라고 하면 최신 상태를 잠그고 가장 중요한 Material Delta 1개만 선택해 검증·별도 Candidate 패치·최소 충분 테스트까지 진행한다.
+
+현재 다음 작업은 C0027 Button·Card·Form component contract consolidation이다.
 
 ## Response ending
 
