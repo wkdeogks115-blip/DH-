@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "generated_at": "2026-08-07T01:04:00+09:00",
+  "schema_version": "1.1",
+  "generated_at": "2026-08-07T02:09:00+09:00",
   "repository": "wkdeogks115-blip/DH-",
   "visibility": "public",
   "control_plane": "READY",
@@ -15,13 +15,15 @@
     "sha256": "d799a0622159989afc7009d17d47d35a711ebcd3369ee760ec998b86c339b22e"
   },
   "current_review_candidate": {
-    "id": "C0025",
-    "sha256": "60080d9f6898fc6b3d6a7c6bab15b4073bf99a0225facd0d85083f1c8a3cf922",
-    "status": "READY_NOT_PROMOTED"
+    "id": "C0026",
+    "sha256": "8088b95c03d5663547a66eb79698d2da673863f96937aa0509fe32a1b643c44e",
+    "status": "READY_NOT_PROMOTED",
+    "direct_parent": "C0025",
+    "direct_parent_sha256": "60080d9f6898fc6b3d6a7c6bab15b4073bf99a0225facd0d85083f1c8a3cf922"
   },
   "design_rollback_parent": {
-    "id": "C0024",
-    "sha256": "f3aa5922cb42bd454deffc7b4076fa6e13c819a4ef9bb6606efbfded03b5267f"
+    "id": "C0025",
+    "sha256": "60080d9f6898fc6b3d6a7c6bab15b4073bf99a0225facd0d85083f1c8a3cf922"
   },
   "functional_rollback_parent": {
     "id": "C0022",
@@ -32,18 +34,23 @@
     "sha256": "f5f86f4e544b5e86186f7b7bcd5ab6f73f3bc0913776c506e717871a66aff6da"
   },
   "latest_answer_pack": {
-    "id": "R21",
-    "sha256": "d08b6f1cf77b3a20d99d9d23660f12f385e1ea7aa61f06027cbe5fbaf8070735"
+    "id": "R22",
+    "sha256": "dd9f0101f6a27159b4410e75856ff67d84da19eff8ed3a4f3700249de6210f5f"
   },
-  "latest_handoff": "A17",
+  "latest_handoff": "A18",
+  "static_gate": "PASS",
+  "css_debt_gate": "PASS_6304_BYTES_AND_61_RAW_LITERALS_REDUCED",
+  "browser_static_visual": "PASS_ZERO_PIXEL_DIFF_DESKTOP_MOBILE",
+  "browser_url_runtime": "UNVERIFIED",
+  "real_device": "NOT_EXECUTED",
+  "assistive_technology": "NOT_EXECUTED",
   "infrastructure": "BASELINE_LOCKED",
   "external_preview": "DEFERRED_BY_USER",
-  "browser_url_runtime": "UNVERIFIED",
   "payment": "NOT_IMPLEMENTED",
   "production": "HOLD",
   "promotion": "NOT_EXECUTED",
-  "next_candidate": "C0026",
-  "next_priority": "Spacing, radius, and typography semantic token integration with measurable legacy CSS reduction",
+  "next_candidate": "C0027",
+  "next_priority": "Consolidate Button, Card and Form component contracts and remove superseded legacy declarations with measurable reduction and C0026 visual parity",
   "commands": {
     "continue": "계속 진행",
     "promotion": "/upgrade-auto"
