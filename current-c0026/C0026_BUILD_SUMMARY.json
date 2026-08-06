@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "candidate": "C0026",
+  "candidate_sha256": "8088b95c03d5663547a66eb79698d2da673863f96937aa0509fe32a1b643c44e",
+  "direct_parent": "C0025",
+  "direct_parent_sha256": "60080d9f6898fc6b3d6a7c6bab15b4073bf99a0225facd0d85083f1c8a3cf922",
+  "role": "REVIEW_CANDIDATE_NOT_DEPLOY_PAYLOAD",
+  "decision": "PASS_STATIC_CSS_DEBT_BROWSER_VISUAL_AUTO_APPROVED_REVERSIBLE_NO_PROMOTION",
+  "delta": {
+    "added": 9,
+    "removed": 2,
+    "changed": 19,
+    "unchanged": 85
+  },
+  "css_debt": {
+    "parent_total_css_bytes": 167629,
+    "candidate_total_css_bytes": 161325,
+    "byte_reduction": 6304,
+    "byte_reduction_percent": 3.761,
+    "target_raw_literal_before": 98,
+    "target_raw_literal_after": 37,
+    "target_raw_literal_reduction": 61
+  },
+  "counts": {
+    "html": 15,
+    "javascript": 9,
+    "css": 13,
+    "application_options": 23,
+    "application_links": 86
+  },
+  "browser_visual": {
+    "method": "SELF_CONTAINED_HEADLESS_CHROMIUM_SCRIPTS_REMOVED",
+    "audited_views": 4,
+    "computed_style_mismatches": 0,
+    "changed_pixels": 0,
+    "pixel_rms": 0
+  },
+  "regressions": {
+    "missing_refs": 0,
+    "broken_fragments": 0,
+    "duplicate_ids": 0,
+    "missing_alt": 0,
+    "jsonld_errors": 0,
+    "blank_rel_errors": 0,
+    "js_syntax_errors": 0,
+    "css_structure_errors": 0,
+    "service_id_drift": false,
+    "price_drift": false,
+    "application_href_drift": false,
+    "external_font_runtime_dependencies": 0,
+    "external_framework_runtime_dependencies": 0
+  },
+  "actual_url_navigation_runtime": "UNVERIFIED_ENVIRONMENT_BLOCKED",
+  "real_device": "NOT_EXECUTED",
+  "assistive_technology": "NOT_EXECUTED",
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD"
+}
