@@ -1,0 +1,310 @@
+/* C0025 — semantic color token foundation.
+   Architecture adapted from role-based token systems:
+   primitive palette -> semantic roles -> component contract.
+   DH keeps one cyan action accent, neutral transactional surfaces,
+   and separate status colors. No external color package is loaded. */
+
+body.dh-design-system-c0025 {
+  color-scheme: dark;
+
+  /* Primitive palette. Values preserve the approved C0024 visual direction. */
+  --dh-neutral-1000: #050b13;
+  --dh-neutral-950: #08111d;
+  --dh-neutral-900: #0e1927;
+  --dh-neutral-850: #132132;
+  --dh-neutral-800: #18283a;
+  --dh-neutral-700: #26384b;
+  --dh-neutral-650: #3b526a;
+  --dh-neutral-600: #526b83;
+  --dh-neutral-400: #8292a4;
+  --dh-neutral-300: #b3bfcc;
+  --dh-neutral-50: #f2f5f8;
+
+  --dh-cyan-400: #7adce3;
+  --dh-cyan-500: #68c8d0;
+  --dh-cyan-600: #51b4bd;
+  --dh-cyan-a10: rgba(104, 200, 208, .10);
+  --dh-cyan-a08: rgba(104, 200, 208, .08);
+
+  --dh-green-500: #79c49f;
+  --dh-amber-500: #d6b46d;
+  --dh-red-500: #e99383;
+
+  /* Semantic roles. Components consume these names, not raw colors. */
+  --dh-color-bg-deep: var(--dh-neutral-1000);
+  --dh-color-bg-canvas: var(--dh-neutral-950);
+  --dh-color-bg-hero-start: #0b1725;
+  --dh-color-header: rgba(5, 11, 19, .94);
+
+  --dh-color-surface-default: var(--dh-neutral-900);
+  --dh-color-surface-raised: var(--dh-neutral-850);
+  --dh-color-surface-strong: var(--dh-neutral-800);
+
+  --dh-color-text-primary: var(--dh-neutral-50);
+  --dh-color-text-secondary: var(--dh-neutral-300);
+  --dh-color-text-muted: var(--dh-neutral-400);
+  --dh-color-text-on-accent: #06131b;
+
+  --dh-color-border-default: var(--dh-neutral-700);
+  --dh-color-border-strong: var(--dh-neutral-650);
+  --dh-color-border-interactive: var(--dh-neutral-600);
+
+  --dh-color-accent: var(--dh-cyan-500);
+  --dh-color-accent-hover: var(--dh-cyan-600);
+  --dh-color-accent-focus: var(--dh-cyan-400);
+  --dh-color-accent-subtle: var(--dh-cyan-a10);
+  --dh-color-accent-hairline: var(--dh-cyan-a08);
+
+  --dh-color-success: var(--dh-green-500);
+  --dh-color-warning: var(--dh-amber-500);
+  --dh-color-danger: var(--dh-red-500);
+
+  --dh-radius-control: 10px;
+  --dh-radius-card: 12px;
+  --dh-radius-panel: 16px;
+
+  /* Legacy aliases. Existing layers resolve through the same role contract. */
+  --bg: var(--dh-color-bg-canvas);
+  --bg-deep: var(--dh-color-bg-deep);
+  --canvas: var(--dh-color-bg-canvas);
+  --canvas-deep: var(--dh-color-bg-deep);
+  --surface: var(--dh-color-surface-default);
+  --surface-2: var(--dh-color-surface-raised);
+  --surface-3: var(--dh-color-surface-strong);
+  --surface-raised: var(--dh-color-surface-raised);
+  --surface-soft: var(--dh-color-surface-raised);
+  --text: var(--dh-color-text-primary);
+  --text-muted: var(--dh-color-text-secondary);
+  --text-soft: var(--dh-color-text-muted);
+  --muted: var(--dh-color-text-secondary);
+  --soft: var(--dh-color-text-muted);
+  --line: var(--dh-color-border-default);
+  --line-soft: var(--dh-color-border-default);
+  --line-strong: var(--dh-color-border-strong);
+  --brand: var(--dh-color-accent);
+  --brand-strong: var(--dh-color-accent-hover);
+  --brand-soft: var(--dh-color-accent-subtle);
+  --primary: var(--dh-color-accent);
+  --cta: var(--dh-color-accent);
+  --cta-ink: var(--dh-color-text-on-accent);
+  --success: var(--dh-color-success);
+  --warning: var(--dh-color-warning);
+  --danger: var(--dh-color-danger);
+  --radius-sm: 8px;
+  --radius: var(--dh-radius-card);
+  --radius-lg: var(--dh-radius-panel);
+
+  color: var(--dh-color-text-primary);
+  background: var(--dh-color-bg-canvas) !important;
+}
+
+body.dh-design-system-c0025 :where(a[href], button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 3px solid var(--dh-color-accent-focus) !important;
+  outline-offset: 3px !important;
+}
+
+body.dh-design-system-c0025 .site-header {
+  background: var(--dh-color-header) !important;
+  border-bottom-color: var(--dh-color-border-default) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(12px);
+}
+body.dh-design-system-c0025 .brand-mark,
+body.dh-design-system-c0025 .nav-toggle {
+  background: var(--dh-color-surface-raised) !important;
+  border-color: var(--dh-color-border-interactive) !important;
+  box-shadow: none !important;
+}
+body.dh-design-system-c0025 .nav-link,
+body.dh-design-system-c0025 .footer-links a,
+body.dh-design-system-c0025 .inline-link,
+body.dh-design-system-c0025 .text-link { color: var(--dh-color-text-secondary) !important; }
+body.dh-design-system-c0025 .nav-link:hover,
+body.dh-design-system-c0025 .footer-links a:hover,
+body.dh-design-system-c0025 .inline-link:hover,
+body.dh-design-system-c0025 .text-link:hover { color: var(--dh-color-text-primary) !important; }
+
+body.dh-design-system-c0025 .decision-hero,
+body.dh-design-system-c0025 .page-hero,
+body.dh-design-system-c0025.application-page .page-hero--application,
+body.dh-design-system-c0025 .page-hero--creator,
+body.dh-design-system-c0025 .page-hero--editing,
+body.dh-design-system-c0025 .page-hero--game,
+body.dh-design-system-c0025 .page-hero--rescue,
+body.dh-design-system-c0025 .page-hero--ready,
+body.dh-design-system-c0025 .page-hero--partner {
+  background: linear-gradient(180deg, var(--dh-color-bg-hero-start) 0%, var(--dh-color-bg-canvas) 100%) !important;
+  border-bottom-color: var(--dh-color-border-default) !important;
+  box-shadow: none !important;
+}
+body.dh-design-system-c0025 .decision-hero::after,
+body.dh-design-system-c0025 .page-hero::before,
+body.dh-design-system-c0025 .page-hero::after,
+body.dh-design-system-c0025 .hero-orb,
+body.dh-design-system-c0025 .hero-glow,
+body.dh-design-system-c0025 .ambient-glow,
+body.dh-design-system-c0025 .visual-glow,
+body.dh-design-system-c0025 .decorative-glow {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
+body.dh-design-system-c0025 .decision-hero h1 span,
+body.dh-design-system-c0025 .eyebrow,
+body.dh-design-system-c0025 .decision-kicker,
+body.dh-design-system-c0025 .package-tag,
+body.dh-design-system-c0025 .service-choice-kicker,
+body.dh-design-system-c0025 .card-icon,
+body.dh-design-system-c0025 .result-code { color: var(--dh-color-accent) !important; }
+
+body.dh-design-system-c0025 .decision-package,
+body.dh-design-system-c0025 .decision-other-card,
+body.dh-design-system-c0025 .decision-proof,
+body.dh-design-system-c0025 .decision-visual,
+body.dh-design-system-c0025 .service-choice-card,
+body.dh-design-system-c0025 .price-card,
+body.dh-design-system-c0025.consumer-decision-c0018 .decision-price-card,
+body.dh-design-system-c0025 .scope-card,
+body.dh-design-system-c0025 .symptom-card,
+body.dh-design-system-c0025 .review-card,
+body.dh-design-system-c0025 .principle-card,
+body.dh-design-system-c0025 .step-card,
+body.dh-design-system-c0025 .prep-card,
+body.dh-design-system-c0025 .prep-panel,
+body.dh-design-system-c0025 .policy-quick-card,
+body.dh-design-system-c0025 .service-card,
+body.dh-design-system-c0025 .metric-card,
+body.dh-design-system-c0025 .value-card,
+body.dh-design-system-c0025 .creator-choice-card,
+body.dh-design-system-c0025 .creator-route-card,
+body.dh-design-system-c0025 .application-form-card,
+body.dh-design-system-c0025 .apply-stage,
+body.dh-design-system-c0025 .application-summary-card,
+body.dh-design-system-c0025 .question-group,
+body.dh-design-system-c0025 .case-card,
+body.dh-design-system-c0025 .info-card,
+body.dh-design-system-c0025.application-page .page-hero--application .hero-proof {
+  background: var(--dh-color-surface-default) !important;
+  background-image: none !important;
+  border: 1px solid var(--dh-color-border-default) !important;
+  border-radius: var(--dh-radius-card) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+body.dh-design-system-c0025 .decision-package::before,
+body.dh-design-system-c0025 .decision-price-card::before,
+body.dh-design-system-c0025 .service-choice-card::before { background: var(--dh-color-border-strong) !important; box-shadow: none !important; }
+body.dh-design-system-c0025 .decision-package.is-recommended,
+body.dh-design-system-c0025 .price-card--featured,
+body.dh-design-system-c0025 .editing-hero-line--recommended,
+body.dh-design-system-c0025 .application-summary-card[data-summary-state="ready"] {
+  background: var(--dh-color-surface-raised) !important;
+  border-color: color-mix(in srgb, var(--dh-color-accent) 62%, var(--dh-color-border-default)) !important;
+  box-shadow: 0 0 0 1px var(--dh-color-accent-hairline) !important;
+}
+body.dh-design-system-c0025 .decision-package.is-recommended::before,
+body.dh-design-system-c0025 .price-card--featured::before,
+body.dh-design-system-c0025 .editing-hero-line--recommended::before { background: var(--dh-color-accent) !important; }
+body.dh-design-system-c0025 .decision-chip,
+body.dh-design-system-c0025 .price-card .price,
+body.dh-design-system-c0025 .service-choice-meta b { color: var(--dh-color-text-primary) !important; }
+body.dh-design-system-c0025 .decision-package p,
+body.dh-design-system-c0025 .decision-package li,
+body.dh-design-system-c0025 .price-card p,
+body.dh-design-system-c0025 .price-card li,
+body.dh-design-system-c0025 .service-choice-card p { color: var(--dh-color-text-secondary) !important; }
+
+body.dh-design-system-c0025 .button,
+body.dh-design-system-c0025 .nav-cta,
+body.dh-design-system-c0025 .decision-primary,
+body.dh-design-system-c0025 .decision-card-action,
+body.dh-design-system-c0025 .service-choice-action,
+body.dh-design-system-c0025 .mobile-sticky,
+body.dh-design-system-c0025 .mobile-cta .button {
+  border-radius: var(--dh-radius-control) !important;
+  box-shadow: none !important;
+  background-image: none !important;
+  text-transform: none !important;
+  letter-spacing: -.01em !important;
+  transform: none !important;
+}
+body.dh-design-system-c0025 .button::after,
+body.dh-design-system-c0025 .nav-cta::after,
+body.dh-design-system-c0025 .decision-primary::after,
+body.dh-design-system-c0025 .decision-card-action::after,
+body.dh-design-system-c0025 .service-choice-action::after { display: none !important; }
+body.dh-design-system-c0025 .nav-cta,
+body.dh-design-system-c0025 .button--brand,
+body.dh-design-system-c0025 .button--primary,
+body.dh-design-system-c0025 .decision-primary,
+body.dh-design-system-c0025 .decision-card-action--primary,
+body.dh-design-system-c0025 .price-card--featured .button,
+body.dh-design-system-c0025 .decision-package.is-recommended .decision-card-action,
+body.dh-design-system-c0025 .editing-hero-line--recommended .service-choice-action,
+body.dh-design-system-c0025 .mobile-cta .button--brand {
+  color: var(--dh-color-text-on-accent) !important;
+  background: var(--dh-color-accent) !important;
+  border: 1px solid var(--dh-color-accent) !important;
+  box-shadow: none !important;
+}
+body.dh-design-system-c0025 .button--ghost,
+body.dh-design-system-c0025 .button--secondary,
+body.dh-design-system-c0025 .decision-card-action:not(.decision-card-action--primary),
+body.dh-design-system-c0025 .service-choice-action,
+body.dh-design-system-c0025 .decision-text-link,
+body.dh-design-system-c0025 .service-decision-fallback {
+  color: var(--dh-color-text-primary) !important;
+  background: transparent !important;
+  border: 1px solid var(--dh-color-border-interactive) !important;
+  box-shadow: none !important;
+}
+body.dh-design-system-c0025 .button:hover,
+body.dh-design-system-c0025 .nav-cta:hover,
+body.dh-design-system-c0025 .decision-card-action:hover,
+body.dh-design-system-c0025 .service-choice-action:hover { transform: none !important; box-shadow: none !important; filter: brightness(1.04); }
+
+body.dh-design-system-c0025 .apply-progress-shell,
+body.dh-design-system-c0025 .apply-submit-panel,
+body.dh-design-system-c0025 .apply-summary,
+body.dh-design-system-c0025 .summary-empty-guide span,
+body.dh-design-system-c0025 .option-label > span {
+  background: var(--dh-color-surface-raised) !important;
+  border-color: var(--dh-color-border-default) !important;
+  box-shadow: none !important;
+}
+body.dh-design-system-c0025.application-page :where(input, select, textarea, .option-label > span) { border-color: var(--dh-color-border-interactive) !important; }
+body.dh-design-system-c0025 .option-label:has(input:checked) > span,
+body.dh-design-system-c0025 .apply-stage[data-complete="true"] {
+  border-color: color-mix(in srgb, var(--dh-color-accent) 58%, var(--dh-color-border-default)) !important;
+  background: var(--dh-color-accent-subtle) !important;
+}
+body.dh-design-system-c0025 .application-progress-fill { background: var(--dh-color-accent) !important; box-shadow: none !important; }
+body.dh-design-system-c0025 .apply-error-summary,
+body.dh-design-system-c0025 .apply-field-error { background-image: none !important; box-shadow: none !important; }
+body.dh-design-system-c0025 .site-footer { background: var(--dh-color-bg-deep) !important; background-image: none !important; border-top-color: var(--dh-color-border-default) !important; }
+body.dh-design-system-c0025 .decision-hero,
+body.dh-design-system-c0025 .page-hero { overflow: clip !important; }
+
+@media (max-width: 520px) {
+  body.dh-design-system-c0025 .button,
+  body.dh-design-system-c0025 .nav-cta,
+  body.dh-design-system-c0025 .decision-primary,
+  body.dh-design-system-c0025 .decision-card-action,
+  body.dh-design-system-c0025 .service-choice-action,
+  body.dh-design-system-c0025 .mobile-sticky { white-space: normal !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.dh-design-system-c0025 *, body.dh-design-system-c0025 *::before, body.dh-design-system-c0025 *::after {
+    animation: none !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (forced-colors: active) {
+  body.dh-design-system-c0025 .button,
+  body.dh-design-system-c0025 .nav-cta,
+  body.dh-design-system-c0025 .decision-primary,
+  body.dh-design-system-c0025 .decision-card-action,
+  body.dh-design-system-c0025 .service-choice-action { border: 2px solid ButtonText !important; }
+}
