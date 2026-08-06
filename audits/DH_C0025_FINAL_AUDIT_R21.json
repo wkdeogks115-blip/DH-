@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "candidate": {"sha256":"60080d9f6898fc6b3d6a7c6bab15b4073bf99a0225facd0d85083f1c8a3cf922","crc":"PASS","entries":106,"safe_paths":true,"reproducible_sha":"PASS"},
+  "local_pack": {"sha256":"9d5d2279cb139059fec518c6a380b1a7461fc43146eac38c4da84c6fdcd49dea","crc":"PASS","reproducible_sha":"PASS","iframe_count":0,"external_font_requests":0,"external_framework_requests":0},
+  "visual_evidence": {"sha256":"b41608f1cd042576e69032aeac53c23d11660aaf5c8710bf417b8dd9527e125d","crc":"PASS","reproducible_sha":"PASS"},
+  "answer_pack": {"sha256":"d08b6f1cf77b3a20d99d9d23660f12f385e1ea7aa61f06027cbe5fbaf8070735","crc":"PASS","reproducible_sha":"PASS","internal_checksum_mismatch":[],"external_checksum_mismatch":[]},
+  "static_recheck": "PASS",
+  "color_token_audit": "PASS",
+  "browser_visual": "PASS_SELF_CONTAINED_CHROMIUM",
+  "actual_url_runtime": "UNVERIFIED",
+  "promotion": "NOT_EXECUTED",
+  "decision": "PASS_R21_READY_NO_PROMOTION_AUTO_APPROVED_REVERSIBLE_DESIGN"
+}
