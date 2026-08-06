@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "subject": "C0026 Layout Type Token Review Candidate",
+  "score_basis": "Available rendered desktop/mobile screenshots, local HTML/CSS/JS sources and static audits; no user conversion test.",
+  "scores": {
+    "overall": 72,
+    "functional_prototype": 84,
+    "commercial_brand_design": 64,
+    "rubric": [
+      {"category":"task_completion_functional_ux","score":17,"max":20},
+      {"category":"information_architecture_decision","score":11,"max":15},
+      {"category":"visual_hierarchy","score":11,"max":15},
+      {"category":"typography_readability","score":10,"max":15},
+      {"category":"brand_trust_differentiation","score":8,"max":15},
+      {"category":"mobile_quality","score":7,"max":10},
+      {"category":"accessibility_state_feedback","score":8,"max":10}
+    ]
+  },
+  "objective_conclusion": "KEEP_FUNCTION_AND_CONTENT_ENGINE_REDESIGN_VISUAL_SHELL",
+  "recommended_next_candidate": "C0027_VISUAL_SHELL_REDESIGN_PROTOTYPE",
+  "prototype_scope": ["home","pc_pricing","apply"],
+  "preserve": ["prices","product_ids","service_ids","application_urls","application_js","error_recovery","focus_behavior","touch_targets","routes","metadata","json_ld"],
+  "runtime_status": {
+    "static_html_css": "AVAILABLE_FOR_LOCAL_REVIEW",
+    "actual_external_url": "UNVERIFIED",
+    "real_device": "NOT_EXECUTED",
+    "assistive_technology": "NOT_EXECUTED",
+    "user_conversion": "NOT_EXECUTED"
+  },
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD"
+}
