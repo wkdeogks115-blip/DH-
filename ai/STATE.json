@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.1",
-  "generated_at": "2026-08-07T02:09:00+09:00",
+  "schema_version": "1.2",
+  "generated_at": "2026-08-07T03:19:00+09:00",
   "repository": "wkdeogks115-blip/DH-",
   "visibility": "public",
   "control_plane": "READY",
@@ -38,6 +38,13 @@
     "sha256": "dd9f0101f6a27159b4410e75856ff67d84da19eff8ed3a4f3700249de6210f5f"
   },
   "latest_handoff": "A18",
+  "objective_design_audit": {
+    "file": "audits/DH_C0026_OBJECTIVE_DESIGN_AUDIT_V1.md",
+    "overall_score": 72,
+    "functional_prototype_score": 84,
+    "commercial_brand_design_score": 64,
+    "decision": "KEEP_FUNCTION_AND_CONTENT_ENGINE_REDESIGN_VISUAL_SHELL"
+  },
   "static_gate": "PASS",
   "css_debt_gate": "PASS_6304_BYTES_AND_61_RAW_LITERALS_REDUCED",
   "browser_static_visual": "PASS_ZERO_PIXEL_DIFF_DESKTOP_MOBILE",
@@ -50,7 +57,7 @@
   "production": "HOLD",
   "promotion": "NOT_EXECUTED",
   "next_candidate": "C0027",
-  "next_priority": "Consolidate Button, Card and Form component contracts and remove superseded legacy declarations with measurable reduction and C0026 visual parity",
+  "next_priority": "Build a separate Home, PC pricing and Apply visual-shell redesign prototype while preserving C0026 function, data and accessibility",
   "commands": {
     "continue": "계속 진행",
     "promotion": "/upgrade-auto"
