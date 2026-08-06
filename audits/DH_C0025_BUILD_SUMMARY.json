@@ -1,0 +1,22 @@
+{
+  "decision": "PASS_STATIC_BROWSER_VISUAL_AUTO_APPROVED_DESIGN_CONTINUATION_NO_PROMOTION",
+  "candidate_sha256": "60080d9f6898fc6b3d6a7c6bab15b4073bf99a0225facd0d85083f1c8a3cf922",
+  "parent_sha256": "f3aa5922cb42bd454deffc7b4076fa6e13c819a4ef9bb6606efbfded03b5267f",
+  "zip": {"sha256":"60080d9f6898fc6b3d6a7c6bab15b4073bf99a0225facd0d85083f1c8a3cf922","entries":106,"crc":"PASS","unsafe_paths":[],"rebuild_sha256":"60080d9f6898fc6b3d6a7c6bab15b4073bf99a0225facd0d85083f1c8a3cf922","reproducible":"PASS"},
+  "inventory": {"listed":104,"actual":104,"missing":[],"extra":[],"mismatch":[],"status":"PASS"},
+  "manifest": {"listed":105,"actual":105,"missing":[],"extra":[],"mismatch":[],"status":"PASS"},
+  "delta": {
+    "added": 8,
+    "removed": 1,
+    "changed": 16,
+    "unchanged": 80,
+    "added_paths": ["css/dh-design-system-c0025.css","docs/candidate_c0025/00_READ_FIRST.md","docs/candidate_c0025/01_MATERIAL_DELTA.md","docs/candidate_c0025/02_TEST_PLAN.md","docs/candidate_c0025/03_SCOPE_AND_EXCLUSIONS.md","docs/candidate_c0025/04_COLOR_TOKEN_CONTRACT.md","docs/candidate_c0025/05_RESEARCH_ADOPTION.md","docs/candidate_c0025/06_AUTO_APPROVAL_BOUNDARY.md"],
+    "removed_paths": ["css/premium-restraint-c0024.css"],
+    "changed_paths": ["404.html","apply/index.html","cases/index.html","creator/editing/index.html","creator/index.html","creator/youtube/index.html","diagnose/index.html","game/index.html","index.html","partners/index.html","pc/index.html","policies/index.html","release-config.json","rescue/index.html","reviews/index.html","stream-ready/index.html"]
+  },
+  "counts": {"html":15,"js":9,"css":13,"application_options":23,"application_links":86},
+  "regressions": {"missing_refs":0,"broken_fragments":0,"duplicate_ids":0,"missing_alt":0,"jsonld_errors":0,"blank_rel_errors":0,"js_syntax_errors":0,"css_structure_errors":0,"service_id_drift":false,"price_drift":false,"application_href_drift":false,"external_font_runtime_dependencies":0,"external_framework_runtime_dependencies":0},
+  "design_direction": "C0024_APPROVED",
+  "material_delta": ["semantic color tokens","legacy variable compatibility aliases","3:1 interactive border role","automatic reversible design approval boundary"],
+  "promotion": "NOT_EXECUTED"
+}
