@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "candidate": "C0025",
+  "parent": "C0024",
+  "render_method": "ACTUAL_HEADLESS_CHROMIUM_PAGE_SET_CONTENT_SELF_CONTAINED_SCRIPTS_REMOVED",
+  "checks": [
+    {"view":"desktop","price_card_surface_parity":true,"primary_action_parity":true,"secondary_border_before":"rgb(59, 82, 106)","secondary_border_after":"rgb(82, 107, 131)","form_border_before":"rgba(91, 123, 160, 0.48)","form_border_after":"rgb(82, 107, 131)"},
+    {"view":"mobile","price_card_surface_parity":true,"primary_action_parity":true,"secondary_border_before":"rgb(59, 82, 106)","secondary_border_after":"rgb(82, 107, 131)","form_border_before":"rgba(91, 123, 160, 0.48)","form_border_after":"rgb(82, 107, 131)"}
+  ],
+  "acceptance": {"approved_c0024_card_surface_preserved":true,"approved_c0024_primary_action_preserved":true,"interactive_boundaries_strengthened":true,"desktop_mobile_screenshots_created":true},
+  "verified_scope": ["CSS cascade","computed styles","desktop static rendering","mobile static rendering","semantic token output"],
+  "unverified_scope": ["actual URL navigation","complete JavaScript runtime","real device","assistive technology","user conversion"],
+  "decision": "PASS_C0024_DIRECTION_PRESERVED_C0025_TOKEN_FOUNDATION"
+}
