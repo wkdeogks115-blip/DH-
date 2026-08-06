@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "candidate": {
+    "sha256": "8088b95c03d5663547a66eb79698d2da673863f96937aa0509fe32a1b643c44e",
+    "crc": "PASS",
+    "entries": 113,
+    "rebuild_sha256": "8088b95c03d5663547a66eb79698d2da673863f96937aa0509fe32a1b643c44e",
+    "reproducible": "PASS"
+  },
+  "local_pack": {
+    "sha256": "b2a8340d38ff2ca015e8a2a02abb60b7d6194e6b76d8499249c6311c4ac1f62f",
+    "crc": "PASS",
+    "entries": 121,
+    "rebuild_sha256": "b2a8340d38ff2ca015e8a2a02abb60b7d6194e6b76d8499249c6311c4ac1f62f",
+    "reproducible": "PASS"
+  },
+  "visual_evidence": {
+    "sha256": "594e83eba40ef1335d27d7e9d90e7aa4066f6720ad7428cfcd08b1dd41750c97",
+    "crc": "PASS",
+    "entries": 12,
+    "rebuild_sha256": "594e83eba40ef1335d27d7e9d90e7aa4066f6720ad7428cfcd08b1dd41750c97",
+    "reproducible": "PASS"
+  },
+  "answer_pack": {
+    "sha256": "dd9f0101f6a27159b4410e75856ff67d84da19eff8ed3a4f3700249de6210f5f",
+    "crc": "PASS",
+    "entries": 13,
+    "rebuild_sha256": "dd9f0101f6a27159b4410e75856ff67d84da19eff8ed3a4f3700249de6210f5f",
+    "reproducible": "PASS"
+  },
+  "answer_pack_internal_checksum_mismatch": [],
+  "external_artifact_checksum_mismatch": [],
+  "static_gate": "PASS",
+  "browser_visual": "PASS",
+  "actual_url_runtime": "UNVERIFIED",
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD",
+  "decision": "PASS_STATIC_CSS_DEBT_BROWSER_VISUAL_R22_READY_NO_PROMOTION"
+}
