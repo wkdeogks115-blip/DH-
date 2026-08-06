@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "candidate": "C0025",
+  "architecture": "PRIMITIVE_TO_SEMANTIC_TO_COMPONENT_WITH_LEGACY_ALIASES",
+  "primitive_token_count": 19,
+  "semantic_token_count": 22,
+  "legacy_alias_count": 27,
+  "component_raw_color_literals_outside_token_block": 0,
+  "documented_contrast_pairs": [
+    {"pair":"text_primary_on_canvas","foreground":"#f2f5f8","background":"#08111d","ratio":17.317,"minimum":4.5,"pass":true},
+    {"pair":"text_secondary_on_surface","foreground":"#b3bfcc","background":"#0e1927","ratio":9.47,"minimum":4.5,"pass":true},
+    {"pair":"text_muted_on_surface","foreground":"#8292a4","background":"#0e1927","ratio":5.557,"minimum":4.5,"pass":true},
+    {"pair":"accent_on_surface","foreground":"#68c8d0","background":"#0e1927","ratio":9.066,"minimum":3.0,"pass":true},
+    {"pair":"text_on_accent","foreground":"#06131b","background":"#68c8d0","ratio":9.636,"minimum":4.5,"pass":true},
+    {"pair":"interactive_border_on_surface","foreground":"#526b83","background":"#0e1927","ratio":3.193,"minimum":3.0,"pass":true},
+    {"pair":"success_on_surface","foreground":"#79c49f","background":"#0e1927","ratio":8.601,"minimum":4.5,"pass":true},
+    {"pair":"warning_on_surface","foreground":"#d6b46d","background":"#0e1927","ratio":8.937,"minimum":4.5,"pass":true},
+    {"pair":"danger_on_surface","foreground":"#e99383","background":"#0e1927","ratio":7.553,"minimum":4.5,"pass":true}
+  ],
+  "all_documented_pairs_pass": true,
+  "interactive_border_change": {"before":"#3b526a","after":"#526b83","surface":"#0e1927","after_ratio":3.193},
+  "runtime_external_design_system_packages": 0,
+  "decision": "PASS_COLOR_TOKEN_FOUNDATION"
+}
