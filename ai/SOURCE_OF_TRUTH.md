@@ -7,37 +7,40 @@
 | Active Control | R0003 | LOCKED |
 | Parent Control | R0002 | lineage valid |
 | Active Preview | C0009A D2 | unchanged |
-| Current Review Candidate | C0025 | READY_NOT_PROMOTED |
-| Design rollback | C0024 | preserved |
+| Current Review Candidate | C0026 | READY_NOT_PROMOTED |
+| Direct parent / design rollback | C0025 | preserved |
 | Functional rollback | C0022 | preserved |
 | Runtime rollback | R0002 R1 | preserved |
-| Latest Answer Pack | R21 | current review pack |
-| Latest Handoff | A17 | current handoff |
+| Latest Answer Pack | R22 | current review pack |
+| Latest Handoff | A18 | current handoff |
 | Production | HOLD | blocker remains |
 
-## C0025 material result
+## C0026 material result
 
-- Primitive → Semantic → Component Contract → Legacy Alias 색상 구조
-- Primitive tokens 19
-- Semantic tokens 22
-- Legacy aliases 27
-- Component raw color literals outside token block 0
-- Application products 23 유지
-- Application links 86 유지
-- Price drift 0
-- Service ID drift 0
-- External font dependencies 0
-- Static QA PASS
-- Self-contained Chromium visual PASS
-- Actual URL runtime UNVERIFIED
+- spacing, radius and typography semantic roles added
+- application flow raw layout/type values migrated to semantic roles with equal computed values
+- runtime CSS reduced 167,629 → 161,325 bytes
+- reduction 6,304 bytes, 3.761%
+- target raw layout/type literals reduced 98 → 37
+- application products 23 and application links 86 preserved
+- price, service ID and application URL drift 0
+- static QA PASS
+- self-contained Chromium desktop/mobile visual parity PASS
+- four audited screenshot comparisons changed pixels 0
+- actual URL runtime UNVERIFIED
 
 ## Current hashes
 
-- C0025 Candidate: `60080d9f6898fc6b3d6a7c6bab15b4073bf99a0225facd0d85083f1c8a3cf922`
-- R21 Answer Pack: `d08b6f1cf77b3a20d99d9d23660f12f385e1ea7aa61f06027cbe5fbaf8070735`
-- C0025 Local Pack: `9d5d2279cb139059fec518c6a380b1a7461fc43146eac38c4da84c6fdcd49dea`
-- C0025 Visual Evidence: `b41608f1cd042576e69032aeac53c23d11660aaf5c8710bf417b8dd9527e125d`
+- C0026 Candidate: `8088b95c03d5663547a66eb79698d2da673863f96937aa0509fe32a1b643c44e`
+- R22 Answer Pack: `dd9f0101f6a27159b4410e75856ff67d84da19eff8ed3a4f3700249de6210f5f`
+- C0026 Local Pack: `b2a8340d38ff2ca015e8a2a02abb60b7d6194e6b76d8499249c6311c4ac1f62f`
+- C0026 Visual Evidence: `594e83eba40ef1335d27d7e9d90e7aa4066f6720ad7428cfcd08b1dd41750c97`
+- A18 Handoff: `fde6e9721b52267dca1941737778d9143c31c3e2d645d7a09eeaec49cce68d21`
 
 ## Promotion boundary
 
-GitHub에 저장돼 있어도 C0025는 Active가 아니다. `/upgrade-auto`를 받은 뒤 Parent·Active cumulative delta, manifest, inventory, CRC, reproducible SHA, rollback, source replacement를 검증해야 한다.
+GitHub에 저장돼 있어도 C0026은 Active가 아니다. `/upgrade-auto` 전에는 Active Control·Active Preview·Production을 변경하지 않는다.
+
+## Next
+
+C0027 Button·Card·Form component contract consolidation with measurable additional legacy CSS reduction and C0026 visual parity.
