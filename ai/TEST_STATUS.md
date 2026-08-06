@@ -1,23 +1,29 @@
-# TEST STATUS R21
+# TEST STATUS R22 — C0026
 
 ## PASS
 
-- Candidate ZIP CRC
+- Candidate ZIP CRC and safe paths
 - Deterministic rebuild SHA
-- Inventory 104/104
-- Manifest 105/105
+- Inventory 111/111
+- Manifest 112/112
 - HTML 15/15
 - JavaScript 9/9
 - CSS 13/13
 - Missing local references 0
 - Broken fragments 0
 - Duplicate IDs 0
-- Missing alt 0
+- Missing Alt 0
 - JSON-LD errors 0
+- Target Blank security errors 0
 - External font requests 0
-- Color token contrast
-- Self-contained Chromium desktop/mobile static visual
-- Products 23, application links 86, price/service/apply URL drift 0
+- External framework requests 0
+- Products 23 and application links 86
+- Price, service ID and application URL drift 0
+- Runtime CSS bytes: 167,629 → 161,325
+- CSS reduction: 6,304 bytes, 3.761%
+- Target raw spacing/radius/type literals: 98 → 37
+- Chromium desktop/mobile self-contained computed-style parity
+- Four audited screenshots: changed pixels 0, RMS 0
 
 ## UNVERIFIED / NOT EXECUTED
 
