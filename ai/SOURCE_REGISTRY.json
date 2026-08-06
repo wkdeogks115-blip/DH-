@@ -1,29 +1,31 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "repository": "wkdeogks115-blip/DH-",
   "current": {
     "ai_entry": "AI_START_HERE.md",
     "agent_contract": "AGENTS.md",
     "machine_state": "ai/STATE.json",
     "source_of_truth": "ai/SOURCE_OF_TRUTH.md",
-    "project_snapshot": "continuation/PROJECT_SNAPSHOT_R21.md",
-    "latest_handoff": "continuation/A17_HANDOFF.md",
+    "project_snapshot": "continuation/PROJECT_SNAPSHOT_R22.md",
+    "latest_handoff": "continuation/A18_HANDOFF.md",
     "next_action": "ai/NEXT_ACTION.md",
-    "current_css_source": "current-c0025/css/dh-design-system-c0025.css",
-    "static_audit": "audits/DH_C0025_STATIC_RECHECK.json",
-    "color_audit": "audits/DH_C0025_COLOR_TOKEN_AUDIT.json",
-    "browser_visual_audit": "audits/DH_C0025_BROWSER_TOKEN_VISUAL_AUDIT.json",
-    "final_audit": "audits/DH_C0025_FINAL_AUDIT_R21.json",
+    "current_css_source": "current-c0026/css/dh-design-system-c0026.css",
+    "current_patch_spec": "current-c0026/C0026_APPLICATION_MIGRATION_SPEC.md",
+    "build_summary": "current-c0026/C0026_BUILD_SUMMARY.json",
+    "static_audit": "audits/DH_C0026_STATIC_RECHECK.json",
+    "css_debt_audit": "audits/DH_C0026_CSS_DEBT_AUDIT.json",
+    "browser_visual_summary": "audits/DH_C0026_BROWSER_VISUAL_SUMMARY.json",
+    "final_audit": "audits/DH_C0026_FINAL_AUDIT_R22.json",
     "control_snapshot_reference": "control/00_DH_CONTROL_SNAPSHOT_R0001.md",
     "active_control_update": "control/11_DH_UPDATE_BUNDLE_R0003_SOURCE_READY.md"
   },
   "external_source_repository": {
     "repository": "wkdeogks115-blip/dh-setup-center-web",
     "role": "actual website source and deploy candidate history",
-    "warning": "Do not treat its main branch as C0025 automatically; compare hashes and material delta first."
+    "warning": "Do not treat its main branch as C0026 automatically; compare hashes and material delta first."
   },
   "binary_artifacts": {
-    "catalog": "ai/ARTIFACT_CATALOG.md",
+    "catalog": "ai/ARTIFACT_CATALOG_R22.md",
     "status": "HASH_AND_AUDIT_REGISTERED_NOT_ALL_BYTES_MIRRORED"
   },
   "promotion_boundary": "NO_PROMOTION_WITHOUT_/upgrade-auto",
