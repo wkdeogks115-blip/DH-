@@ -42,6 +42,11 @@ C0026은 GitHub에 기록돼 있지만 Active로 승격되지 않았습니다.
 - Chromium desktop/mobile four-view comparison: changed pixels 0
 - Products 23, application links 86, prices, service IDs and apply URLs preserved
 
+## 다음 작업
+
+- [Issue #2 — C0027 Button·Card·Form component contracts](https://github.com/wkdeogks115-blip/DH-/issues/2)
+- 완료된 C0026 작업은 [Issue #1](https://github.com/wkdeogks115-blip/DH-/issues/1)에 보존됩니다.
+
 ## 저장소 지도
 
 - `control/`: Control Snapshot과 Update Bundle
