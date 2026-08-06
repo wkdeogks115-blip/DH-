@@ -1,29 +1,45 @@
-# NEXT ACTION — C0027
+# NEXT ACTION — C0027 VISUAL SHELL REDESIGN PROTOTYPE
+
+## Why the priority changed
+
+C0026 objective design audit scored the current site **72/100 overall**, with **84/100 functional prototype quality** but **64/100 commercial brand design quality**. Further micro-consolidation of Legacy CSS is lower-value than improving brand differentiation, page rhythm, trust proof and decision density.
+
+Read `audits/DH_C0026_OBJECTIVE_DESIGN_AUDIT_V1.md` before implementation.
 
 ## Objective
 
-C0026의 색상·Spacing·Radius·Typography Token과 zero-pixel visual parity를 보존하면서 Button·Card·Form component contract를 한 곳으로 통합하고, Legacy CSS에 남은 superseded declaration을 실제로 제거한다.
+Keep C0026's function, content model, prices, product/service IDs, routes, application JavaScript, error recovery, keyboard focus and accessibility behavior unchanged. Build a separate C0027 Review Candidate that redesigns only the Visual Shell of:
+
+1. Home
+2. PC pricing/products
+3. Apply
+
+## Design direction
+
+- Preserve neutral dark surfaces and one cyan action accent, but reduce generic nested Card/Border repetition.
+- Make each page answer one primary customer question.
+- Reduce mobile scroll and repeated explanatory copy.
+- Strengthen real-service trust, process clarity and decision evidence without inventing testimonials, logos or performance numbers.
+- Use a new coherent component layer rather than stacking more high-specificity overrides.
 
 ## Required evidence
 
-1. C0026 SHA `8088b95c03d5663547a66eb79698d2da673863f96937aa0509fe32a1b643c44e`를 direct parent로 잠금
-2. Button·Card·Form 중복 selector·declaration baseline 측정
-3. Component contract와 migration boundary 작성
-4. 별도 C0027 Review Candidate 생성
-5. C0026 Desktop·Mobile computed style 및 screenshot parity 검사
-6. HTML 15/15, JS, CSS, refs, fragments, IDs, Alt, JSON-LD 검사
-7. Products 23, application links 86, prices, service IDs, apply URLs 보존
-8. CSS byte 또는 duplicate declaration의 측정 가능한 추가 감소
+1. Lock C0026 SHA `8088b95c03d5663547a66eb79698d2da673863f96937aa0509fe32a1b643c44e` as direct parent and immutable rollback.
+2. Preserve 23 products, 86 application links, prices, service IDs and apply URLs.
+3. Preserve application validation, error summary, focus recovery, value retention and schedule-two-options rule.
+4. Produce desktop and mobile screenshots for Home, PC pricing and Apply.
+5. Compare C0026 and C0027 using the objective design rubric; target overall score >= 80 without reducing functional prototype score below 84.
+6. Run HTML, JS, CSS, refs, fragments, duplicate IDs, Alt and JSON-LD checks.
+7. Keep actual URL Runtime, real-device and assistive-technology status UNVERIFIED unless executed.
 
 ## Stop conditions
 
-- 중복 또는 CSS bytes가 측정 가능하게 감소하지 않음
-- C0026 시각 방향 회귀
-- 가격·서비스·신청 회귀
-- 새 증거 없이 동일 검사 반복
+- Functional or data regression.
+- Accessibility regression.
+- New design does not improve the rubric by at least 6 points.
+- Visual change relies on invented customer proof or unsupported business claims.
+- Scope expands beyond the three prototype pages before evidence is reviewed.
 
-이 경우 `HOLD — 새 결론 없음` 또는 Candidate 폐기.
+## Promotion boundary
 
-## Promotion
-
-C0027도 `/upgrade-auto` 전까지 Review Candidate다.
+C0027 remains a Review Candidate. Do not promote, deploy or replace Active Control without `/upgrade-auto`.
