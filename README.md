@@ -21,7 +21,7 @@
 6. [`current-c0025/`](current-c0025/)
 7. [`audits/`](audits/)
 
-다음 작업은 [Issue #1](../../issues/1)에 기록되어 있습니다.
+다음 작업은 [Issue #1](https://github.com/wkdeogks115-blip/DH-/issues/1)에 기록되어 있습니다.
 
 기존 공식 홈페이지 Source는 [`wkdeogks115-blip/dh-setup-center-web`](https://github.com/wkdeogks115-blip/dh-setup-center-web)를 참고합니다.
 
