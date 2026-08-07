@@ -30,26 +30,26 @@
 
 - Active Control: R0003
 - Active Preview: C0009A D2
-- Review Candidate: C0029
-- Direct Parent / Visual Rollback: C0028
+- Review Candidate: C0030
+- Direct Parent / Visual Rollback: C0029
 - Functional Rollback: C0022
-- Latest Answer Pack: R25
-- Latest Handoff: A21
+- Latest Answer Pack: R26
+- Latest Handoff: A22
 - Production: HOLD
 - Browser external URL Runtime: UNVERIFIED
 - External Preview: DEFERRED_BY_USER
 
-C0029는 GitHub에 저장됐지만 Active가 아니다.
+C0030은 GitHub에 저장됐지만 Active가 아니다.
 
-## C0029 evidence boundary
+## C0030 evidence boundary
 
-Self-contained Chromium에서 실제 `js/apply.js` 상호작용은 실행되어 PASS했다. 그러나 외부 URL navigation, real-device, assistive-technology, user conversion은 실행되지 않았으므로 각각 UNVERIFIED/NOT_EXECUTED로 유지한다.
+Self-contained Chromium CSS/Layout에서 Rescue/Stream Ready migration과 Home/PC/Apply 6개 core parity를 실제 실행했다. 외부 URL navigation, real-device, assistive-technology, user conversion은 실행되지 않았으므로 UNVERIFIED/NOT_EXECUTED로 유지한다.
 
 ## Continuation command
 
 사용자가 `계속 진행`, `그다음 진행`, `알아서 다음`이라고 하면 최신 상태를 잠그고 가장 중요한 Material Delta 1개만 선택해 검증·별도 Candidate 패치·최소 충분 테스트까지 진행한다.
 
-현재 다음 작업은 C0030: `rescue/`와 `stream-ready/` 두 페이지의 Visual Shell migration이다. Creator 페이지까지 같은 Candidate에서 확장하지 않는다.
+현재 다음 작업은 C0031: `creator/`, `creator/youtube/`, `creator/editing/` 세 페이지의 Visual Shell migration이다. policies/cases/reviews/game까지 같은 Candidate에서 확장하지 않는다.
 
 ## Response ending
 
