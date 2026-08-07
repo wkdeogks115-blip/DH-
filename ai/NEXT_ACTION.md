@@ -1,57 +1,64 @@
-# NEXT ACTION — C0031 CREATOR SHELL MIGRATION
+# NEXT ACTION — C0032 REMAINING SURFACE AUDIT FIRST
 
 ## Baseline
 
 - Active Control: R0003
 - Active Preview: C0009A D2
-- Direct parent / immutable visual rollback: C0030
-- C0030 SHA: `e3caadb915360ab36fa9cbbc9bc13feddbfb29f2ccc97d32a916371cf0ba1bbd`
+- Direct parent / immutable visual rollback: C0031
+- C0031 SHA: `45d1b8d7fd70fcfe16ce450c6fe5ad4957b26c40cf4bb3b3924260a2863e3ddd`
 - Functional rollback: C0022
 - Overall design heuristic: 80/100
 - Functional prototype heuristic: 84/100
 - Production: HOLD
 - Actual external URL Runtime: UNVERIFIED
 
-## Why this is next
+## Why this is audit-first
 
-Home, PC pricing, Apply, Rescue and Stream Ready now share the approved visual language. The largest remaining customer-facing inconsistency is the Creator branch.
+The main conversion funnel and the two primary service branches now share a consistent shell. The remaining pages have different jobs: game product, partner intake, evidence/reviews, policy/reference and diagnosis. Forcing one visual template across all of them could reduce task clarity or create unnecessary CSS debt.
 
 ## Objective
 
-Create a separate C0031 Review Candidate that migrates only:
+Audit these remaining surfaces before creating any C0032 build:
 
-1. `creator/`
-2. `creator/youtube/`
-3. `creator/editing/`
+1. `game/`
+2. `partners/`
+3. `cases/`
+4. `reviews/`
+5. `policies/`
+6. `diagnose/`
+7. `404.html`
 
-onto the same reusable shell principles while preserving C0030 Rescue/Stream Ready, C0029 Apply behavior, prices, product/service IDs, routes and application links.
+Classify each as `KEEP`, `MIGRATE`, `MINOR_FIX`, or `UNVERIFIED` using actual desktop/mobile render evidence and task role.
 
-## Design contract
+## Build gate
 
-- retain the neutral dark shell and restrained action accent;
-- reduce nested cards and repeated decorative containers;
-- express Creator service differences through hierarchy and content rather than unrelated color systems;
-- preserve existing real claims only; invent no testimonials, logos, customer counts or performance metrics;
-- reuse C0028/C0030 component contracts rather than creating a separate page-wide override system.
+Create a separate C0032 Candidate only if at least one material inconsistency is found, such as:
 
-## Required evidence
+- the primary action or user question is visually unclear;
+- mobile layout or density creates measurable task friction;
+- the page visibly conflicts with the approved shell in a way that harms trust or comprehension;
+- duplicate/high-specificity styling can be removed with measurable benefit;
+- accessibility or interaction state is materially weaker than the current core funnel.
 
-- C0030 locked as direct parent.
-- C0030 Rescue/Stream Ready and C0029 Home/PC/Apply remain visually unchanged in audited views.
+Do **not** redesign legal/policy pages merely for novelty. Preserve information density when it serves reference scanning.
+
+## Required evidence if a build is opened
+
+- C0031 locked as direct parent.
+- Existing Home/PC/Apply/Rescue/Stream Ready/Creator pages remain unchanged outside explicitly selected scope.
 - 23 application options and 86 application links preserved.
 - prices, service IDs and Apply URLs preserved.
-- desktop/mobile screenshots for all three Creator pages.
-- no horizontal overflow or clipped CTA/control.
+- Desktop/Mobile evidence for every page changed.
+- no horizontal overflow or clipped controls.
 - HTML/JS/CSS/refs/fragments/IDs/Alt/JSON-LD PASS.
-- measurable hierarchy/consistency improvement.
 
 ## Stop conditions
 
-- functional/data/route/accessibility regression;
-- Creator migration requires unsupported claims;
-- no clear visual hierarchy improvement;
-- scope expands into policies/cases/reviews/game in the same Candidate.
+- no material inconsistency after audit → `HOLD — 새 결론 없음` and do not create C0032;
+- proposed change is aesthetic-only with no task/trust benefit;
+- scope begins to merge unrelated policy, evidence and product pages into one generic layout;
+- functional/data/accessibility regression.
 
 ## Promotion boundary
 
-C0031 remains a Review Candidate. Do not promote or deploy without `/upgrade-auto`.
+Any C0032 build remains a Review Candidate. Do not promote or deploy without `/upgrade-auto`.
