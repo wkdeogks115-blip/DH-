@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "runtime": {
+    "parent_off": {
+      "before_checked": [false, false],
+      "result_visible": true,
+      "errors": []
+    },
+    "candidate_off": {
+      "before_checked": [false, false],
+      "result_visible": false,
+      "errors": ["safety_ack", "scope_ack"]
+    },
+    "empty": {
+      "count": 6,
+      "keys": ["service", "issue", "urgency", "availability", "safety_ack", "scope_ack"],
+      "focused": true
+    },
+    "both_off": {
+      "errors": ["safety_ack", "scope_ack"],
+      "preserved": true
+    },
+    "safety_only": {"errors": ["scope_ack"]},
+    "both_on": {
+      "result_visible": true,
+      "summary_length": 408,
+      "overflow": false
+    }
+  },
+  "decision": "PASS_PARENT_DEFECT_REPRODUCED_CANDIDATE_FIXED"
+}
