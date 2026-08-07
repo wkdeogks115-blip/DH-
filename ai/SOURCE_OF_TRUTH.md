@@ -6,43 +6,68 @@
 |---|---|---|
 | Active Control | R0003 | LOCKED |
 | Active Preview | C0009A D2 | unchanged |
-| Current Review Candidate | C0032 | READY_NOT_PROMOTED_DIRECTION_PROTOTYPE |
-| Direct parent / visual rollback | C0031 | preserved |
+| Current Review Candidate | C0033 | READY_NOT_PROMOTED |
+| Direct parent / design rollback | C0032 | preserved |
+| Secondary design rollback | C0031 | preserved |
 | Functional rollback | C0022 | preserved |
-| Latest Answer Pack | R28 | current review pack |
-| Latest Handoff | A24 | current handoff |
+| Latest Answer Pack | R29 | current review pack |
+| Latest Handoff | A25 | current handoff |
 | Production | HOLD | blocker remains |
 
-## Why the direction changed
+## C0033 material result
 
-After C0031 the user reported that the current design felt visually worse/flatter than the earlier direction. This is material design evidence. The remaining-surface migration was paused rather than blindly extending the C0031 visual language.
+While preparing the planned PC + Apply design extension, real Apply interaction testing reproduced a higher-priority C0032 validation defect.
 
-## C0032 material result
+### Parent defect
 
-- Scope is Home + Creator Hub only.
-- C0031 information hierarchy and semantic-token foundation are preserved.
-- Selective navy/cyan depth, moderate hero typography, one elevated decision surface and grouped pricing/choice surfaces were restored.
-- Old card-heavy/glow-heavy styling was not restored.
-- C0031 direction heuristic: 80/100.
-- C0032 direction prototype heuristic: 88/100. This is a heuristic only, not conversion evidence.
-- PC, Apply, Rescue, Stream Ready, YouTube and Editing were re-rendered Desktop+Mobile: 12/12 comparisons returned zero changed pixels.
-- 23 application options and 86 application links preserved.
-- Prices, service IDs and Apply URLs preserved.
-- Static QA PASS; target Home/Creator renders have no horizontal overflow.
-- Actual external URL Runtime UNVERIFIED; real device, assistive technology and user conversion NOT_EXECUTED.
+With all core application data valid and both required safety acknowledgement checkboxes visibly unchecked, C0032 generated the application summary. The generic value helper returned the checkbox HTML value even when `.checked` was false.
+
+### Candidate correction
+
+C0033 returns a single checkbox/radio value only when the input is checked.
+
+Executed self-contained Chromium evidence:
+- C0032 both safety boxes unchecked → summary generated, no acknowledgement errors;
+- C0033 both unchecked → summary blocked, errors `safety_ack` + `scope_ack`;
+- C0033 safety only → `scope_ack` remains;
+- C0033 both checked → summary generated;
+- C0033 empty form → 6 errors because Kakao handoff is intentionally default-selected;
+- error-summary focus → PASS;
+- failed-submit input preservation → PASS.
+
+Business invariants:
+- application options: 23;
+- application links: 86;
+- prices: preserved;
+- service IDs: preserved;
+- Apply URLs: preserved;
+- CSS: unchanged from C0032;
+- Home/PC/Apply Desktop+Mobile static visual parity: 6/6 zero changed pixels.
+
+## Design direction
+
+C0032 remains the current design-direction prototype: C0031 hierarchy plus selective navy/cyan depth and grouped decision surfaces. C0033 does not replace that direction; it fixes the safety acknowledgement runtime behavior on top of C0032.
 
 ## Current hashes
 
-- C0032 Candidate: `66fa34cbe48977aa9a0bd1dcc906e45975da38828b59818e2803954b8f468464`
-- R28 Answer Pack: `98ce855c28f454acfc7483751e8c12ca8e5d9735ad03acfb5bb2bc0ab2da8e3b`
-- C0032 Local Review V26: `850964563c9341c6c6a39a5dc05e18241e2be35e0c436b183c0275fbd7d91cf8`
-- C0032 Visual Evidence: `e4436618363f35385c70265bae1b15103f7aec79f6851cbe8c773fe27a395e4f`
-- A24 Handoff local source hash: `999f648be526ef6edc828d7d057bc6116bfeae1ece1c3adfcc7e2610b527a30b`
+- C0033 Candidate: `db4659fb9f7f28ac4ce03c43f71472391a2badcdcc0db1762c281356cc49ad68`
+- R29 Answer Pack: `d2a2500f66de62b23301605247dca64af486d4561766b1bae5439b9891e31c67`
+- C0033 Local Review V27: `fc8f25f888ba445a19c635bc7cfee3ea803d216def04242eebf06ca381e9bd32`
+- C0033 Final Audit R29 local hash: `9dead505d158c178e552e7b22f82da623129de7f6ad1af4515c958b8ef6e19d3`
+- C0033 Runtime Audit local hash: `0c507f7bb3039255e99d2ea3e7a12559f44e75701c8ddf585335f1a0ad6eba6b`
+- A25 Handoff local source hash: `78be44482cd8a05a3a3749716a91c71ab90f538b6892c77fcc38a0077b6953d2`
+
+## Unverified
+
+- Actual external URL Runtime: UNVERIFIED
+- Real mobile device: NOT_EXECUTED
+- Assistive technology: NOT_EXECUTED
+- User conversion test: NOT_EXECUTED
 
 ## Promotion boundary
 
-GitHub storage does not promote C0032. `/upgrade-auto` is still required before Active Control/Preview changes. Production remains HOLD.
+GitHub storage does not promote C0033. `/upgrade-auto` is still required before Active Control/Preview changes. Production remains HOLD.
 
 ## Next
 
-C0033 must not blindly extend C0032 to every page. First use the Home + Creator A/B as direction evidence. If this balance remains stronger, extend in small groups. If not, keep C0031 and create an alternate direction prototype.
+C0034 resumes the deferred PC + Apply selective Brand Depth extension. C0033 safety acknowledgement behavior is now a mandatory invariant and must be executed again after any Apply visual change.
