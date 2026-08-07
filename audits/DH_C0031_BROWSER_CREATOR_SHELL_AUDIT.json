@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "render_mode": "SELF_CONTAINED_CHROMIUM_CSS_LAYOUT",
+  "creator_metrics": {
+    "parent_creator_mobile": {"scrollHeight":3274,"scrollWidth":390,"clientWidth":390},
+    "candidate_creator_mobile": {"scrollHeight":3243,"scrollWidth":390,"clientWidth":390},
+    "parent_youtube_mobile": {"scrollHeight":9095,"scrollWidth":390,"clientWidth":390},
+    "candidate_youtube_mobile": {"scrollHeight":8460,"scrollWidth":390,"clientWidth":390},
+    "parent_editing_mobile": {"scrollHeight":8814,"scrollWidth":390,"clientWidth":390},
+    "candidate_editing_mobile": {"scrollHeight":8524,"scrollWidth":390,"clientWidth":390}
+  },
+  "preserved_page_parity": {
+    "home_desktop":{"changed_pixels":0,"same_size":true},
+    "home_mobile":{"changed_pixels":0,"same_size":true},
+    "pc_desktop":{"changed_pixels":0,"same_size":true},
+    "pc_mobile":{"changed_pixels":0,"same_size":true},
+    "apply_desktop":{"changed_pixels":0,"same_size":true},
+    "apply_mobile":{"changed_pixels":0,"same_size":true},
+    "rescue_desktop":{"changed_pixels":0,"same_size":true},
+    "rescue_mobile":{"changed_pixels":0,"same_size":true},
+    "stream_desktop":{"changed_pixels":0,"same_size":true},
+    "stream_mobile":{"changed_pixels":0,"same_size":true}
+  },
+  "preserved_page_parity_all_zero": true,
+  "horizontal_overflow": [],
+  "actual_url_runtime": "UNVERIFIED",
+  "decision": "PASS_CREATOR_SHELL_AND_PRESERVED_PARITY"
+}
