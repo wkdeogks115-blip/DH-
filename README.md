@@ -9,51 +9,54 @@
 3. [`ai/STATE.json`](ai/STATE.json)
 4. [`ai/SOURCE_REGISTRY.json`](ai/SOURCE_REGISTRY.json)
 5. [`ai/SOURCE_OF_TRUTH.md`](ai/SOURCE_OF_TRUTH.md)
-6. [`continuation/PROJECT_SNAPSHOT_R22.md`](continuation/PROJECT_SNAPSHOT_R22.md)
-7. [`continuation/A18_HANDOFF.md`](continuation/A18_HANDOFF.md)
+6. [`continuation/PROJECT_SNAPSHOT_R23.md`](continuation/PROJECT_SNAPSHOT_R23.md)
+7. [`continuation/A19_HANDOFF.md`](continuation/A19_HANDOFF.md)
 8. [`ai/NEXT_ACTION.md`](ai/NEXT_ACTION.md)
 
 ## 새 AI 대화에서 보낼 문장
 
-> `wkdeogks115-blip/DH-` 저장소를 열고 `AI_START_HERE.md`부터 순서대로 읽어. Active Control R0003과 Active Preview C0009A D2를 잠그고, C0026은 승격되지 않은 Review Candidate로 유지한 뒤 `ai/NEXT_ACTION.md`의 C0027 작업을 계속 진행해. `/upgrade-auto` 없이는 승격·배포하지 마.
+> `wkdeogks115-blip/DH-` 저장소를 열고 `AI_START_HERE.md`부터 순서대로 읽어. Active Control R0003과 Active Preview C0009A D2를 잠그고, C0027은 승격되지 않은 Review Candidate로 유지한 뒤 `ai/NEXT_ACTION.md`의 C0028 작업을 계속 진행해. `/upgrade-auto` 없이는 승격·배포하지 마.
 
 ## 현재 잠금 상태
 
 ```text
 Active Control: R0003
 Active Preview Baseline: C0009A D2
-Current Review Candidate: C0026
-Direct Parent / Design Rollback: C0025
+Current Review Candidate: C0027
+Direct Parent / Design Rollback: C0026
 Functional Rollback Parent: C0022
-Latest Answer Pack: R22
-Latest Handoff: A18
+Latest Answer Pack: R23
+Latest Handoff: A19
 Actual URL Browser Runtime: UNVERIFIED
 Payment: NOT_IMPLEMENTED
 Production: HOLD
 ```
 
-C0026은 GitHub에 기록돼 있지만 Active로 승격되지 않았습니다.
+C0027은 GitHub에 기록돼 있지만 Active로 승격되지 않았습니다.
 
-## C0026 결과
+## C0027 결과
 
-- Runtime CSS 167,629 → 161,325 bytes
-- 6,304 bytes, 3.761% 감소
-- Target raw spacing/radius/type literals 98 → 37
-- Chromium desktop/mobile four-view comparison: changed pixels 0
-- Products 23, application links 86, prices, service IDs and apply URLs preserved
+- Home·PC pricing·Apply 3개 화면 Visual Shell 재설계
+- 디자인 휴리스틱 72 → 80
+- 기능 Prototype 휴리스틱 84 유지
+- 23 application options, 86 application links 유지
+- 가격, service ID, apply URL drift 0
+- 정적 QA PASS
+- Self-contained Chromium targeted desktop/mobile layout PASS, horizontal overflow 0
+- 임시 Visual Shell CSS +26,397 bytes — C0028 통합 전 더 넓게 확장하지 않음
 
 ## 다음 작업
 
-- [Issue #2 — C0027 Button·Card·Form component contracts](https://github.com/wkdeogks115-blip/DH-/issues/2)
-- 완료된 C0026 작업은 [Issue #1](https://github.com/wkdeogks115-blip/DH-/issues/1)에 보존됩니다.
+- C0027 완료 기록: [Issue #2](https://github.com/wkdeogks115-blip/DH-/issues/2)
+- 다음 C0028 작업은 새 Issue에 기록합니다.
 
 ## 저장소 지도
 
 - `control/`: Control Snapshot과 Update Bundle
 - `continuation/`: Snapshot·Handoff·Autopilot
-- `current-c0026/`: 최신 Review Candidate 핵심 CSS·migration spec·summary
-- `audits/`: C0026 정적·CSS debt·Chromium·final audit
-- `ai/`: 기계 판독 상태, Source Registry, next action, artifact catalog
+- `current-c0027/`: C0027 현재 Candidate record
+- `audits/`: C0027 객관적 디자인 감사와 Final Audit
+- `ai/`: 기계 판독 상태, Source Registry, next action
 - `history/`: Candidate·Handoff 계보
 
 기존 실제 홈페이지 Source 저장소는 [`wkdeogks115-blip/dh-setup-center-web`](https://github.com/wkdeogks115-blip/dh-setup-center-web)입니다.
