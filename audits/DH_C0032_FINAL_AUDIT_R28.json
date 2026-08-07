@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "candidate": {"sha256":"66fa34cbe48977aa9a0bd1dcc906e45975da38828b59818e2803954b8f468464","crc":"PASS","entries":139},
+  "candidate_reproducible": true,
+  "local_review": {"sha256":"850964563c9341c6c6a39a5dc05e18241e2be35e0c436b183c0275fbd7d91cf8","crc":"PASS","entries":146},
+  "local_review_reproducible": true,
+  "visual_evidence": {"sha256":"e4436618363f35385c70265bae1b15103f7aec79f6851cbe8c773fe27a395e4f","crc":"PASS","entries":37},
+  "visual_evidence_reproducible": true,
+  "answer_pack": {"sha256":"98ce855c28f454acfc7483751e8c12ca8e5d9735ad03acfb5bb2bc0ab2da8e3b","crc":"PASS","entries":8},
+  "answer_pack_reproducible": true,
+  "non_target_parity_all_zero": true,
+  "non_target_parity_views": 12,
+  "application_options": 23,
+  "application_links": 86,
+  "prices_equal_parent": true,
+  "service_ids_equal_parent": true,
+  "apply_urls_equal_parent": true,
+  "actual_url_runtime": "UNVERIFIED",
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD",
+  "decision": "PASS_R28_DIRECTION_PROTOTYPE_READY_NO_PROMOTION"
+}
