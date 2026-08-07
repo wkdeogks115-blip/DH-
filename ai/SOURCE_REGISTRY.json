@@ -1,31 +1,36 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "repository": "wkdeogks115-blip/DH-",
   "current": {
     "ai_entry": "AI_START_HERE.md",
     "agent_contract": "AGENTS.md",
     "machine_state": "ai/STATE.json",
     "source_of_truth": "ai/SOURCE_OF_TRUTH.md",
-    "project_snapshot": "continuation/PROJECT_SNAPSHOT_R22.md",
-    "latest_handoff": "continuation/A18_HANDOFF.md",
+    "project_snapshot": "continuation/PROJECT_SNAPSHOT_R23.md",
+    "latest_handoff": "continuation/A19_HANDOFF.md",
     "next_action": "ai/NEXT_ACTION.md",
-    "current_css_source": "current-c0026/css/dh-design-system-c0026.css",
-    "current_patch_spec": "current-c0026/C0026_APPLICATION_MIGRATION_SPEC.md",
-    "build_summary": "current-c0026/C0026_BUILD_SUMMARY.json",
-    "static_audit": "audits/DH_C0026_STATIC_RECHECK.json",
-    "css_debt_audit": "audits/DH_C0026_CSS_DEBT_AUDIT.json",
-    "browser_visual_summary": "audits/DH_C0026_BROWSER_VISUAL_SUMMARY.json",
-    "final_audit": "audits/DH_C0026_FINAL_AUDIT_R22.json",
+    "current_candidate_record": "current-c0027/README.md",
+    "objective_design_audit": "audits/DH_C0027_OBJECTIVE_DESIGN_AUDIT_V2.md",
+    "final_audit": "audits/DH_C0027_FINAL_AUDIT_R23.json",
     "control_snapshot_reference": "control/00_DH_CONTROL_SNAPSHOT_R0001.md",
     "active_control_update": "control/11_DH_UPDATE_BUNDLE_R0003_SOURCE_READY.md"
+  },
+  "current_candidate": {
+    "id": "C0027",
+    "sha256": "0db244b8f483e030d330d66f43b4d2bd262ed06460abf919209e627b996cdd7d",
+    "direct_parent": "C0026",
+    "status": "READY_NOT_PROMOTED"
   },
   "external_source_repository": {
     "repository": "wkdeogks115-blip/dh-setup-center-web",
     "role": "actual website source and deploy candidate history",
-    "warning": "Do not treat its main branch as C0026 automatically; compare hashes and material delta first."
+    "warning": "Do not treat its main branch as C0027 automatically; compare hashes and material delta first."
   },
   "binary_artifacts": {
-    "catalog": "ai/ARTIFACT_CATALOG_R22.md",
+    "candidate_sha256": "0db244b8f483e030d330d66f43b4d2bd262ed06460abf919209e627b996cdd7d",
+    "answer_pack_sha256": "caf51941b3c60b58c641e72f340dfb0966ad2e2499500e359827dc3c624cfc15",
+    "local_review_sha256": "c6cb05ef8280bc80d8e7d0ea6725bbd315ebd1a740ffbab4a7b1cac9935e0c39",
+    "visual_evidence_sha256": "b183a4d0b0ffaac4042d5d125ef09f29ad11a8d7dfc0919c825f6a7237eb11a9",
     "status": "HASH_AND_AUDIT_REGISTERED_NOT_ALL_BYTES_MIRRORED"
   },
   "promotion_boundary": "NO_PROMOTION_WITHOUT_/upgrade-auto",
