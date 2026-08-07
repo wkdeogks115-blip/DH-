@@ -1,0 +1,7 @@
+{
+  "schema_version":1,
+  "candidate":{"sha256":"4bdbe123a6e5860979f8af580a06ffd2407c63e2739ef802111679f679315cb7","crc":"PASS","reproducible":"PASS"},
+  "local_pack":{"sha256":"9b769b6c414a73a2d9f2c2f1e6f6644df612f194b1b00aaf3cdc742f5b422df3","crc":"PASS"},
+  "visual_evidence":{"sha256":"6d637f530d87a562ab88b2c5e17c8a73d2c8a7b73044f7f2dce688e84ef50c26","crc":"PASS"},
+  "static_gate":"PASS","visual_pixel_parity":"PASS_ZERO_CHANGED_PIXELS_8_VIEWS","business_function_invariants":"PASS","actual_url_runtime":"UNVERIFIED","promotion":"NOT_EXECUTED","production":"HOLD","decision":"PASS_C0028_R24_READY_NO_PROMOTION"
+}
