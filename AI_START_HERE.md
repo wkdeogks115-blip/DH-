@@ -6,33 +6,34 @@
 2. [`AGENTS.md`](AGENTS.md)
 3. [`ai/SOURCE_REGISTRY.json`](ai/SOURCE_REGISTRY.json)
 4. [`ai/SOURCE_OF_TRUTH.md`](ai/SOURCE_OF_TRUTH.md)
-5. [`continuation/PROJECT_SNAPSHOT_R27.md`](continuation/PROJECT_SNAPSHOT_R27.md)
-6. [`continuation/A23_HANDOFF.md`](continuation/A23_HANDOFF.md)
-7. [`audits/DH_C0031_FINAL_AUDIT_R27.json`](audits/DH_C0031_FINAL_AUDIT_R27.json)
-8. [`audits/DH_C0031_OBJECTIVE_CREATOR_SHELL_AUDIT_V1.md`](audits/DH_C0031_OBJECTIVE_CREATOR_SHELL_AUDIT_V1.md)
+5. [`continuation/PROJECT_SNAPSHOT_R28.md`](continuation/PROJECT_SNAPSHOT_R28.md)
+6. [`continuation/A24_HANDOFF.md`](continuation/A24_HANDOFF.md)
+7. [`audits/DH_C0032_FINAL_AUDIT_R28.json`](audits/DH_C0032_FINAL_AUDIT_R28.json)
+8. [`audits/DH_C0032_OBJECTIVE_DESIGN_DIRECTION_AUDIT_V1.md`](audits/DH_C0032_OBJECTIVE_DESIGN_DIRECTION_AUDIT_V1.md)
 9. [`ai/NEXT_ACTION.md`](ai/NEXT_ACTION.md)
-10. 구현이 필요할 때 `current-c0028/`, `current-c0029/`, `current-c0030/`, `current-c0031/`을 읽는다.
+10. 구현이 필요할 때 `current-c0031/`과 `current-c0032/`를 비교한다.
 
 ## 절대 혼동 금지
 
 - Active Control은 **R0003**이다.
 - Active Preview는 **C0009A D2**다.
-- **C0031은 Review Candidate이며 Active가 아니다.**
-- C0030은 Direct Parent·Visual Rollback, C0022는 Functional Rollback이다.
+- **C0032는 Review Candidate이자 방향 Prototype이며 Active가 아니다.**
+- C0031은 Direct Parent·Visual Rollback, C0022는 Functional Rollback이다.
 - `/upgrade-auto` 없이는 승격하지 않는다.
 - Production은 HOLD다.
 - 실제 외부 URL Browser Runtime은 UNVERIFIED다.
 - 결제 기능은 구현되지 않았다.
 
-## C0031 핵심 결론
+## C0032 핵심 결론
 
-- `creator/`, `creator/youtube/`, `creator/editing/`만 승인된 Visual Shell 언어로 이동.
-- Creator-family 디자인 휴리스틱 68 → 80.
-- 전체 사이트 디자인 휴리스틱 80 유지, 기능 휴리스틱 84 유지.
-- Creator Hub 모바일 3,274 → 3,243px, YouTube 9,095 → 8,460px, Editing 8,814 → 8,524px.
-- Home/PC/Apply/Rescue/Stream Ready Desktop+Mobile 10개 비교는 모두 0 changed pixels.
+- C0031 이후 사용자 피드백에서 디자인이 이전보다 평면적이고 덜 좋아 보인다는 Material Delta가 발생했다.
+- 따라서 남은 페이지의 무조건적 Visual Shell 확장은 중단했다.
+- C0032는 Home + Creator Hub에서만 브랜드 깊이를 재조정한 A/B Prototype이다.
+- C0031의 정보 구조·CTA 절제는 유지한다.
+- 선택적 Navy/Cyan 깊이, 적정 Hero 크기, 중요한 의사결정 Surface에만 Elevation을 복원한다.
+- C0031 방향 휴리스틱 80 → C0032 Prototype 88. 단, 사용자 전환 실험이 아닌 디자인 휴리스틱이다.
+- PC/Apply/Rescue/Stream/YouTube/Editing Desktop+Mobile 12개 비교는 모두 0 changed pixels.
 - 23 application options, 86 application links, prices, service IDs, apply URLs 유지.
-- 첫 Creator Hub 모바일 시안의 16px horizontal overflow는 검증에서 발견되어 폐기됨.
 
 ## Binary 주의
 
@@ -40,4 +41,4 @@
 
 ## 현재 다음 작업
 
-C0032는 무조건적인 디자인 확장이 아니라 남은 Surface 감사다. `game/`, `partners/`, `cases/`, `reviews/`, `policies/`, `diagnose/`, 404를 실제로 비교하고 Material visual/task inconsistency가 있을 때만 별도 Candidate를 만든다.
+C0033에서는 C0032 방향을 모든 페이지에 자동 확장하지 않는다. Home + Creator A/B가 여전히 더 강하면 작은 페이지 묶음으로 확장하고, 그렇지 않으면 C0031을 보존한 채 다른 방향 Prototype을 만든다.
