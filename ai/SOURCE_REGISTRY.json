@@ -1,38 +1,25 @@
 {
-  "schema_version": "1.2",
-  "repository": "wkdeogks115-blip/DH-",
-  "current": {
-    "ai_entry": "AI_START_HERE.md",
-    "agent_contract": "AGENTS.md",
-    "machine_state": "ai/STATE.json",
-    "source_of_truth": "ai/SOURCE_OF_TRUTH.md",
-    "project_snapshot": "continuation/PROJECT_SNAPSHOT_R23.md",
-    "latest_handoff": "continuation/A19_HANDOFF.md",
-    "next_action": "ai/NEXT_ACTION.md",
-    "current_candidate_record": "current-c0027/README.md",
-    "objective_design_audit": "audits/DH_C0027_OBJECTIVE_DESIGN_AUDIT_V2.md",
-    "final_audit": "audits/DH_C0027_FINAL_AUDIT_R23.json",
-    "control_snapshot_reference": "control/00_DH_CONTROL_SNAPSHOT_R0001.md",
-    "active_control_update": "control/11_DH_UPDATE_BUNDLE_R0003_SOURCE_READY.md"
+  "schema_version":"1.3",
+  "repository":"wkdeogks115-blip/DH-",
+  "current":{
+    "ai_entry":"AI_START_HERE.md",
+    "agent_contract":"AGENTS.md",
+    "machine_state":"ai/STATE.json",
+    "source_of_truth":"ai/SOURCE_OF_TRUTH.md",
+    "project_snapshot":"continuation/PROJECT_SNAPSHOT_R24.md",
+    "latest_handoff":"continuation/A20_HANDOFF.md",
+    "next_action":"ai/NEXT_ACTION.md",
+    "current_candidate_record":"current-c0028/README.md",
+    "current_visual_shell_css":"current-c0028/css/visual-shell-components-c0028.css",
+    "component_audit":"audits/DH_C0028_COMPONENT_CONSOLIDATION_AUDIT.json",
+    "objective_design_audit":"audits/DH_C0028_OBJECTIVE_DESIGN_AUDIT_V3.md",
+    "final_audit":"audits/DH_C0028_FINAL_AUDIT_R24.json",
+    "control_snapshot_reference":"control/00_DH_CONTROL_SNAPSHOT_R0001.md",
+    "active_control_update":"control/11_DH_UPDATE_BUNDLE_R0003_SOURCE_READY.md"
   },
-  "current_candidate": {
-    "id": "C0027",
-    "sha256": "0db244b8f483e030d330d66f43b4d2bd262ed06460abf919209e627b996cdd7d",
-    "direct_parent": "C0026",
-    "status": "READY_NOT_PROMOTED"
-  },
-  "external_source_repository": {
-    "repository": "wkdeogks115-blip/dh-setup-center-web",
-    "role": "actual website source and deploy candidate history",
-    "warning": "Do not treat its main branch as C0027 automatically; compare hashes and material delta first."
-  },
-  "binary_artifacts": {
-    "candidate_sha256": "0db244b8f483e030d330d66f43b4d2bd262ed06460abf919209e627b996cdd7d",
-    "answer_pack_sha256": "caf51941b3c60b58c641e72f340dfb0966ad2e2499500e359827dc3c624cfc15",
-    "local_review_sha256": "c6cb05ef8280bc80d8e7d0ea6725bbd315ebd1a740ffbab4a7b1cac9935e0c39",
-    "visual_evidence_sha256": "b183a4d0b0ffaac4042d5d125ef09f29ad11a8d7dfc0919c825f6a7237eb11a9",
-    "status": "HASH_AND_AUDIT_REGISTERED_NOT_ALL_BYTES_MIRRORED"
-  },
-  "promotion_boundary": "NO_PROMOTION_WITHOUT_/upgrade-auto",
-  "production": "HOLD"
+  "current_candidate":{"id":"C0028","sha256":"4bdbe123a6e5860979f8af580a06ffd2407c63e2739ef802111679f679315cb7","direct_parent":"C0027","status":"READY_NOT_PROMOTED"},
+  "external_source_repository":{"repository":"wkdeogks115-blip/dh-setup-center-web","role":"actual website source and deploy candidate history","warning":"Do not treat its main branch as C0028 automatically; compare hashes and material delta first."},
+  "binary_artifacts":{"candidate_sha256":"4bdbe123a6e5860979f8af580a06ffd2407c63e2739ef802111679f679315cb7","answer_pack_sha256":"b1f1ea366e18235f29d228c5e925e8e3c2725130f4d3ded7ebee0f4493f32207","local_review_sha256":"9b769b6c414a73a2d9f2c2f1e6f6644df612f194b1b00aaf3cdc742f5b422df3","visual_evidence_sha256":"6d637f530d87a562ab88b2c5e17c8a73d2c8a7b73044f7f2dce688e84ef50c26","status":"HASH_AND_AUDIT_REGISTERED_NOT_ALL_BYTES_MIRRORED"},
+  "promotion_boundary":"NO_PROMOTION_WITHOUT_/upgrade-auto",
+  "production":"HOLD"
 }
