@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "candidate": {
+    "file": "DH_SITE_CANDIDATE_C0031_CREATOR_SHELL_MIGRATION_REVIEW.zip",
+    "sha256": "45d1b8d7fd70fcfe16ce450c6fe5ad4957b26c40cf4bb3b3924260a2863e3ddd",
+    "crc": "PASS",
+    "entries": 136,
+    "rebuild_sha256": "45d1b8d7fd70fcfe16ce450c6fe5ad4957b26c40cf4bb3b3924260a2863e3ddd",
+    "reproducible": true
+  },
+  "direct_parent": {
+    "file": "DH_SITE_CANDIDATE_C0030_SERVICE_SHELL_RESCUE_STREAM_REVIEW.zip",
+    "sha256": "e3caadb915360ab36fa9cbbc9bc13feddbfb29f2ccc97d32a916371cf0ba1bbd"
+  },
+  "html_files": 15,
+  "js_syntax": {"pass": true, "files": 9},
+  "css_braces": {"pass": true, "files": 14},
+  "missing_local_refs": [],
+  "broken_fragments": [],
+  "duplicate_ids": [],
+  "missing_alt": [],
+  "jsonld_errors": [],
+  "application_options": {"parent":23,"candidate":23},
+  "application_links": {"parent":86,"candidate":86},
+  "prices_equal_parent": true,
+  "service_values_equal_parent": true,
+  "apply_urls_equal_parent": true,
+  "preserved_page_pixel_parity_all_zero": true,
+  "preserved_page_count": 10,
+  "horizontal_overflow": [],
+  "decision": "PASS_STATIC_CREATOR_SHELL_READY_NOT_PROMOTED"
+}
