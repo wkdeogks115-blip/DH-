@@ -1,72 +1,33 @@
 {
-  "schema_version": "1.3",
-  "generated_at": "2026-08-07T10:59:00+09:00",
-  "repository": "wkdeogks115-blip/DH-",
-  "visibility": "public",
-  "control_plane": "READY",
-  "active_control": {
-    "revision": "R0003",
-    "parent": "R0002",
-    "source_sha256": "b6546f8bf2968f666713073dca5dd6253ee9363ed985ff5e5c54ecfd272c3704"
-  },
-  "active_preview": {
-    "candidate": "C0009A",
-    "deploy": "D2",
-    "sha256": "d799a0622159989afc7009d17d47d35a711ebcd3369ee760ec998b86c339b22e"
-  },
-  "current_review_candidate": {
-    "id": "C0027",
-    "sha256": "0db244b8f483e030d330d66f43b4d2bd262ed06460abf919209e627b996cdd7d",
-    "status": "READY_NOT_PROMOTED",
-    "direct_parent": "C0026",
-    "direct_parent_sha256": "8088b95c03d5663547a66eb79698d2da673863f96937aa0509fe32a1b643c44e"
-  },
-  "design_rollback_parent": {
-    "id": "C0026",
-    "sha256": "8088b95c03d5663547a66eb79698d2da673863f96937aa0509fe32a1b643c44e"
-  },
-  "functional_rollback_parent": {
-    "id": "C0022",
-    "sha256": "5f9e8749b02ff210e7a1729224e58a315e4cf023e59fc356c3529209c7af9128"
-  },
-  "latest_answer_pack": {
-    "id": "R23",
-    "sha256": "caf51941b3c60b58c641e72f340dfb0966ad2e2499500e359827dc3c624cfc15"
-  },
-  "latest_handoff": "A19",
-  "objective_design_audit": {
-    "file": "audits/DH_C0027_OBJECTIVE_DESIGN_AUDIT_V2.md",
-    "overall_score": 80,
-    "parent_score": 72,
-    "functional_prototype_score": 84,
-    "commercial_brand_design_score_estimate": 73,
-    "decision": "PASS_DIRECTIONAL_IMPROVEMENT_KEEP_C0026_ROLLBACK"
-  },
-  "visual_scope": ["home", "pc-pricing", "apply"],
-  "business_invariants": {
-    "application_options": 23,
-    "application_links": 86,
-    "prices": "PRESERVED",
-    "service_ids": "PRESERVED",
-    "apply_urls": "PRESERVED"
-  },
-  "static_gate": "PASS",
-  "browser_static_layout": "PASS_NO_HORIZONTAL_OVERFLOW_KEY_SECTIONS_VISIBLE",
-  "browser_url_runtime": "UNVERIFIED",
-  "real_device": "NOT_EXECUTED",
-  "assistive_technology": "NOT_EXECUTED",
-  "user_conversion_test": "NOT_EXECUTED",
-  "temporary_visual_shell_css_increase_bytes": 26397,
-  "infrastructure": "BASELINE_LOCKED",
-  "external_preview": "DEFERRED_BY_USER",
-  "payment": "NOT_IMPLEMENTED",
-  "production": "HOLD",
-  "promotion": "NOT_EXECUTED",
-  "design_direction_approval": "AUTO_APPROVED_REVERSIBLE",
-  "next_candidate": "C0028",
-  "next_priority": "Consolidate the approved C0027 visual-shell prototype into reusable component contracts before expanding it to additional service pages",
-  "commands": {
-    "continue": "계속 진행",
-    "promotion": "/upgrade-auto"
-  }
+  "schema_version":"1.4",
+  "generated_at":"2026-08-07T11:18:00+09:00",
+  "repository":"wkdeogks115-blip/DH-",
+  "visibility":"public",
+  "control_plane":"READY",
+  "active_control":{"revision":"R0003","parent":"R0002","source_sha256":"b6546f8bf2968f666713073dca5dd6253ee9363ed985ff5e5c54ecfd272c3704"},
+  "active_preview":{"candidate":"C0009A","deploy":"D2","sha256":"d799a0622159989afc7009d17d47d35a711ebcd3369ee760ec998b86c339b22e"},
+  "current_review_candidate":{"id":"C0028","sha256":"4bdbe123a6e5860979f8af580a06ffd2407c63e2739ef802111679f679315cb7","status":"READY_NOT_PROMOTED","direct_parent":"C0027","direct_parent_sha256":"0db244b8f483e030d330d66f43b4d2bd262ed06460abf919209e627b996cdd7d"},
+  "design_rollback_parent":{"id":"C0027","sha256":"0db244b8f483e030d330d66f43b4d2bd262ed06460abf919209e627b996cdd7d"},
+  "functional_rollback_parent":{"id":"C0022","sha256":"5f9e8749b02ff210e7a1729224e58a315e4cf023e59fc356c3529209c7af9128"},
+  "latest_answer_pack":{"id":"R24","sha256":"b1f1ea366e18235f29d228c5e925e8e3c2725130f4d3ded7ebee0f4493f32207"},
+  "latest_handoff":"A20",
+  "objective_design_score":80,
+  "functional_prototype_score":84,
+  "css_consolidation":{"parent_total_css_bytes":187722,"candidate_total_css_bytes":181422,"reduction_bytes":6300,"visual_shell_bytes":"26397->20097","long_scope_prefixes":"164->0","important_count":473},
+  "visual_parity":"PASS_ZERO_CHANGED_PIXELS_8_VIEWS",
+  "business_invariants":{"application_options":23,"application_links":86,"prices":"PRESERVED","service_ids":"PRESERVED","apply_urls":"PRESERVED","javascript_bytes":"UNCHANGED_FROM_C0027"},
+  "static_gate":"PASS",
+  "browser_url_runtime":"UNVERIFIED",
+  "real_device":"NOT_EXECUTED",
+  "assistive_technology":"NOT_EXECUTED",
+  "user_conversion_test":"NOT_EXECUTED",
+  "infrastructure":"BASELINE_LOCKED",
+  "external_preview":"DEFERRED_BY_USER",
+  "payment":"NOT_IMPLEMENTED",
+  "production":"HOLD",
+  "promotion":"NOT_EXECUTED",
+  "design_direction_approval":"AUTO_APPROVED_REVERSIBLE",
+  "next_candidate":"C0029",
+  "next_priority":"Reduce Apply mobile decision and scroll burden while preserving C0028 visuals elsewhere, all validation/accessibility behavior and business invariants",
+  "commands":{"continue":"계속 진행","promotion":"/upgrade-auto"}
 }
