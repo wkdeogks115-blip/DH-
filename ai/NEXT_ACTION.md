@@ -1,45 +1,50 @@
-# NEXT ACTION — C0027 VISUAL SHELL REDESIGN PROTOTYPE
+# NEXT ACTION — C0028 VISUAL SHELL COMPONENT CONSOLIDATION
 
-## Why the priority changed
+## Baseline
 
-C0026 objective design audit scored the current site **72/100 overall**, with **84/100 functional prototype quality** but **64/100 commercial brand design quality**. Further micro-consolidation of Legacy CSS is lower-value than improving brand differentiation, page rhythm, trust proof and decision density.
+- Active Control: R0003
+- Active Preview: C0009A D2
+- Direct parent / immutable visual rollback: C0027
+- C0027 SHA: `0db244b8f483e030d330d66f43b4d2bd262ed06460abf919209e627b996cdd7d`
+- Functional rollback: C0022
+- Design heuristic: C0026 72 → C0027 80
+- Functional prototype heuristic: 84 maintained
+- Production: HOLD
+- Actual URL Runtime: UNVERIFIED
 
-Read `audits/DH_C0026_OBJECTIVE_DESIGN_AUDIT_V1.md` before implementation.
+## Why this is next
+
+C0027 proves the visual direction on Home, PC pricing and Apply, but it adds a temporary 26,397-byte high-specificity visual-shell layer. Expanding that layer to the rest of the site before consolidation would increase maintenance and regression risk.
 
 ## Objective
 
-Keep C0026's function, content model, prices, product/service IDs, routes, application JavaScript, error recovery, keyboard focus and accessibility behavior unchanged. Build a separate C0027 Review Candidate that redesigns only the Visual Shell of:
+Create a separate C0028 Review Candidate that converts the approved C0027 shell into reusable, lower-specificity component contracts for:
 
-1. Home
-2. PC pricing/products
-3. Apply
+1. page/section shell
+2. primary/secondary actions
+3. pricing rail/cards
+4. form stages/options/summary
+5. shared responsive spacing and type rules
 
-## Design direction
-
-- Preserve neutral dark surfaces and one cyan action accent, but reduce generic nested Card/Border repetition.
-- Make each page answer one primary customer question.
-- Reduce mobile scroll and repeated explanatory copy.
-- Strengthen real-service trust, process clarity and decision evidence without inventing testimonials, logos or performance numbers.
-- Use a new coherent component layer rather than stacking more high-specificity overrides.
+Preserve C0027 appearance on the three prototype pages while reducing duplicate/high-specificity declarations. Do not expand to additional service pages until this consolidation has measurable benefit.
 
 ## Required evidence
 
-1. Lock C0026 SHA `8088b95c03d5663547a66eb79698d2da673863f96937aa0509fe32a1b643c44e` as direct parent and immutable rollback.
-2. Preserve 23 products, 86 application links, prices, service IDs and apply URLs.
-3. Preserve application validation, error summary, focus recovery, value retention and schedule-two-options rule.
-4. Produce desktop and mobile screenshots for Home, PC pricing and Apply.
-5. Compare C0026 and C0027 using the objective design rubric; target overall score >= 80 without reducing functional prototype score below 84.
-6. Run HTML, JS, CSS, refs, fragments, duplicate IDs, Alt and JSON-LD checks.
-7. Keep actual URL Runtime, real-device and assistive-technology status UNVERIFIED unless executed.
+- Lock C0027 as direct parent.
+- Preserve 23 products, 86 application links, prices, service IDs and apply URLs.
+- Preserve all C0026/C0027 application JS and accessibility behavior.
+- Reduce temporary visual-shell CSS bytes or duplicate declarations by a measurable amount.
+- Preserve C0027 targeted desktop/mobile appearance with computed-style or screenshot parity.
+- Re-run HTML, JS, CSS, refs, fragments, duplicate IDs, Alt and JSON-LD checks.
+- Keep actual URL Runtime, real-device and assistive-technology status UNVERIFIED unless actually executed.
 
 ## Stop conditions
 
-- Functional or data regression.
-- Accessibility regression.
-- New design does not improve the rubric by at least 6 points.
-- Visual change relies on invented customer proof or unsupported business claims.
-- Scope expands beyond the three prototype pages before evidence is reviewed.
+- No measurable CSS/consolidation benefit.
+- Visual regression against C0027.
+- Functional, data or accessibility regression.
+- Expansion to additional pages before component consolidation passes.
 
 ## Promotion boundary
 
-C0027 remains a Review Candidate. Do not promote, deploy or replace Active Control without `/upgrade-auto`.
+C0028 remains a Review Candidate. Do not promote or deploy without `/upgrade-auto`.
