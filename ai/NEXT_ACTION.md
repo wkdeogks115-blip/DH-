@@ -1,50 +1,51 @@
-# NEXT ACTION — C0028 VISUAL SHELL COMPONENT CONSOLIDATION
+# NEXT ACTION — C0029 APPLY MOBILE DECISION COMPRESSION
 
 ## Baseline
 
 - Active Control: R0003
 - Active Preview: C0009A D2
-- Direct parent / immutable visual rollback: C0027
-- C0027 SHA: `0db244b8f483e030d330d66f43b4d2bd262ed06460abf919209e627b996cdd7d`
+- Direct parent / immutable visual rollback: C0028
+- C0028 SHA: `4bdbe123a6e5860979f8af580a06ffd2407c63e2739ef802111679f679315cb7`
 - Functional rollback: C0022
-- Design heuristic: C0026 72 → C0027 80
-- Functional prototype heuristic: 84 maintained
+- Design heuristic: 80/100
+- Functional prototype heuristic: 84/100
 - Production: HOLD
 - Actual URL Runtime: UNVERIFIED
 
 ## Why this is next
 
-C0027 proves the visual direction on Home, PC pricing and Apply, but it adds a temporary 26,397-byte high-specificity visual-shell layer. Expanding that layer to the rest of the site before consolidation would increase maintenance and regression risk.
+C0028 successfully consolidated the C0027 visual shell with exact pixel parity and 6,300 bytes of CSS reduction. The most visible remaining weakness in the audited core flow is the long Apply mobile page and decision burden.
 
 ## Objective
 
-Create a separate C0028 Review Candidate that converts the approved C0027 shell into reusable, lower-specificity component contracts for:
+Create a separate C0029 Review Candidate that reduces mobile Apply decision/scroll burden without changing business data or validated application behavior.
 
-1. page/section shell
-2. primary/secondary actions
-3. pricing rail/cards
-4. form stages/options/summary
-5. shared responsive spacing and type rules
+Preferred methods:
 
-Preserve C0027 appearance on the three prototype pages while reducing duplicate/high-specificity declarations. Do not expand to additional service pages until this consolidation has measurable benefit.
+- reduce repeated guidance visible at once;
+- use progressive disclosure only for secondary explanation;
+- keep required labels, errors and current-stage context visible;
+- do not hide information needed to choose a service or complete the form;
+- preserve desktop C0028 unless a shared improvement is clearly justified.
 
 ## Required evidence
 
-- Lock C0027 as direct parent.
-- Preserve 23 products, 86 application links, prices, service IDs and apply URLs.
-- Preserve all C0026/C0027 application JS and accessibility behavior.
-- Reduce temporary visual-shell CSS bytes or duplicate declarations by a measurable amount.
-- Preserve C0027 targeted desktop/mobile appearance with computed-style or screenshot parity.
-- Re-run HTML, JS, CSS, refs, fragments, duplicate IDs, Alt and JSON-LD checks.
-- Keep actual URL Runtime, real-device and assistive-technology status UNVERIFIED unless actually executed.
+- C0028 locked as direct parent.
+- 23 application options, 86 application links, prices, service IDs and apply URLs preserved.
+- `js/apply.js` validation, error summary, focus recovery, input retention and two-time availability rule preserved.
+- Touch targets and keyboard focus preserved.
+- Mobile Apply rendered height / decision-density improvement measured.
+- No horizontal overflow or clipped controls.
+- Static QA PASS.
+- Actual URL Runtime remains UNVERIFIED unless truly executed.
 
 ## Stop conditions
 
-- No measurable CSS/consolidation benefit.
-- Visual regression against C0027.
-- Functional, data or accessibility regression.
-- Expansion to additional pages before component consolidation passes.
+- No measurable mobile decision/scroll improvement.
+- Required information becomes hidden or harder to understand.
+- Accessibility, function, price or service regression.
+- Improvement depends only on aesthetic preference without task benefit.
 
 ## Promotion boundary
 
-C0028 remains a Review Candidate. Do not promote or deploy without `/upgrade-auto`.
+C0029 remains a Review Candidate. Do not promote or deploy without `/upgrade-auto`.
