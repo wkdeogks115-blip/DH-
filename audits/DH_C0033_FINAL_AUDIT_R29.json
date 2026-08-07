@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "candidate": {
+    "sha256": "db4659fb9f7f28ac4ce03c43f71472391a2badcdcc0db1762c281356cc49ad68",
+    "crc": "PASS",
+    "entries": 142
+  },
+  "candidate_reproducible": true,
+  "local_review": {
+    "sha256": "fc8f25f888ba445a19c635bc7cfee3ea803d216def04242eebf06ca381e9bd32",
+    "crc": "PASS",
+    "entries": 144
+  },
+  "local_review_reproducible": true,
+  "answer_pack": {
+    "sha256": "d2a2500f66de62b23301605247dca64af486d4561766b1bae5439b9891e31c67",
+    "crc": "PASS",
+    "entries": 9
+  },
+  "answer_pack_reproducible": true,
+  "parent_defect_reproduced": {
+    "before_checked": [false, false],
+    "result_visible": true,
+    "errors": []
+  },
+  "candidate_runtime": {
+    "candidate_off": {
+      "before_checked": [false, false],
+      "result_visible": false,
+      "errors": ["safety_ack", "scope_ack"]
+    },
+    "empty": {
+      "count": 6,
+      "keys": ["service", "issue", "urgency", "availability", "safety_ack", "scope_ack"],
+      "focused": true
+    },
+    "both_off": {
+      "errors": ["safety_ack", "scope_ack"],
+      "preserved": true
+    },
+    "safety_only": {
+      "errors": ["scope_ack"]
+    },
+    "both_on": {
+      "result_visible": true,
+      "summary_length": 408,
+      "overflow": false
+    }
+  },
+  "logic_simulation": {
+    "both_off": true,
+    "one_on": true,
+    "both_on": true
+  },
+  "visual_parity": {
+    "home_desktop": {"changed_pixels": 0, "same_size": true},
+    "home_mobile": {"changed_pixels": 0, "same_size": true},
+    "pc_desktop": {"changed_pixels": 0, "same_size": true},
+    "pc_mobile": {"changed_pixels": 0, "same_size": true},
+    "apply_desktop": {"changed_pixels": 0, "same_size": true},
+    "apply_mobile": {"changed_pixels": 0, "same_size": true}
+  },
+  "application_options": 23,
+  "application_links": 86,
+  "prices_equal_parent": true,
+  "service_ids_equal_parent": true,
+  "apply_urls_equal_parent": true,
+  "actual_external_url_runtime": "UNVERIFIED",
+  "real_device": "NOT_EXECUTED",
+  "assistive_technology": "NOT_EXECUTED",
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD",
+  "decision": "PASS_R29_SAFETY_FIX_READY_NO_PROMOTION"
+}
