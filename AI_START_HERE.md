@@ -6,33 +6,33 @@
 2. [`AGENTS.md`](AGENTS.md)
 3. [`ai/SOURCE_REGISTRY.json`](ai/SOURCE_REGISTRY.json)
 4. [`ai/SOURCE_OF_TRUTH.md`](ai/SOURCE_OF_TRUTH.md)
-5. [`continuation/PROJECT_SNAPSHOT_R25.md`](continuation/PROJECT_SNAPSHOT_R25.md)
-6. [`continuation/A21_HANDOFF.md`](continuation/A21_HANDOFF.md)
-7. [`audits/DH_C0029_FINAL_AUDIT_R25.json`](audits/DH_C0029_FINAL_AUDIT_R25.json)
-8. [`audits/DH_C0029_OBJECTIVE_MOBILE_UX_AUDIT_V1.md`](audits/DH_C0029_OBJECTIVE_MOBILE_UX_AUDIT_V1.md)
+5. [`continuation/PROJECT_SNAPSHOT_R26.md`](continuation/PROJECT_SNAPSHOT_R26.md)
+6. [`continuation/A22_HANDOFF.md`](continuation/A22_HANDOFF.md)
+7. [`audits/DH_C0030_FINAL_AUDIT_R26.json`](audits/DH_C0030_FINAL_AUDIT_R26.json)
+8. [`audits/DH_C0030_OBJECTIVE_SERVICE_SHELL_AUDIT_V1.md`](audits/DH_C0030_OBJECTIVE_SERVICE_SHELL_AUDIT_V1.md)
 9. [`ai/NEXT_ACTION.md`](ai/NEXT_ACTION.md)
-10. 구현이 필요할 때 [`current-c0029/`](current-c0029/)와 C0028 parent component source를 읽는다.
+10. 구현이 필요할 때 `current-c0028/`, `current-c0029/`, `current-c0030/`을 읽는다.
 
 ## 절대 혼동 금지
 
 - Active Control은 **R0003**이다.
 - Active Preview는 **C0009A D2**다.
-- **C0029는 Review Candidate이며 Active가 아니다.**
-- C0028은 Direct Parent·Visual Rollback, C0022는 Functional Rollback이다.
+- **C0030은 Review Candidate이며 Active가 아니다.**
+- C0029는 Direct Parent·Visual Rollback, C0022는 Functional Rollback이다.
 - `/upgrade-auto` 없이는 승격하지 않는다.
 - Production은 HOLD다.
 - 실제 외부 URL Browser Runtime은 UNVERIFIED다.
 - 결제 기능은 구현되지 않았다.
 
-## C0029 핵심 결론
+## C0030 핵심 결론
 
-- 390px 모바일 Apply 초기 높이 4,903 → 3,390 px (-30.859%).
-- 요약 생성 후 높이 5,325 → 4,359 px (-18.141%).
-- Desktop C0028/C0029 changed pixels 0.
-- Actual `js/apply.js` self-contained Chromium interaction PASS: 1-time rejection, error-summary focus, input retention, valid summary generation.
-- `js/apply.js` bytes and form-control signature are identical to C0028.
-- 23 application options, 86 links, prices, service IDs, apply URLs 유지.
-- Real device, assistive technology and user conversion tests remain NOT_EXECUTED.
+- `rescue/`, `stream-ready/`만 승인된 Visual Shell로 이동.
+- Rescue 모바일 길이 -13.029%, Stream Ready -12.937%.
+- 두 서비스 페이지 디자인 휴리스틱 70 → 80.
+- 전체 사이트 디자인 휴리스틱은 80 유지, 기능 휴리스틱 84 유지.
+- Home/PC/Apply Desktop+Mobile 6개 비교는 모두 0 changed pixels.
+- 23 application options, 86 application links, prices, service IDs, apply URLs 유지.
+- 중간 빌드에서 공통 모바일 container 회귀가 발견되어 폐기됐고, 최종 C0030은 Rescue/Stream Ready에만 Scope됨.
 
 ## Binary 주의
 
@@ -40,4 +40,4 @@
 
 ## 현재 다음 작업
 
-C0030에서 C0029를 Parent로 잠그고 승인된 Visual Shell을 `rescue/`와 `stream-ready/`에만 확장한다. Apply 모바일 변경을 건드리지 말고, Creator 페이지까지 같은 Candidate에서 확장하지 않는다. Material Delta가 없거나 기능·가격·Route 회귀가 있으면 HOLD한다.
+C0031에서 C0030을 Parent로 잠그고 `creator/`, `creator/youtube/`, `creator/editing/` 세 Creator 페이지에만 동일한 Visual Shell을 확장한다. C0030 Rescue/Stream Ready와 C0029 Apply를 보존하고 policies/cases/reviews까지 같은 Candidate에서 확장하지 않는다.
