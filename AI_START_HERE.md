@@ -6,33 +6,33 @@
 2. [`AGENTS.md`](AGENTS.md)
 3. [`ai/SOURCE_REGISTRY.json`](ai/SOURCE_REGISTRY.json)
 4. [`ai/SOURCE_OF_TRUTH.md`](ai/SOURCE_OF_TRUTH.md)
-5. [`continuation/PROJECT_SNAPSHOT_R26.md`](continuation/PROJECT_SNAPSHOT_R26.md)
-6. [`continuation/A22_HANDOFF.md`](continuation/A22_HANDOFF.md)
-7. [`audits/DH_C0030_FINAL_AUDIT_R26.json`](audits/DH_C0030_FINAL_AUDIT_R26.json)
-8. [`audits/DH_C0030_OBJECTIVE_SERVICE_SHELL_AUDIT_V1.md`](audits/DH_C0030_OBJECTIVE_SERVICE_SHELL_AUDIT_V1.md)
+5. [`continuation/PROJECT_SNAPSHOT_R27.md`](continuation/PROJECT_SNAPSHOT_R27.md)
+6. [`continuation/A23_HANDOFF.md`](continuation/A23_HANDOFF.md)
+7. [`audits/DH_C0031_FINAL_AUDIT_R27.json`](audits/DH_C0031_FINAL_AUDIT_R27.json)
+8. [`audits/DH_C0031_OBJECTIVE_CREATOR_SHELL_AUDIT_V1.md`](audits/DH_C0031_OBJECTIVE_CREATOR_SHELL_AUDIT_V1.md)
 9. [`ai/NEXT_ACTION.md`](ai/NEXT_ACTION.md)
-10. 구현이 필요할 때 `current-c0028/`, `current-c0029/`, `current-c0030/`을 읽는다.
+10. 구현이 필요할 때 `current-c0028/`, `current-c0029/`, `current-c0030/`, `current-c0031/`을 읽는다.
 
 ## 절대 혼동 금지
 
 - Active Control은 **R0003**이다.
 - Active Preview는 **C0009A D2**다.
-- **C0030은 Review Candidate이며 Active가 아니다.**
-- C0029는 Direct Parent·Visual Rollback, C0022는 Functional Rollback이다.
+- **C0031은 Review Candidate이며 Active가 아니다.**
+- C0030은 Direct Parent·Visual Rollback, C0022는 Functional Rollback이다.
 - `/upgrade-auto` 없이는 승격하지 않는다.
 - Production은 HOLD다.
 - 실제 외부 URL Browser Runtime은 UNVERIFIED다.
 - 결제 기능은 구현되지 않았다.
 
-## C0030 핵심 결론
+## C0031 핵심 결론
 
-- `rescue/`, `stream-ready/`만 승인된 Visual Shell로 이동.
-- Rescue 모바일 길이 -13.029%, Stream Ready -12.937%.
-- 두 서비스 페이지 디자인 휴리스틱 70 → 80.
-- 전체 사이트 디자인 휴리스틱은 80 유지, 기능 휴리스틱 84 유지.
-- Home/PC/Apply Desktop+Mobile 6개 비교는 모두 0 changed pixels.
+- `creator/`, `creator/youtube/`, `creator/editing/`만 승인된 Visual Shell 언어로 이동.
+- Creator-family 디자인 휴리스틱 68 → 80.
+- 전체 사이트 디자인 휴리스틱 80 유지, 기능 휴리스틱 84 유지.
+- Creator Hub 모바일 3,274 → 3,243px, YouTube 9,095 → 8,460px, Editing 8,814 → 8,524px.
+- Home/PC/Apply/Rescue/Stream Ready Desktop+Mobile 10개 비교는 모두 0 changed pixels.
 - 23 application options, 86 application links, prices, service IDs, apply URLs 유지.
-- 중간 빌드에서 공통 모바일 container 회귀가 발견되어 폐기됐고, 최종 C0030은 Rescue/Stream Ready에만 Scope됨.
+- 첫 Creator Hub 모바일 시안의 16px horizontal overflow는 검증에서 발견되어 폐기됨.
 
 ## Binary 주의
 
@@ -40,4 +40,4 @@
 
 ## 현재 다음 작업
 
-C0031에서 C0030을 Parent로 잠그고 `creator/`, `creator/youtube/`, `creator/editing/` 세 Creator 페이지에만 동일한 Visual Shell을 확장한다. C0030 Rescue/Stream Ready와 C0029 Apply를 보존하고 policies/cases/reviews까지 같은 Candidate에서 확장하지 않는다.
+C0032는 무조건적인 디자인 확장이 아니라 남은 Surface 감사다. `game/`, `partners/`, `cases/`, `reviews/`, `policies/`, `diagnose/`, 404를 실제로 비교하고 Material visual/task inconsistency가 있을 때만 별도 Candidate를 만든다.
