@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "candidate": "C0032",
+  "candidate_sha256": "66fa34cbe48977aa9a0bd1dcc906e45975da38828b59818e2803954b8f468464",
+  "direct_parent": "C0031",
+  "direct_parent_sha256": "45d1b8d7fd70fcfe16ce450c6fe5ad4957b26c40cf4bb3b3924260a2863e3ddd",
+  "trigger": "USER_REPORTED_CURRENT_DESIGN_FEELS_WORSE",
+  "classification": ["DESIGN_CHANGE","DIRECTION_CORRECTION","BRAND_DEPTH_REBALANCE"],
+  "scope": ["home","creator"],
+  "current_direction_heuristic": 80,
+  "prototype_direction_heuristic": 88,
+  "business_invariants": {"application_options":23,"application_links":86,"prices":"PRESERVED","service_ids":"PRESERVED","apply_urls":"PRESERVED"},
+  "non_target_parity": "PASS_12_OF_12_ZERO_CHANGED_PIXELS",
+  "browser_url_runtime": "UNVERIFIED",
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD"
+}
