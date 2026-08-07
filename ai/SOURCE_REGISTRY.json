@@ -13,7 +13,7 @@
     "parent_visual_shell_css":"current-c0028/css/visual-shell-components-c0028.css",
     "apply_mobile_delta_css":"current-c0029/css/apply-mobile-compression-delta-c0029.css",
     "service_shell_delta":"current-c0030/css/service-shell-delta-c0030.css",
-    "creator_shell_delta":"current-c0031/css/creator-shell-delta-c0031.css",
+    "creator_shell_contract":"current-c0031/CREATOR_SHELL_CONTRACT.md",
     "objective_creator_shell_audit":"audits/DH_C0031_OBJECTIVE_CREATOR_SHELL_AUDIT_V1.md",
     "browser_creator_shell_audit":"audits/DH_C0031_BROWSER_CREATOR_SHELL_AUDIT.json",
     "final_audit":"audits/DH_C0031_FINAL_AUDIT_R27.json",
