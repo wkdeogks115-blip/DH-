@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "candidate": {
+    "sha256": "e3caadb915360ab36fa9cbbc9bc13feddbfb29f2ccc97d32a916371cf0ba1bbd",
+    "crc": "PASS",
+    "entries": 133
+  },
+  "candidate_reproducible": true,
+  "local_review": {
+    "sha256": "9c529827a6f31dd53837da16bdf70c340ec28d3b4cb97488216f36b14ab072bf",
+    "crc": "PASS",
+    "entries": 140
+  },
+  "local_review_reproducible": true,
+  "visual_evidence": {
+    "sha256": "37a54706e436b0cc2c96c0888fed4935036e1b53ac5bf2f23d7df9f9ad6a4be0",
+    "crc": "PASS",
+    "entries": 25
+  },
+  "visual_evidence_reproducible": true,
+  "answer_pack": {
+    "sha256": "e4bf48a30fc35c00ec065e79b5f384f492c94b514ebcdcf64397258a496238c2",
+    "crc": "PASS",
+    "entries": 9
+  },
+  "answer_pack_reproducible": true,
+  "intermediate_regression": "DETECTED_AND_REJECTED_BROAD_MOBILE_CONTAINER",
+  "core_c0029_pixel_parity": {
+    "home_desktop": {"changed_pixels": 0, "same_size": true},
+    "home_mobile": {"changed_pixels": 0, "same_size": true},
+    "pc_desktop": {"changed_pixels": 0, "same_size": true},
+    "pc_mobile": {"changed_pixels": 0, "same_size": true},
+    "apply_desktop": {"changed_pixels": 0, "same_size": true},
+    "apply_mobile": {"changed_pixels": 0, "same_size": true}
+  },
+  "core_c0029_pixel_parity_all_zero": true,
+  "rescue_mobile_reduction_pct": 13.029,
+  "stream_ready_mobile_reduction_pct": 12.937,
+  "application_options": 23,
+  "application_links": 86,
+  "prices_equal_parent": true,
+  "service_values_equal_parent": true,
+  "apply_urls_equal_parent": true,
+  "horizontal_overflow": [],
+  "actual_url_runtime": "UNVERIFIED",
+  "real_device": "NOT_EXECUTED",
+  "assistive_technology": "NOT_EXECUTED",
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD",
+  "decision": "PASS_R26_CORRECTED_READY_NO_PROMOTION"
+}
