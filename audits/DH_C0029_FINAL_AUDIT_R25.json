@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "candidate": {
+    "sha256": "ba0de866143c9c68a3c5c0e9804390afeacbd43969c1dd8e135a804a59789930",
+    "crc": "PASS",
+    "entries": 130
+  },
+  "candidate_reproducible": true,
+  "local_review": {
+    "sha256": "a138f18ba2b5428de7f8643b4534fff7701b7c3ba18272b238c9ca8926397501",
+    "crc": "PASS",
+    "entries": 143
+  },
+  "local_review_reproducible": true,
+  "visual_evidence": {
+    "sha256": "e5f17571fa8f6fda78722d24fc5048451e37baffc2296a6870c23e5c3ba02134",
+    "crc": "PASS",
+    "entries": 10
+  },
+  "visual_evidence_reproducible": true,
+  "answer_pack": {
+    "sha256": "620564f8ac4e2747a8fbaf53dedb62c10c6d1399eb538b5bcccc013b3ce0a0d5",
+    "crc": "PASS",
+    "entries": 10
+  },
+  "answer_pack_reproducible": true,
+  "answer_pack_internal_checksum_mismatch": [],
+  "external_artifact_checksum_mismatch": [],
+  "mobile_initial_height_reduction_pct": 30.859,
+  "mobile_ready_height_reduction_pct": 18.141,
+  "desktop_changed_pixels": 0,
+  "apply_js_bytes_equal": true,
+  "application_options": 23,
+  "application_links": 86,
+  "static_gate": "PASS",
+  "self_contained_chromium_apply_interaction": "PASS",
+  "actual_url_runtime": "UNVERIFIED",
+  "real_device": "NOT_EXECUTED",
+  "assistive_technology": "NOT_EXECUTED",
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD",
+  "decision": "PASS_R25_READY_NO_PROMOTION"
+}
