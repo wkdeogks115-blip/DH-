@@ -1,64 +1,58 @@
-# NEXT ACTION — C0032 REMAINING SURFACE AUDIT FIRST
+# NEXT ACTION — C0033 SELECTIVE BRAND-DEPTH EXTENSION
 
 ## Baseline
 
 - Active Control: R0003
 - Active Preview: C0009A D2
+- Current Review Candidate: C0032
+- C0032 SHA: `66fa34cbe48977aa9a0bd1dcc906e45975da38828b59818e2803954b8f468464`
 - Direct parent / immutable visual rollback: C0031
-- C0031 SHA: `45d1b8d7fd70fcfe16ce450c6fe5ad4957b26c40cf4bb3b3924260a2863e3ddd`
 - Functional rollback: C0022
-- Overall design heuristic: 80/100
+- Current-direction heuristic: 80/100
+- C0032 prototype-direction heuristic: 88/100 (heuristic only)
 - Functional prototype heuristic: 84/100
 - Production: HOLD
 - Actual external URL Runtime: UNVERIFIED
 
-## Why this is audit-first
+## Why the priority changed
 
-The main conversion funnel and the two primary service branches now share a consistent shell. The remaining pages have different jobs: game product, partner intake, evidence/reviews, policy/reference and diagnosis. Forcing one visual template across all of them could reduce task clarity or create unnecessary CSS debt.
+User feedback after C0031 reported that the current design felt worse/flatter than earlier versions. This is a material design signal. C0032 therefore paused the planned remaining-page audit/migration and tested a direction correction on Home + Creator Hub only.
 
-## Objective
+## C0032 direction
 
-Audit these remaining surfaces before creating any C0032 build:
+Keep:
+- C0031 information architecture;
+- semantic tokens;
+- single primary CTA logic;
+- lower card repetition;
+- accessibility and business invariants.
 
-1. `game/`
-2. `partners/`
-3. `cases/`
-4. `reviews/`
-5. `policies/`
-6. `diagnose/`
-7. `404.html`
+Restore selectively:
+- quiet navy/cyan spatial depth;
+- moderate hero typography instead of billboard-scale text;
+- one elevated decision surface;
+- grouped pricing/choice surfaces;
+- stronger but restrained DH visual memory.
 
-Classify each as `KEEP`, `MIGRATE`, `MINOR_FIX`, or `UNVERIFIED` using actual desktop/mobile render evidence and task role.
+Do not return to bright multi-color gradients, glow-heavy buttons, or independent cards everywhere.
 
-## Build gate
+## C0033 gate
 
-Create a separate C0032 Candidate only if at least one material inconsistency is found, such as:
-
-- the primary action or user question is visually unclear;
-- mobile layout or density creates measurable task friction;
-- the page visibly conflicts with the approved shell in a way that harms trust or comprehension;
-- duplicate/high-specificity styling can be removed with measurable benefit;
-- accessibility or interaction state is materially weaker than the current core funnel.
-
-Do **not** redesign legal/policy pages merely for novelty. Preserve information density when it serves reference scanning.
-
-## Required evidence if a build is opened
-
-- C0031 locked as direct parent.
-- Existing Home/PC/Apply/Rescue/Stream Ready/Creator pages remain unchanged outside explicitly selected scope.
-- 23 application options and 86 application links preserved.
-- prices, service IDs and Apply URLs preserved.
-- Desktop/Mobile evidence for every page changed.
-- no horizontal overflow or clipped controls.
-- HTML/JS/CSS/refs/fragments/IDs/Alt/JSON-LD PASS.
+1. Review C0032 Home + Creator A/B evidence first.
+2. If the direction remains stronger, extend only one small group:
+   - preferred first group: PC pricing + Apply, because they are the main decision/conversion funnel; or
+   - Rescue + Stream Ready if preserving form presentation is safer.
+3. Re-render all non-target pages and require zero regression outside explicit scope.
+4. Preserve 23 application options, 86 application links, prices, service IDs, Apply URLs, application validation and accessibility behavior.
 
 ## Stop conditions
 
-- no material inconsistency after audit → `HOLD — 새 결론 없음` and do not create C0032;
-- proposed change is aesthetic-only with no task/trust benefit;
-- scope begins to merge unrelated policy, evidence and product pages into one generic layout;
-- functional/data/accessibility regression.
+- C0032 looks merely more decorative but not more trustworthy/readable;
+- visual depth begins to reintroduce card/glow clutter;
+- any non-target regression;
+- accessibility or application behavior regression;
+- no material improvement over C0031.
 
 ## Promotion boundary
 
-Any C0032 build remains a Review Candidate. Do not promote or deploy without `/upgrade-auto`.
+C0032/C0033 remain Review Candidates. Do not promote or deploy without `/upgrade-auto`.
