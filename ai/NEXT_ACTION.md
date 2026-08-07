@@ -1,58 +1,64 @@
-# NEXT ACTION — C0033 SELECTIVE BRAND-DEPTH EXTENSION
+# NEXT ACTION — C0034 PC + APPLY BRAND-DEPTH EXTENSION
 
 ## Baseline
 
 - Active Control: R0003
 - Active Preview: C0009A D2
-- Current Review Candidate: C0032
-- C0032 SHA: `66fa34cbe48977aa9a0bd1dcc906e45975da38828b59818e2803954b8f468464`
-- Direct parent / immutable visual rollback: C0031
+- Current Review Candidate: C0033
+- C0033 SHA: `db4659fb9f7f28ac4ce03c43f71472391a2badcdcc0db1762c281356cc49ad68`
+- Direct parent / design rollback: C0032
+- Secondary design rollback: C0031
 - Functional rollback: C0022
-- Current-direction heuristic: 80/100
-- C0032 prototype-direction heuristic: 88/100 (heuristic only)
+- C0032 direction prototype heuristic: 88/100 (heuristic only)
 - Functional prototype heuristic: 84/100
 - Production: HOLD
 - Actual external URL Runtime: UNVERIFIED
 
-## Why the priority changed
+## Mandatory C0033 safety invariant
 
-User feedback after C0031 reported that the current design felt worse/flatter than earlier versions. This is a material design signal. C0032 therefore paused the planned remaining-page audit/migration and tested a direction correction on Home + Creator Hub only.
+Any C0034 Apply visual change must re-execute the actual candidate `apply.js` and prove:
 
-## C0032 direction
+1. both `safety_ack` and `scope_ack` unchecked → no summary; exactly those two acknowledgement errors once other required data is valid;
+2. safety only → `scope_ack` remains required;
+3. both checked → summary generated;
+4. error summary focus works;
+5. blocked submission preserves existing inputs;
+6. one availability time remains rejected by the 2-time rule;
+7. mobile horizontal overflow remains zero.
 
-Keep:
-- C0031 information architecture;
-- semantic tokens;
-- single primary CTA logic;
-- lower card repetition;
-- accessibility and business invariants.
+Do not regress to the C0032 unchecked-checkbox behavior.
 
-Restore selectively:
-- quiet navy/cyan spatial depth;
-- moderate hero typography instead of billboard-scale text;
-- one elevated decision surface;
-- grouped pricing/choice surfaces;
-- stronger but restrained DH visual memory.
+## C0034 design scope
 
-Do not return to bright multi-color gradients, glow-heavy buttons, or independent cards everywhere.
+Only:
+- PC pricing / scope page;
+- Apply page presentation.
 
-## C0033 gate
+Use the C0032 design direction:
+- keep C0031 information hierarchy;
+- keep semantic tokens and single-primary-CTA logic;
+- restore only selective navy/cyan depth;
+- group important decision surfaces;
+- use elevation only for a small number of primary anchors;
+- avoid glow-heavy buttons, independent cards everywhere, bright multi-color gradients and billboard typography.
 
-1. Review C0032 Home + Creator A/B evidence first.
-2. If the direction remains stronger, extend only one small group:
-   - preferred first group: PC pricing + Apply, because they are the main decision/conversion funnel; or
-   - Rescue + Stream Ready if preserving form presentation is safer.
-3. Re-render all non-target pages and require zero regression outside explicit scope.
-4. Preserve 23 application options, 86 application links, prices, service IDs, Apply URLs, application validation and accessibility behavior.
+## Required regression gate
+
+- Home + Creator Hub C0032 visual direction preserved;
+- Rescue + Stream Ready + YouTube + Editing preserved;
+- non-target Desktop/Mobile comparisons: zero changed pixels;
+- application options 23;
+- application links 86;
+- prices/service IDs/Apply URLs preserved.
 
 ## Stop conditions
 
-- C0032 looks merely more decorative but not more trustworthy/readable;
-- visual depth begins to reintroduce card/glow clutter;
-- any non-target regression;
-- accessibility or application behavior regression;
-- no material improvement over C0031.
+- the PC/Apply version becomes merely more decorative rather than more trustworthy/readable;
+- Apply mobile compression becomes materially worse;
+- any C0033 safety acknowledgement regression;
+- any non-target visual regression;
+- accessibility or form behavior regression.
 
 ## Promotion boundary
 
-C0032/C0033 remain Review Candidates. Do not promote or deploy without `/upgrade-auto`.
+C0033/C0034 remain Review Candidates. Do not promote or deploy without `/upgrade-auto`.
