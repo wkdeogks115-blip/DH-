@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "render_mode": "SELF_CONTAINED_CHROMIUM_CSS_LAYOUT",
+  "viewport_desktop": "1440x1000",
+  "viewport_mobile": "390x844",
+  "service_metrics": {
+    "rescue_mobile": {"parent_scroll_height": 8389, "candidate_scroll_height": 7296, "reduction_pct": 13.029, "horizontal_overflow": 0},
+    "stream_ready_mobile": {"parent_scroll_height": 8379, "candidate_scroll_height": 7295, "reduction_pct": 12.937, "horizontal_overflow": 0},
+    "rescue_desktop": {"parent_scroll_height": 5047, "candidate_scroll_height": 4648, "horizontal_overflow": 0},
+    "stream_ready_desktop": {"parent_scroll_height": 5057, "candidate_scroll_height": 4560, "horizontal_overflow": 0}
+  },
+  "core_page_parity": {
+    "home_desktop": {"changed_pixels": 0, "same_size": true},
+    "home_mobile": {"changed_pixels": 0, "same_size": true},
+    "pc_desktop": {"changed_pixels": 0, "same_size": true},
+    "pc_mobile": {"changed_pixels": 0, "same_size": true},
+    "apply_desktop": {"changed_pixels": 0, "same_size": true},
+    "apply_mobile": {"changed_pixels": 0, "same_size": true}
+  },
+  "horizontal_overflow": [],
+  "actual_url_runtime": "UNVERIFIED",
+  "decision": "PASS_TARGET_SERVICE_SHELL_CORE_PARITY_6_OF_6_ZERO_PIXELS"
+}
