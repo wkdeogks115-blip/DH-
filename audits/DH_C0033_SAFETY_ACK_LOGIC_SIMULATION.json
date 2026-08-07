@@ -1,0 +1,14 @@
+{
+  "cases": [
+    ["both-off", [
+      {"key":"safety_ack","target":"safety-ack","message":"민감정보를 보내지 않는다는 항목을 확인해주세요."},
+      {"key":"scope_ack","target":"scope-ack","message":"작업 전 범위·시간·총액·일정을 확인한다는 항목을 확인해주세요."}
+    ]],
+    ["one-on", [
+      {"key":"scope_ack","target":"scope-ack","message":"작업 전 범위·시간·총액·일정을 확인한다는 항목을 확인해주세요."}
+    ]],
+    ["both-on", []]
+  ],
+  "assertions": {"both_off":true,"one_on":true,"both_on":true},
+  "decision": "PASS_LOGIC_SIMULATION"
+}
