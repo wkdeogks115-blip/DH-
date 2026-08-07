@@ -6,42 +6,39 @@
 |---|---|---|
 | Active Control | R0003 | LOCKED |
 | Active Preview | C0009A D2 | unchanged |
-| Current Review Candidate | C0029 | READY_NOT_PROMOTED |
-| Direct parent / visual rollback | C0028 | preserved |
+| Current Review Candidate | C0030 | READY_NOT_PROMOTED |
+| Direct parent / visual rollback | C0029 | preserved |
 | Functional rollback | C0022 | preserved |
-| Latest Answer Pack | R25 | current review pack |
-| Latest Handoff | A21 | current handoff |
+| Latest Answer Pack | R26 | current review pack |
+| Latest Handoff | A22 | current handoff |
 | Production | HOLD | blocker remains |
 
-## C0029 material result
+## C0030 material result
 
-- Mobile Apply task density reduced without changing business logic.
-- 390×844 initial document height: 4,903 → 3,390 px (-30.859%).
-- Generated-summary document height: 5,325 → 4,359 px (-18.141%).
-- Progress shell: 146 → 94 px; form height: 2,549 → 1,903 px.
-- Empty application summary is hidden on mobile until a valid summary is generated.
-- Stage 3 secondary option text is visually compressed; primary option names remain visible and text remains in DOM.
-- Safety acknowledgement explanations remain visible.
-- Actual `js/apply.js` executed in self-contained Chromium: one-time availability rejection, error-summary focus, input retention and valid two-time summary generation PASS.
-- Desktop C0028/C0029 changed pixels: 0.
-- `js/apply.js` bytes and Apply form control signature are identical to C0028.
+- Only `rescue/` and `stream-ready/` migrated to the approved reusable visual shell.
+- Rescue mobile document height reduced by 13.029%.
+- Stream Ready mobile document height reduced by 12.937%.
+- Service-page commercial visual heuristic: 70 → 80.
+- Overall site design heuristic remains 80; functional prototype heuristic remains 84.
+- Home, PC pricing and Apply desktop/mobile were re-rendered after the shared CSS change: 6/6 comparisons returned zero changed pixels.
 - 23 application options and 86 application links preserved.
-- Prices, service IDs and apply URLs preserved.
-- Static QA PASS.
+- Prices, service IDs and Apply URLs preserved.
+- Static QA PASS; no horizontal overflow in targeted service renders.
+- An intermediate broad mobile-container rule changed core mobile pages and was rejected. Only the corrected C0030 artifact is valid.
 - Actual external URL Runtime UNVERIFIED; real device, assistive technology and user conversion NOT_EXECUTED.
 
 ## Current hashes
 
-- C0029 Candidate: `ba0de866143c9c68a3c5c0e9804390afeacbd43969c1dd8e135a804a59789930`
-- R25 Answer Pack: `620564f8ac4e2747a8fbaf53dedb62c10c6d1399eb538b5bcccc013b3ce0a0d5`
-- C0029 Local Review V23: `a138f18ba2b5428de7f8643b4534fff7701b7c3ba18272b238c9ca8926397501`
-- C0029 Visual Evidence: `e5f17571fa8f6fda78722d24fc5048451e37baffc2296a6870c23e5c3ba02134`
-- A21 Handoff local source hash: `73de4301cfa0258fd02e9d11037cb1606714063fb50edd190501ee005a0180c1`
+- C0030 Candidate: `e3caadb915360ab36fa9cbbc9bc13feddbfb29f2ccc97d32a916371cf0ba1bbd`
+- R26 Answer Pack: `e4bf48a30fc35c00ec065e79b5f384f492c94b514ebcdcf64397258a496238c2`
+- C0030 Local Review V24: `9c529827a6f31dd53837da16bdf70c340ec28d3b4cb97488216f36b14ab072bf`
+- C0030 Visual Evidence: `37a54706e436b0cc2c96c0888fed4935036e1b53ac5bf2f23d7df9f9ad6a4be0`
+- A22 Handoff local source hash: `32f229ccb7726e3208be0ee107a8da1ede730c3305b59b9bbaec6fc094e91d9f`
 
 ## Promotion boundary
 
-GitHub storage does not promote C0029. `/upgrade-auto` is still required before Active Control/Preview changes. Production remains HOLD.
+GitHub storage does not promote C0030. `/upgrade-auto` is still required before Active Control/Preview changes. Production remains HOLD.
 
 ## Next
 
-Use C0029 as immutable visual parent. C0030 should migrate the approved reusable visual shell to `rescue/` and `stream-ready/` only. Preserve C0029 Apply behavior and do not expand into Creator pages in the same Candidate.
+Use C0030 as immutable visual parent. C0031 should migrate the approved shell to `creator/`, `creator/youtube/`, and `creator/editing/` only. Preserve C0030 Rescue/Stream Ready and C0029 Apply behavior. Do not combine policies/cases/reviews in the same Candidate.
