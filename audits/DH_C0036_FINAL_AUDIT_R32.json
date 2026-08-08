@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "candidate": {
+    "sha256": "ee9bda1f4dfa0ff47e2b155640250a63c270062a61d3c82981f6deb58e33ea87",
+    "crc": "PASS",
+    "entries": 154
+  },
+  "candidate_reproducible": true,
+  "local_review": {
+    "sha256": "5cbb29fab73318899755dc675f851a1974a27ad9d3a8098069b8acf7c8c0f1f7",
+    "crc": "PASS",
+    "entries": 161
+  },
+  "local_review_reproducible": true,
+  "visual_evidence": {
+    "sha256": "829dd2ab2b415f023bd0be11a7a28fa6f4710d204119b5fe6558246668830064",
+    "crc": "PASS",
+    "entries": 37
+  },
+  "visual_evidence_reproducible": true,
+  "answer_pack": {
+    "sha256": "b4a649b8bc7e5de76e85a9795ede06815dad5a4be286144f73bafe6c2d5802ff",
+    "crc": "PASS",
+    "entries": 9
+  },
+  "answer_pack_reproducible": true,
+  "mandatory_c0033_safety_gate": "PASS",
+  "non_target_parity_all_zero": true,
+  "mobile_height_delta": {
+    "youtube": {"parent":8460,"candidate":8444,"delta_px":-16,"pct":-0.189},
+    "editing": {"parent":8524,"candidate":8497,"delta_px":-27,"pct":-0.317}
+  },
+  "application_options": 23,
+  "application_links": 86,
+  "prices_equal_parent": true,
+  "service_ids_equal_parent": true,
+  "apply_urls_equal_parent": true,
+  "apply_js_byte_equal_parent": true,
+  "horizontal_overflow": [],
+  "actual_external_url_runtime": "UNVERIFIED",
+  "real_device": "NOT_EXECUTED",
+  "assistive_technology": "NOT_EXECUTED",
+  "user_conversion_test": "NOT_EXECUTED",
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD",
+  "decision": "PASS_R32_C0036_READY_NO_PROMOTION"
+}
