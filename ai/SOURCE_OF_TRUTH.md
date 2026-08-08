@@ -6,34 +6,36 @@
 |---|---|---|
 | Active Control | R0003 | LOCKED |
 | Active Preview | C0009A D2 | unchanged |
-| Current Review Candidate | C0035 | READY_NOT_PROMOTED |
-| Direct parent / immediate rollback | C0034 | preserved |
+| Current Review Candidate | C0036 | READY_NOT_PROMOTED |
+| Direct parent / immediate rollback | C0035 | preserved |
+| PC/Apply rollback | C0034 | preserved |
 | Safety rollback / invariant source | C0033 | preserved |
 | Brand-depth direction parent | C0032 | preserved |
 | Secondary design rollback | C0031 | preserved |
 | Functional rollback | C0022 | preserved |
-| Latest Answer Pack | R31 | current review pack |
-| Latest Handoff | A27 | current handoff |
+| Latest Answer Pack | R32 | current review pack |
+| Latest Handoff | A28 | current handoff |
 | Production | HOLD | blocker remains |
 
-## C0035 material result
+## C0036 material result
 
-C0035 extends the validated selective Brand Depth language to only `rescue/` and `stream-ready/`, using C0034 as the direct parent.
+C0036 extends the validated selective Brand Depth language only to `creator/youtube/` and `creator/editing/`, using C0035 as the direct parent.
 
 ### Design outcome
 
-- service trust / visual anchoring heuristic: 80 → 87;
-- decision comparison clarity: 84 → 88;
+- creator-detail trust / visual anchoring: 80 → 87;
+- package decision clarity: 84 → 88;
+- cross-page brand consistency: 82 → 90;
 - overall Brand Depth direction heuristic: 88 maintained;
 - functional prototype heuristic: 84 maintained;
-- Rescue mobile height: 7,296px → 7,335px (+0.535%);
-- Stream Ready mobile height: 7,295px → 7,224px (-0.973%).
+- YouTube mobile height: 8,460px → 8,444px (-0.189%);
+- Editing mobile height: 8,524px → 8,497px (-0.317%).
 
-A first visual audit found a residual purple Stream Ready primary CTA. That intermediate result was rejected. The final C0035 uses a Cyan-family primary accent on the target pages.
+The Creator Detail pages keep the C0031 information hierarchy. Hero proof, service choice, pricing and route/result areas gain selective depth. Existing purple Creator/Editing primary CTAs are normalized to a restrained Cyan family.
 
 ### Mandatory C0033 safety gate
 
-The actual candidate `apply.js` is byte-identical to C0034 and was executed in self-contained Chromium:
+The actual candidate `apply.js` is byte-identical to C0035 and was executed in self-contained Chromium:
 - empty form → 6 errors + error-summary focus PASS;
 - both `safety_ack` and `scope_ack` unchecked with other required data valid → no summary, errors exactly `safety_ack`, `scope_ack`;
 - safety only → `scope_ack` remains;
@@ -44,8 +46,8 @@ The actual candidate `apply.js` is byte-identical to C0034 and was executed in s
 
 ### Regression / business invariants
 
-- Home + Creator Hub + PC + Apply + YouTube + Editing Desktop/Mobile: 12/12 zero changed pixels;
-- target Rescue/Stream horizontal overflow: 0;
+- Home + Creator Hub + PC + Apply + Rescue + Stream Ready Desktop/Mobile: 12/12 zero changed pixels;
+- target YouTube/Editing horizontal overflow: 0;
 - application options: 23;
 - application links: 86;
 - prices: preserved;
@@ -54,11 +56,11 @@ The actual candidate `apply.js` is byte-identical to C0034 and was executed in s
 
 ## Current hashes
 
-- C0035 Candidate: `c9369108b2f1fb39df78583c23700c6bfe083f1f0e0a42bf6b054b2edd7a217c`
-- R31 Answer Pack: `71c3425d46424e3b8957502259421f5b6a4c5cd945c9860923a684f42181c41f`
-- C0035 Local Review V29: `2f67f47ea68bfee7d493fb4d7d87674374acbd7c3cdcf702b3ce5f9d8ef05edb`
-- C0035 Browser Evidence: `23cd3d4e4b7c2acc9dde0b625f807c405e35363ebef7c3fba58337ce06ace062`
-- A27 Handoff: `9ecb1ee6a1e36c3a96730225ee13057ef25ea5bca9bd1431265e78a4757e4e93`
+- C0036 Candidate: `ee9bda1f4dfa0ff47e2b155640250a63c270062a61d3c82981f6deb58e33ea87`
+- R32 Answer Pack: `b4a649b8bc7e5de76e85a9795ede06815dad5a4be286144f73bafe6c2d5802ff`
+- C0036 Local Review V30: `5cbb29fab73318899755dc675f851a1974a27ad9d3a8098069b8acf7c8c0f1f7`
+- C0036 Browser Evidence: `829dd2ab2b415f023bd0be11a7a28fa6f4710d204119b5fe6558246668830064`
+- A28 Handoff: `ef8d7a21fefec174ce8364bfc967b28395922e4e5a85dadecc3ab31f57bb69ac`
 
 ## Unverified
 
@@ -69,8 +71,8 @@ The actual candidate `apply.js` is byte-identical to C0034 and was executed in s
 
 ## Promotion boundary
 
-GitHub storage does not promote C0035. `/upgrade-auto` remains required before Active Control/Preview changes. Production remains HOLD.
+GitHub storage does not promote C0036. `/upgrade-auto` remains required before Active Control/Preview changes. Production remains HOLD.
 
 ## Next
 
-C0036 should extend the validated Brand Depth language to only YouTube + Editing creator-detail pages, preserving C0035 service pages, C0034 PC/Apply and the C0033 safety gate.
+C0037 audits the remaining utility/trust surfaces first: `game/`, `partners/`, `cases/`, `reviews/`, `policies/`, `diagnose/`, `404`. Build only where a material inconsistency is reproduced.
