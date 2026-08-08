@@ -1,64 +1,56 @@
-# NEXT ACTION — C0038 SITE-WIDE CONSISTENCY + PRODUCTION-BLOCKER AUDIT
+# NEXT ACTION — C0039 INTEGRATED PROMOTION-READINESS AUDIT
 
 ## Baseline
 
 - Active Control: R0003
 - Active Preview: C0009A D2
-- Current Review Candidate: C0037
-- C0037 SHA: `b560ed29d799548baf28b34fc9f0797268cf43eb3a5939705e33c13d5602a225`
-- Direct parent / immediate rollback: C0036
-- PC/Apply rollback: C0034
+- Current Review Candidate: C0038
+- C0038 SHA: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
+- Direct parent / immediate rollback: C0037
 - Safety invariant source: C0033
-- Brand-depth direction parent: C0032
 - Production: HOLD
 - Actual external URL Runtime: UNVERIFIED
 
-## C0037 conclusion to preserve
+## C0038 conclusion to preserve
 
-Remaining-surface audit classification:
-- game: MIGRATE → corrected in C0037
-- partners: KEEP
-- cases: KEEP
-- reviews: KEEP
-- policies: KEEP
-- diagnose: KEEP
-- 404: KEEP
+Site-wide blocker audit reproduced one material accessibility defect on Diagnose result completion.
 
-C0037 game primary actions are now one Cyan family. Non-target parity: 28/28 zero changed pixels.
-
-## C0038 scope
-
-Stop broad visual migration. Audit the whole candidate for reproduced blockers or high-value inconsistencies in:
-- functionality and form behavior;
-- trust / evidence integrity;
-- accessibility and keyboard/focus behavior;
-- routes, local references and fragments;
-- prices, service IDs and application routing;
-- responsive overflow and critical mobile density;
-- high-salience cross-page visual inconsistencies only.
-
-Build a C0038 Candidate only if a material defect is reproduced. Otherwise return `HOLD — 새 결론 없음` and do not mint a new design version.
-
-## Mandatory regression gate
-
-- C0037 game consistency preserved;
-- C0036 YouTube + Editing preserved;
-- C0035 Rescue + Stream Ready preserved;
-- C0034 PC + Apply preserved;
-- C0032 Home + Creator Hub preserved;
-- C0033 safety acknowledgement runtime remains mandatory;
-- application options 23;
-- application links 86;
+C0038 fixed only that transition:
+- valid result receives focus;
+- result is a named `region`;
+- `aria-live="polite"` / `aria-atomic="true"`;
+- native invalid-form focus remains intact;
+- Diagnose resting visual parity 2/2 zero changed pixels;
+- other 14 pages Desktop/Mobile 28/28 zero changed pixels;
+- C0033 safety gate PASS;
+- application options 23 / application links 86;
 - prices/service IDs/Apply URLs preserved;
-- changed target horizontal overflow zero.
+- Apply JS byte-identical to C0037.
+
+## C0039 scope
+
+Do not extend design further. Audit promotion readiness from Active Preview `C0009A D2` through current Review Candidate `C0038`.
+
+Required checks:
+- summarize the material lineage through C0038;
+- compare Active Preview → C0038 separately from direct-parent deltas;
+- identify unresolved Production blockers and unverified evidence;
+- verify latest Candidate business data, routes, local refs, focus/form behavior and responsive integrity;
+- prepare exact `/upgrade-auto` evidence if coherent;
+- do not promote automatically.
 
 ## Stop conditions
 
-- no new material defect or evidence;
-- decorative-only change;
-- repeated static checks with no new conclusion;
-- any safety/form, route, accessibility or business-data regression.
+- no new material defect/evidence → return a promotion-readiness HOLD/READY conclusion without creating a new design Candidate;
+- no decorative-only work;
+- no deploy/delete/website-source commit;
+- do not change Active Control/Preview without explicit `/upgrade-auto`.
 
-## Promotion boundary
+## Known unresolved evidence
 
-C0037 and any future C0038 build remain Review Candidates. Do not promote or deploy without `/upgrade-auto`.
+- External URL Browser Runtime: UNVERIFIED
+- Real mobile device: NOT_EXECUTED
+- Assistive technology: NOT_EXECUTED
+- User conversion test: NOT_EXECUTED
+- Payment: NOT_IMPLEMENTED
+- Production: HOLD
