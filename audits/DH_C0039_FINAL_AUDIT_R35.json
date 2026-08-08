@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "audit_id": "C0039_R35",
+  "site_candidate_created": false,
+  "active_d2": {
+    "file": "DH_SITE_DEPLOY_C0009A_ANCHOR_FIX_PREVIEW_D2.zip",
+    "sha256": "d799a0622159989afc7009d17d47d35a711ebcd3369ee760ec998b86c339b22e",
+    "crc": "PASS",
+    "entries": 36,
+    "unsafe_paths": []
+  },
+  "current_c0038": {
+    "file": "DH_SITE_CANDIDATE_C0038_DIAGNOSE_RESULT_FOCUS_REVIEW.zip",
+    "sha256": "b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114",
+    "crc": "PASS",
+    "entries": 161,
+    "unsafe_paths": []
+  },
+  "lineage_count": 23,
+  "lineage_crc_all_pass": true,
+  "lineage_final_audit_hash_matches": 22,
+  "active_to_current_delta_counts": {
+    "added": 125,
+    "removed": 0,
+    "changed": 20,
+    "unchanged": 16
+  },
+  "active_routes": 14,
+  "current_routes": 15,
+  "price_value_set_equal_active": true,
+  "application_options": 23,
+  "application_links": 86,
+  "service_ids": 23,
+  "static_failures": {
+    "missing_local_refs": [],
+    "broken_fragments": [],
+    "duplicate_ids": [],
+    "missing_alt": [],
+    "jsonld_errors": [],
+    "aria_ref_errors": [],
+    "blank_rel_errors": [],
+    "unlabeled_controls": [],
+    "empty_button_names": [],
+    "lang_errors": [],
+    "viewport_errors": [],
+    "h1_count_errors": {},
+    "skip_link_errors": []
+  },
+  "js_syntax_all_pass": true,
+  "css_braces_all_pass": true,
+  "browser_routes_viewports": 30,
+  "browser_overflow_count": 0,
+  "browser_page_error_count": 0,
+  "apply_runtime": {
+    "empty_count": 6,
+    "empty_focus": true,
+    "both_off_errors": ["safety_ack", "scope_ack"],
+    "both_off_result": false,
+    "preserved": true,
+    "safety_only_errors": ["scope_ack"],
+    "one_time_result": false,
+    "valid_result": true,
+    "summary_length": 415,
+    "overflow": false
+  },
+  "diagnose_runtime": {
+    "invalid_focus_name": "issue",
+    "hidden": false,
+    "focused": true,
+    "role": "region",
+    "labelledby": "diagnose-result-title",
+    "live": "polite",
+    "atomic": "true",
+    "tabindex": "-1",
+    "overflow": false
+  },
+  "preview_indexing_guard": {
+    "meta_noindex_all_routes": true,
+    "headers_noindex": true,
+    "robots_disallow_all": true
+  },
+  "external_executable_dependencies": 0,
+  "production_blockers": [
+    {"id":"EXTERNAL_PREVIEW_RUNTIME","status":"UNVERIFIED"},
+    {"id":"FINAL_PUBLICATION_IDENTITY_AND_TERMS","status":"HOLD"},
+    {"id":"PRODUCTION_INDEXING","status":"HOLD"},
+    {"id":"PRODUCTION_DOMAIN_CONFIRMATION","status":"USER_CONFIRMATION_REQUIRED"},
+    {"id":"REAL_DEVICE","status":"NOT_EXECUTED"},
+    {"id":"ASSISTIVE_TECHNOLOGY","status":"NOT_EXECUTED"},
+    {"id":"EXTERNAL_EVIDENCE_LINK_RUNTIME","status":"UNVERIFIED"},
+    {"id":"PAYMENT_EXECUTION","status":"NOT_IMPLEMENTED_OR_NOT_EVIDENCED"}
+  ],
+  "answer_pack": {
+    "sha256": "981885174a1658661e37f51ceeb2281a658c75a273c1346cc48e7fcf120a68f2",
+    "crc": "PASS",
+    "entries": 8
+  },
+  "answer_pack_reproducible": true,
+  "handoff_sha256": "10240f7483ea819aeb39a922a3b22b93eca3d20a69c211bcf5b0c318e46fae36",
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD",
+  "decision": "READY_FOR_EXPLICIT_UPGRADE_AUTO_PREVIEW_PROMOTION_PRODUCTION_HOLD"
+}
