@@ -7,10 +7,11 @@
 3. `ai/SOURCE_REGISTRY.json`
 4. `ai/SOURCE_OF_TRUTH.md`
 5. `continuation/PROJECT_SNAPSHOT_R36.md`
-6. `continuation/A32_HANDOFF.md`
+6. `continuation/A33_HANDOFF.md`
 7. `current-c0038/README.md`
 8. `audits/DH_C0038_UPGRADE_AUTO_AUDIT_R36.json`
-9. `ai/NEXT_ACTION.md`
+9. `delivery/C0040_VISUAL_REBASE_DELIVERY_BRIEF_V1.md`
+10. `ai/NEXT_ACTION.md`
 
 ## 현재 잠금 상태
 
@@ -19,14 +20,22 @@
 - Active SHA: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
 - Active Rollback: **C0009A D2**
 - Promotion: **EXECUTED_LOGICAL_PREVIEW_BASELINE**
-- External Preview deployment/runtime: **NOT_EXECUTED / UNVERIFIED**
+- External Preview deployment/runtime: **DEFERRED / UNVERIFIED**
 - Production: **HOLD**
 
 ## R36 promotion result
 
 Explicit `/upgrade-auto` was executed. Fresh gates passed: control lineage, Candidate CRC/unsafe path, deterministic rebuild, manifest/inventory, 15-route static validation, JS/CSS checks, 30/30 Desktop/Mobile Chromium, Apply safety/form runtime, Diagnose focus/semantics runtime, preserved price value set, 23 application options, 86 application links, 23 service IDs, and Preview noindex guard.
 
-C0038 is now the logical Active Preview Baseline. This does not deploy the website and does not clear Production blockers.
+C0038 remains the logical Active Preview Baseline. It is functionally valid and remains the rollback-safe source for the next design prototype.
+
+## New visual-direction evidence
+
+A fresh 15-route Desktop/Mobile visual review plus comparison against older Home visuals found a material visual-direction issue: the current shell is too uniformly dark, repetitive, and SaaS/AI-template-like. This does not invalidate C0038 functionality; it changes the next delivery priority.
+
+Decision: **DEFER_PREVIEW_DEPLOYMENT_PENDING_VISUAL_REBASE_PROTOTYPE**.
+
+Planned C0040 is a Delivery Plane prototype on exactly Home + PC + Apply. Use `delivery/C0040_VISUAL_REBASE_DELIVERY_BRIEF_V1.md`. Do not create or promote it from Control Plane.
 
 ## Rollback
 
@@ -39,4 +48,4 @@ External Preview Runtime, final business identity/terms, Production indexing fli
 
 ## Next work
 
-Do not create another design Candidate without new material evidence. The next meaningful step is a **manual Preview-only deployment of C0038 followed by actual URL Runtime QA**.
+Delivery Plane builds C0040 Home + PC + Apply visual rebase prototype from C0038, preserving all functional/business/accessibility invariants. External Preview deployment remains deferred until the A/B direction review passes.
