@@ -6,20 +6,21 @@
 2. [`AGENTS.md`](AGENTS.md)
 3. [`ai/SOURCE_REGISTRY.json`](ai/SOURCE_REGISTRY.json)
 4. [`ai/SOURCE_OF_TRUTH.md`](ai/SOURCE_OF_TRUTH.md)
-5. [`continuation/PROJECT_SNAPSHOT_R31.md`](continuation/PROJECT_SNAPSHOT_R31.md)
-6. [`continuation/A27_HANDOFF.md`](continuation/A27_HANDOFF.md)
-7. [`current-c0035/README.md`](current-c0035/README.md)
-8. [`current-c0035/BRAND_DEPTH_CONTRACT.md`](current-c0035/BRAND_DEPTH_CONTRACT.md)
+5. [`continuation/PROJECT_SNAPSHOT_R32.md`](continuation/PROJECT_SNAPSHOT_R32.md)
+6. [`continuation/A28_HANDOFF.md`](continuation/A28_HANDOFF.md)
+7. [`current-c0036/README.md`](current-c0036/README.md)
+8. [`current-c0036/CREATOR_DETAIL_BRAND_DEPTH_CONTRACT.md`](current-c0036/CREATOR_DETAIL_BRAND_DEPTH_CONTRACT.md)
 9. [`ai/NEXT_ACTION.md`](ai/NEXT_ACTION.md)
 
 ## 절대 혼동 금지
 
 - Active Control은 **R0003**이다.
 - Active Preview는 **C0009A D2**다.
-- **C0035는 Review Candidate이며 Active가 아니다.**
-- C0034는 C0035의 Direct Parent이자 즉시 Rollback이다.
-- C0033은 안전 확인 검증 수정본이며 해당 동작은 이후 Candidate의 필수 invariant다.
-- C0032는 Brand Depth 디자인 방향의 원형이다.
+- **C0036은 Review Candidate이며 Active가 아니다.**
+- C0035는 C0036의 Direct Parent이자 즉시 Rollback이다.
+- C0034는 PC + Apply Brand Depth rollback이다.
+- C0033은 안전 확인 검증 invariant의 원본이다.
+- C0032는 Brand Depth 방향 원형이다.
 - C0031은 초절제 디자인 Rollback이다.
 - C0022는 Functional Rollback이다.
 - `/upgrade-auto` 없이는 승격하지 않는다.
@@ -27,18 +28,19 @@
 - 실제 외부 URL Browser Runtime은 UNVERIFIED다.
 - 결제 기능은 구현되지 않았다.
 
-## C0035 핵심 결론
+## C0036 핵심 결론
 
-C0035는 `rescue/`와 `stream-ready/` 두 서비스 페이지만 선택적 Navy/Cyan Brand Depth로 확장했다.
+C0036은 `creator/youtube/`와 `creator/editing/` 두 Creator Detail 페이지만 선택적 Navy/Cyan Brand Depth로 확장했다.
 
-- Service trust heuristic: 80 → 87
-- Decision clarity heuristic: 84 → 88
-- Rescue mobile: 7,296px → 7,335px (+0.535%)
-- Stream Ready mobile: 7,295px → 7,224px (-0.973%)
-- 중간 시각 감사에서 Stream Ready 하단 Primary CTA의 기존 보라색 잔존을 발견해 최종 Candidate에서 Cyan 계열로 교정했다.
-- Home/Creator/PC/Apply/YouTube/Editing Desktop+Mobile: 12/12 zero changed pixels.
+- Creator-detail trust heuristic: 80 → 87
+- Package decision clarity: 84 → 88
+- Cross-page brand consistency: 82 → 90
+- YouTube mobile: 8,460px → 8,444px (-0.189%)
+- Editing mobile: 8,524px → 8,497px (-0.317%)
+- 기존 purple Creator/Editing primary CTA는 Cyan 계열로 통일했다.
+- Home/Creator Hub/PC/Apply/Rescue/Stream Desktop+Mobile: 12/12 zero changed pixels.
 - application options 23, application links 86, 가격, service IDs, Apply URLs 유지.
-- Apply JS는 C0034와 byte-identical.
+- Apply JS는 C0035와 byte-identical.
 
 ## C0033 안전 invariant
 
@@ -54,7 +56,11 @@ C0035는 `rescue/`와 `stream-ready/` 두 서비스 페이지만 선택적 Navy/
 
 ## 디자인 방향
 
-Brand Depth는 단순 장식 확장이 아니다. C0031의 정보 구조를 유지하면서 Hero proof, package decision, scope/readiness, pricing 같은 주요 결정 지점에만 깊이를 사용한다. Glow-heavy 버튼, 다색 Gradient, 독립 Card 남발, billboard typography로 돌아가지 않는다.
+Brand Depth는 장식 확장이 아니다. C0031 정보 구조를 유지하면서 Hero proof, package decision, pricing, route/result 같은 주요 결정 지점에만 깊이를 사용한다. Glow-heavy 버튼, 다색 Gradient, billboard typography, 독립 Card 남발로 돌아가지 않는다.
+
+## 다음 작업
+
+C0037은 `game/`, `partners/`, `cases/`, `reviews/`, `policies/`, `diagnose/`, `404`를 먼저 감사한다. Material inconsistency가 재현된 페이지에만 Candidate 변경을 허용한다.
 
 ## Binary 주의
 
