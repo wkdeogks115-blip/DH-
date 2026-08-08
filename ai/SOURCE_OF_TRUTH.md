@@ -4,63 +4,56 @@
 
 | Role | Current value | Status |
 |---|---|---|
-| Active Control | R0003 | LOCKED |
-| Active Preview | C0009A D2 | unchanged |
-| Current Review Candidate | C0038 | READY_FOR_EXPLICIT_UPGRADE_AUTO |
-| C0039 site Candidate | none | NOT_CREATED_NO_NEW_MATERIAL_DEFECT |
-| Direct parent / immediate rollback | C0037 | preserved |
-| PC/Apply rollback | C0034 | preserved |
-| Safety rollback / invariant source | C0033 | preserved |
-| Brand-depth direction parent | C0032 | preserved |
-| Secondary design rollback | C0031 | preserved |
-| Functional rollback | C0022 | preserved |
-| Latest Answer Pack | R35 | integrated promotion-readiness pack |
-| Latest Handoff | A31 | promotion-readiness handoff |
-| Promotion | NOT_EXECUTED | explicit `/upgrade-auto` required |
+| Active Control | **R0004** | PROMOTED |
+| Parent Control | R0003 | preserved |
+| Active Preview | **C0038** | ACTIVE_PREVIEW_NOT_DEPLOYED |
+| Active Preview SHA | `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114` | locked |
+| Active Rollback | C0009A D2 | ACTIVE_ROLLBACK_NOT_EXECUTED |
+| Previous Rollback | R0002 Runtime R1 | ARCHIVE_CANDIDATE |
+| Upgrade Audit | R36 | PASS |
+| Latest Handoff | A32 | current |
+| Promotion | EXECUTED_LOGICAL_PREVIEW_BASELINE | complete |
+| External Preview Runtime | UNVERIFIED | not deployed |
 | Production | HOLD | blockers remain |
 
-## R35 integrated conclusion
+## `/upgrade-auto` result
 
-C0039 was executed as an **audit ID only**. No C0039 site-design Candidate was created because the integrated audit found no new material site defect after C0038.
+C0038 was revalidated against Active Control R0003 / Active Preview C0009A D2 and passed the explicit promotion gate.
 
-Decision:
+Fresh R36 evidence:
 
-`READY_FOR_EXPLICIT_UPGRADE_AUTO_PREVIEW_PROMOTION_PRODUCTION_HOLD`
-
-Current promotion target remains C0038:
-
-- artifact SHA-256: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
-- Active D2 SHA-256: `d799a0622159989afc7009d17d47d35a711ebcd3369ee760ec998b86c339b22e`
-
-## Fresh integrated evidence
-
-- accepted C0016→C0038 lineage artifacts: 23, CRC PASS
-- final-audit hash match: 23/23
-- superseded C0033 PC/APPLY intermediate: excluded
-- Active runtime routes: 14
-- Current runtime routes: 15
-- price value set vs Active D2: equal
+- R0001→R0002→R0003 control lineage: PASS
+- C0038 SHA/CRC: PASS
+- unsafe ZIP paths: 0
+- deterministic rebuild: PASS
+- manifest / inventory: PASS
+- runtime HTML routes: 15
+- local refs/fragments/IDs/Alt/JSON-LD/ARIA/form labels: PASS
+- JS syntax: 9/9
+- CSS structure: 19/19
+- 15 routes × Desktop/Mobile Chromium: PASS 30/30
+- horizontal overflow: 0
+- browser page errors: 0
+- Apply safety/form runtime: PASS
+- Diagnose focus/semantics runtime: PASS
+- price value set vs previous Active D2: preserved
 - application options: 23
 - application links: 86
 - service IDs: 23
-- current C0038 ZIP CRC: PASS
-- unsafe ZIP paths: 0
-- local refs/fragments/duplicate IDs/Alt/JSON-LD/ARIA refs/form labels: PASS
-- JS syntax: PASS
-- CSS structural checks: PASS
-- 15 routes × Desktop/Mobile Chromium: PASS 30/30
-- horizontal overflow: 0
-- render page errors: 0
-- Apply safety/form Runtime: PASS
-- Diagnose completion focus/semantics Runtime: PASS
-- external executable script/stylesheet dependencies: 0
+- external executable dependencies: 0
 - Preview noindex guard: PASS
 
-## Preview vs Production
+Decision: `PASS_PROMOTE_C0038_TO_ACTIVE_PREVIEW_R0004_PRODUCTION_HOLD`.
 
-C0038 is ready for an explicit **logical Preview Baseline promotion attempt** only.
+## Rollback transition
 
-Production remains HOLD because the following evidence/gates are unresolved:
+- C0038 → `SITE_PREVIEW_BASELINE_ACTIVE`
+- C0009A D2 → `SITE_ROLLBACK_ACTIVE`
+- R0002 Runtime R1 → `ARCHIVE_CANDIDATE`
+
+No external website deployment, website-source commit/push, Production release or deletion was executed by this promotion.
+
+## Production HOLD
 
 - deployed external Preview Runtime: UNVERIFIED
 - final business identity/disclosure and final terms: HOLD
@@ -71,19 +64,15 @@ Production remains HOLD because the following evidence/gates are unresolved:
 - external Review/Case evidence-link Runtime: UNVERIFIED
 - payment execution/integration evidence: NOT_IMPLEMENTED_OR_NOT_EVIDENCED
 
-The current Policies page itself retains a `FINAL PUBLICATION GATE`; do not silently mark that PASS.
+The current Preview package intentionally retains noindex. Do not interpret R0004 as Production approval.
 
-## Current hashes
+## Canonical hashes
 
-- C0038 Candidate: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
-- R35 Answer Pack: `6ace60c7b8bd5770173e7eec1f7ca18747ee808201cee4d0c03bdb25ac2448e1`
-- R35 Audit Markdown: `49b8cda07247a74f6ce9195d235a906ed474151f5cf2e63b648910f40a43b402`
-- R35 Lineage Ledger: `635596696c77912884503e8ad9fd4a57a81bb369f4d64e9a74ab53d14e2e4414`
-- R35 Final Audit JSON: `eda70aef87f9d6ba026e68c43dfd2eabfa6069988a17dfe41a1057b2eb26be83`
-- A31 Handoff: `10240f7483ea819aeb39a922a3b22b93eca3d20a69c211bcf5b0c318e46fae36`
+- R0004 Source-ready bundle: `f77dfca2f99fb32d5c94fb5175ae5c2fe18d0dea964e65e960ad78188ad4f963`
+- C0038 Active Preview: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
+- C0009A D2 Rollback: `d799a0622159989afc7009d17d47d35a711ebcd3369ee760ec998b86c339b22e`
+- R36 Upgrade Audit: `030aabab158c0b358e446df6f657bf522072a9d4e5359fcf7e2d26faa6e12b97`
 
-## Promotion boundary
+## Next state-changing scope
 
-GitHub storage does not promote C0038. `/upgrade-auto` remains required before Active Control/Preview changes.
-
-If the same C0038 artifact and the same evidence are reviewed again without new input, return `HOLD — 새 결론 없음` rather than creating another design Candidate.
+Manually deploy C0038 to a **Preview environment only**, then run actual URL Runtime QA. Until a deployed Preview URL or other new material evidence exists, do not create another design Candidate.
