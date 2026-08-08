@@ -9,8 +9,10 @@
 | Current Review Candidate | C0038 | READY_FOR_EXPLICIT_UPGRADE_AUTO |
 | C0039 site Candidate | none | NOT_CREATED_NO_NEW_MATERIAL_DEFECT |
 | Direct parent / immediate rollback | C0037 | preserved |
+| PC/Apply rollback | C0034 | preserved |
 | Safety rollback / invariant source | C0033 | preserved |
 | Brand-depth direction parent | C0032 | preserved |
+| Secondary design rollback | C0031 | preserved |
 | Functional rollback | C0022 | preserved |
 | Latest Answer Pack | R35 | integrated promotion-readiness pack |
 | Latest Handoff | A31 | promotion-readiness handoff |
@@ -33,6 +35,7 @@ Current promotion target remains C0038:
 ## Fresh integrated evidence
 
 - accepted C0016→C0038 lineage artifacts: 23, CRC PASS
+- final-audit hash match: 23/23
 - superseded C0033 PC/APPLY intermediate: excluded
 - Active runtime routes: 14
 - Current runtime routes: 15
@@ -73,9 +76,10 @@ The current Policies page itself retains a `FINAL PUBLICATION GATE`; do not sile
 ## Current hashes
 
 - C0038 Candidate: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
-- R35 Answer Pack: `981885174a1658661e37f51ceeb2281a658c75a273c1346cc48e7fcf120a68f2`
+- R35 Answer Pack: `6ace60c7b8bd5770173e7eec1f7ca18747ee808201cee4d0c03bdb25ac2448e1`
 - R35 Audit Markdown: `49b8cda07247a74f6ce9195d235a906ed474151f5cf2e63b648910f40a43b402`
-- R35 Final Audit JSON: `d1646310560ee792958071be12102fe83c1001694198057b46114045df12f36f`
+- R35 Lineage Ledger: `635596696c77912884503e8ad9fd4a57a81bb369f4d64e9a74ab53d14e2e4414`
+- R35 Final Audit JSON: `eda70aef87f9d6ba026e68c43dfd2eabfa6069988a17dfe41a1057b2eb26be83`
 - A31 Handoff: `10240f7483ea819aeb39a922a3b22b93eca3d20a69c211bcf5b0c318e46fae36`
 
 ## Promotion boundary
