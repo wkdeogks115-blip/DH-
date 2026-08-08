@@ -1,4 +1,4 @@
-# NEXT ACTION — C0039 INTEGRATED PROMOTION-READINESS AUDIT
+# NEXT ACTION — EXPLICIT C0038 PREVIEW PROMOTION
 
 ## Baseline
 
@@ -6,51 +6,53 @@
 - Active Preview: C0009A D2
 - Current Review Candidate: C0038
 - C0038 SHA: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
-- Direct parent / immediate rollback: C0037
-- Safety invariant source: C0033
+- Latest integrated audit: R35
+- Latest Handoff: A31
 - Production: HOLD
-- Actual external URL Runtime: UNVERIFIED
 
-## C0038 conclusion to preserve
+## R35 conclusion
 
-Site-wide blocker audit reproduced one material accessibility defect on Diagnose result completion.
+C0039 integrated promotion-readiness audit is complete.
 
-C0038 fixed only that transition:
-- valid result receives focus;
-- result is a named `region`;
-- `aria-live="polite"` / `aria-atomic="true"`;
-- native invalid-form focus remains intact;
-- Diagnose resting visual parity 2/2 zero changed pixels;
-- other 14 pages Desktop/Mobile 28/28 zero changed pixels;
-- C0033 safety gate PASS;
-- application options 23 / application links 86;
-- prices/service IDs/Apply URLs preserved;
-- Apply JS byte-identical to C0037.
+- no C0039 site Candidate was created;
+- no new material site defect was reproduced after C0038;
+- accepted C0016→C0038 lineage artifacts: 23, CRC PASS;
+- 15 routes × Desktop/Mobile Chromium: PASS 30/30;
+- horizontal overflow 0;
+- Apply safety/form Runtime PASS;
+- Diagnose focus/semantics Runtime PASS;
+- price value set equals Active D2;
+- application options 23 / application links 86 / service IDs 23;
+- Preview noindex guard PASS;
+- external executable dependencies 0.
 
-## C0039 scope
+Decision:
 
-Do not extend design further. Audit promotion readiness from Active Preview `C0009A D2` through current Review Candidate `C0038`.
+`READY_FOR_EXPLICIT_UPGRADE_AUTO_PREVIEW_PROMOTION_PRODUCTION_HOLD`
 
-Required checks:
-- summarize the material lineage through C0038;
-- compare Active Preview → C0038 separately from direct-parent deltas;
-- identify unresolved Production blockers and unverified evidence;
-- verify latest Candidate business data, routes, local refs, focus/form behavior and responsive integrity;
-- prepare exact `/upgrade-auto` evidence if coherent;
-- do not promote automatically.
+## Next state-changing command
 
-## Stop conditions
+`/upgrade-auto`
 
-- no new material defect/evidence → return a promotion-readiness HOLD/READY conclusion without creating a new design Candidate;
-- no decorative-only work;
-- no deploy/delete/website-source commit;
-- do not change Active Control/Preview without explicit `/upgrade-auto`.
+The command must target **C0038**, not a new C0039 Candidate.
 
-## Known unresolved evidence
+## Promotion boundary
 
-- External URL Browser Runtime: UNVERIFIED
-- Real mobile device: NOT_EXECUTED
-- Assistive technology: NOT_EXECUTED
-- User conversion test: NOT_EXECUTED
-- Payment: NOT_IMPLEMENTED
-- Production: HOLD
+If `/upgrade-auto` passes, promote C0038 logically as the next Active Preview Baseline and preserve the prior Active Preview as rollback according to Control Plane rules.
+
+Do not claim deployed Preview Runtime or Production PASS.
+
+## Production blockers to preserve
+
+- external deployed Preview Runtime: UNVERIFIED
+- final business identity/disclosure + final terms: HOLD
+- Production indexing flip: HOLD
+- final Production domain: USER_CONFIRMATION_REQUIRED
+- real physical device: NOT_EXECUTED
+- real assistive technology: NOT_EXECUTED
+- external evidence-link Runtime: UNVERIFIED
+- payment execution/integration evidence: NOT_IMPLEMENTED_OR_NOT_EVIDENCED
+
+## Stop condition
+
+If the user sends `계속 진행` again without new evidence or `/upgrade-auto`, do not create another Candidate. Return `HOLD — 새 결론 없음` and point to `/upgrade-auto`.
