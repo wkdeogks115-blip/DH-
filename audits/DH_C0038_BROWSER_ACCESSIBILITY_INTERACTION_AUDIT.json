@@ -1,0 +1,12 @@
+{
+  "schema_version":1,
+  "repository_record":true,
+  "local_artifact_sha256":"c51d3694b7523d51cf871e0a7b3d40ac357bb061e941c542be2435e8591f23ab",
+  "parent_defect":{"valid_result_focus":false,"result_role":null,"aria_labelledby":null,"aria_live":null,"aria_atomic":null,"tabindex":null},
+  "candidate_fix":{"valid_result_focus":true,"result_role":"region","aria_labelledby":"diagnose-result-title","aria_live":"polite","aria_atomic":"true","tabindex":"-1","invalid_native_focus":{"tag":"INPUT","name":"issue"}},
+  "mandatory_c0033_safety_gate":{"empty_error_count":6,"error_summary_focus":"PASS","both_unchecked_errors":["safety_ack","scope_ack"],"both_unchecked_summary":false,"input_preservation":"PASS","safety_only_errors":["scope_ack"],"one_time_rejected":true,"both_checked_summary":"PASS","mobile_overflow":0},
+  "diagnose_static_parity":"PASS_2_OF_2_ZERO_CHANGED_PIXELS",
+  "non_target_parity":"PASS_28_OF_28_ZERO_CHANGED_PIXELS",
+  "actual_external_url_runtime":"UNVERIFIED",
+  "decision":"PASS_PARENT_DIAGNOSE_FOCUS_DEFECT_REPRODUCED_CANDIDATE_FIXED"
+}
