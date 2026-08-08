@@ -1,58 +1,33 @@
-# NEXT ACTION — EXPLICIT C0038 PREVIEW PROMOTION
+# NEXT ACTION — PREVIEW RUNTIME QA
 
-## Baseline
+## Current state
 
-- Active Control: R0003
-- Active Preview: C0009A D2
-- Current Review Candidate: C0038
-- C0038 SHA: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
-- Latest integrated audit: R35
-- Latest Handoff: A31
+- Active Control: R0004
+- Active Preview: C0038
+- Active SHA: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
+- Active Rollback: C0009A D2
+- Upgrade Audit: R36 PASS
+- Promotion: EXECUTED_LOGICAL_PREVIEW_BASELINE
+- External Preview Runtime: UNVERIFIED
 - Production: HOLD
 
-## R35 conclusion
+## Next meaningful action
 
-C0039 integrated promotion-readiness audit is complete.
+Deploy the C0038 Active Artifact to a **Preview environment only** using the user's normal hosting workflow, then provide the deployed Preview URL for actual Runtime QA.
 
-- no C0039 site Candidate was created;
-- no new material site defect was reproduced after C0038;
-- accepted C0016→C0038 lineage artifacts: 23, CRC PASS;
-- 15 routes × Desktop/Mobile Chromium: PASS 30/30;
-- horizontal overflow 0;
-- Apply safety/form Runtime PASS;
-- Diagnose focus/semantics Runtime PASS;
-- price value set equals Active D2;
-- application options 23 / application links 86 / service IDs 23;
-- Preview noindex guard PASS;
-- external executable dependencies 0.
+Do not deploy to Production. Do not remove noindex/robots protections yet.
 
-Decision:
+## Runtime QA scope after URL exists
 
-`READY_FOR_EXPLICIT_UPGRADE_AUTO_PREVIEW_PROMOTION_PRODUCTION_HOLD`
-
-## Next state-changing command
-
-`/upgrade-auto`
-
-The command must target **C0038**, not a new C0039 Candidate.
-
-## Promotion boundary
-
-If `/upgrade-auto` passes, promote C0038 logically as the next Active Preview Baseline and preserve the prior Active Preview as rollback according to Control Plane rules.
-
-Do not claim deployed Preview Runtime or Production PASS.
-
-## Production blockers to preserve
-
-- external deployed Preview Runtime: UNVERIFIED
-- final business identity/disclosure + final terms: HOLD
-- Production indexing flip: HOLD
-- final Production domain: USER_CONFIRMATION_REQUIRED
-- real physical device: NOT_EXECUTED
-- real assistive technology: NOT_EXECUTED
-- external evidence-link Runtime: UNVERIFIED
-- payment execution/integration evidence: NOT_IMPLEMENTED_OR_NOT_EVIDENCED
+- all public routes open successfully;
+- local navigation and fragments;
+- mobile/desktop layout;
+- application flow and safety acknowledgements;
+- Diagnose result focus/semantics;
+- external contact/evidence links;
+- analytics/consent behavior where applicable;
+- noindex/robots headers remain correct for Preview.
 
 ## Stop condition
 
-If the user sends `계속 진행` again without new evidence or `/upgrade-auto`, do not create another Candidate. Return `HOLD — 새 결론 없음` and point to `/upgrade-auto`.
+Without a deployed Preview URL or other new material evidence, do not create a new site Candidate. Keep Production HOLD.
