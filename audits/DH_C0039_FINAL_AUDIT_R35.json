@@ -18,7 +18,7 @@
   },
   "lineage_count": 23,
   "lineage_crc_all_pass": true,
-  "lineage_final_audit_hash_matches": 22,
+  "lineage_final_audit_hash_matches": 23,
   "active_to_current_delta_counts": {
     "added": 125,
     "removed": 0,
@@ -91,7 +91,7 @@
     {"id":"PAYMENT_EXECUTION","status":"NOT_IMPLEMENTED_OR_NOT_EVIDENCED"}
   ],
   "answer_pack": {
-    "sha256": "981885174a1658661e37f51ceeb2281a658c75a273c1346cc48e7fcf120a68f2",
+    "sha256": "6ace60c7b8bd5770173e7eec1f7ca18747ee808201cee4d0c03bdb25ac2448e1",
     "crc": "PASS",
     "entries": 8
   },
