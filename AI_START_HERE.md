@@ -6,19 +6,19 @@
 2. [`AGENTS.md`](AGENTS.md)
 3. [`ai/SOURCE_REGISTRY.json`](ai/SOURCE_REGISTRY.json)
 4. [`ai/SOURCE_OF_TRUTH.md`](ai/SOURCE_OF_TRUTH.md)
-5. [`continuation/PROJECT_SNAPSHOT_R33.md`](continuation/PROJECT_SNAPSHOT_R33.md)
-6. [`continuation/A29_HANDOFF.md`](continuation/A29_HANDOFF.md)
-7. [`current-c0037/README.md`](current-c0037/README.md)
-8. [`current-c0037/GAME_BRAND_CONSISTENCY_CONTRACT.md`](current-c0037/GAME_BRAND_CONSISTENCY_CONTRACT.md)
+5. [`continuation/PROJECT_SNAPSHOT_R34.md`](continuation/PROJECT_SNAPSHOT_R34.md)
+6. [`continuation/A30_HANDOFF.md`](continuation/A30_HANDOFF.md)
+7. [`current-c0038/README.md`](current-c0038/README.md)
+8. [`current-c0038/DIAGNOSE_RESULT_FOCUS_CONTRACT.md`](current-c0038/DIAGNOSE_RESULT_FOCUS_CONTRACT.md)
 9. [`ai/NEXT_ACTION.md`](ai/NEXT_ACTION.md)
 
 ## 절대 혼동 금지
 
 - Active Control은 **R0003**이다.
 - Active Preview는 **C0009A D2**다.
-- **C0037은 Review Candidate이며 Active가 아니다.**
-- C0036은 C0037의 Direct Parent이자 즉시 Rollback이다.
-- C0034는 PC + Apply Brand Depth rollback이다.
+- **C0038은 Review Candidate이며 Active가 아니다.**
+- C0037은 C0038의 Direct Parent이자 즉시 Rollback이다.
+- C0034는 PC + Apply rollback이다.
 - C0033은 안전 확인 검증 invariant의 원본이다.
 - C0032는 Brand Depth 방향 원형이다.
 - C0031은 초절제 디자인 Rollback이다.
@@ -28,45 +28,40 @@
 - 실제 외부 URL Browser Runtime은 UNVERIFIED다.
 - 결제 기능은 구현되지 않았다.
 
-## C0037 핵심 결론
+## C0038 핵심 결론
 
-남은 7개 utility/trust surface를 먼저 감사했다.
+C0037 이후 광범위한 디자인 확장은 중단했다. C0038은 사이트 전체 Production-Blocker 감사를 수행했고, `diagnose/`에서 실제 접근성 Material Delta 한 건을 재현했다.
 
-- `game/`: **MIGRATE** — 한 페이지에 Orange / Mint / Cyan 3계열 Primary Action이 동시에 존재해 현재 단일 Cyan 브랜드 규칙과 충돌했다.
-- `partners/`: KEEP
-- `cases/`: KEEP
-- `reviews/`: KEEP
-- `policies/`: KEEP
-- `diagnose/`: KEEP
-- `404`: KEEP
+Parent C0037에서는 유효한 진단 결과가 표시돼도 keyboard focus가 `추천 범위 확인` 제출 버튼에 남았고, 결과 영역에 named region/live semantics가 없었다.
 
-따라서 C0037은 `game/` 한 페이지만 수정했다.
+C0038은 Diagnose 결과에만 다음을 추가했다.
 
-- Game primary action: Cyan family PASS
-- Game mobile height: 6,444px → 6,384px (-0.931%)
+- `role="region"`
+- `aria-labelledby="diagnose-result-title"`
+- `aria-live="polite"`
+- `aria-atomic="true"`
+- `tabindex="-1"`
+- 유효 결과 생성 직후 `focus({preventScroll:true})`
+
+실제 self-contained Chromium 결과:
+- Parent valid result focus defect: REPRODUCED
+- Candidate result focus: PASS
+- Candidate result semantics: PASS
+- 필수 항목 누락 시 native browser focus: PASS
+- Diagnose resting visual parity: 2/2 zero changed pixels
 - 다른 14페이지 Desktop/Mobile: 28/28 zero changed pixels
-- application options 23, application links 86, 가격, service IDs, Apply URLs 유지
-- Apply JS는 C0036과 byte-identical
-
-## C0033 안전 invariant
-
-실제 Candidate `apply.js`를 self-contained Chromium에서 재실행했다.
-
-- 빈 신청서: 오류 6개 + 오류요약 Focus PASS
-- 안전 확인 2개 미체크: `safety_ack`, `scope_ack` 오류 + 요약 차단
-- safety만 체크: `scope_ack` 오류 유지
-- 가능한 시간 1개: 차단
-- 차단 후 입력값 유지
-- 안전 확인 2개 + 가능한 시간 2개: 요약 생성
-- 모바일 가로 Overflow 0
+- C0033 안전 invariant: PASS
+- application options 23 / application links 86
+- 가격, service IDs, Apply URLs 유지
+- Apply JS는 C0037과 byte-identical
 
 ## 디자인 방향
 
-광범위한 디자인 마이그레이션은 C0037에서 중단한다. 앞으로는 사이트 전체를 감사하고 실제 기능·신뢰·접근성·Route·Data 또는 눈에 띄는 시각 결함이 재현된 경우에만 Candidate를 만든다.
+추가 광범위 디자인 마이그레이션은 하지 않는다. 앞으로는 실제 기능·신뢰·접근성·Route·Data 결함이 재현될 때만 별도 Candidate를 만든다.
 
 ## 다음 작업
 
-C0038은 **site-wide consistency + production-blocker audit**이다. 장식 목적 변경은 금지한다.
+C0039는 **통합 승격 준비 감사**다. Active Preview `C0009A D2`와 최신 통합 Review Candidate `C0038` 사이의 전체 Material Delta와 Production blocker를 검증한다. 새 결함이 없으면 새 디자인 Candidate를 만들지 않는다. `/upgrade-auto` 없이는 승격하지 않는다.
 
 ## Binary 주의
 
