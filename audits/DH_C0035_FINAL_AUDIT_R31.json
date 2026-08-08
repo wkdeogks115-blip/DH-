@@ -1,0 +1,33 @@
+{
+  "schema_version":2,
+  "candidate":{"sha256":"c9369108b2f1fb39df78583c23700c6bfe083f1f0e0a42bf6b054b2edd7a217c","crc":"PASS","entries":150},
+  "candidate_reproducible":true,
+  "local_review":{"sha256":"2f67f47ea68bfee7d493fb4d7d87674374acbd7c3cdcf702b3ce5f9d8ef05edb","crc":"PASS"},
+  "visual_evidence":{"sha256":"23cd3d4e4b7c2acc9dde0b625f807c405e35363ebef7c3fba58337ce06ace062","crc":"PASS"},
+  "answer_pack":{"sha256":"71c3425d46424e3b8957502259421f5b6a4c5cd945c9860923a684f42181c41f","crc":"PASS"},
+  "intermediate_visual_issue":"STREAM_READY_PURPLE_PRIMARY_CTA_CORRECTED",
+  "target_primary_accent_family":"CYAN_PASS",
+  "mandatory_c0033_safety_gate":{
+    "empty":{"count":6,"focused":true},
+    "both_off":{"errors":["safety_ack","scope_ack"],"result_visible":false,"preserved":true},
+    "safety_only":{"errors":["scope_ack"]},
+    "one_time":{"rejected":true},
+    "valid":{"result_visible":true,"overflow":false}
+  },
+  "non_target_parity":"PASS_12_OF_12_ZERO_CHANGED_PIXELS",
+  "mobile_height_delta_pct":{"rescue":0.535,"stream_ready":-0.973},
+  "application_options":23,
+  "application_links":86,
+  "prices_equal_parent":true,
+  "service_ids_equal_parent":true,
+  "apply_urls_equal_parent":true,
+  "apply_js_byte_equal_parent":true,
+  "horizontal_overflow":[],
+  "actual_external_url_runtime":"UNVERIFIED",
+  "real_device":"NOT_EXECUTED",
+  "assistive_technology":"NOT_EXECUTED",
+  "user_conversion_test":"NOT_EXECUTED",
+  "promotion":"NOT_EXECUTED",
+  "production":"HOLD",
+  "decision":"PASS_R31_C0035_READY_NO_PROMOTION"
+}
