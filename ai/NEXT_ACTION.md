@@ -1,50 +1,58 @@
-# NEXT ACTION — C0036 YOUTUBE + EDITING BRAND-DEPTH EXTENSION
+# NEXT ACTION — C0037 REMAINING SURFACE AUDIT
 
 ## Baseline
 
 - Active Control: R0003
 - Active Preview: C0009A D2
-- Current Review Candidate: C0035
-- C0035 SHA: `c9369108b2f1fb39df78583c23700c6bfe083f1f0e0a42bf6b054b2edd7a217c`
-- Direct parent / immediate rollback: C0034
+- Current Review Candidate: C0036
+- C0036 SHA: `ee9bda1f4dfa0ff47e2b155640250a63c270062a61d3c82981f6deb58e33ea87`
+- Direct parent / immediate rollback: C0035
+- PC/Apply rollback: C0034
 - Safety invariant source: C0033
 - Brand-depth direction parent: C0032
 - Production: HOLD
 - Actual external URL Runtime: UNVERIFIED
 
-## C0036 scope
+## C0037 scope
 
-Only:
-- `creator/youtube/`
-- `creator/editing/`
+Audit first, do not migrate blindly:
+- `game/`
+- `partners/`
+- `cases/`
+- `reviews/`
+- `policies/`
+- `diagnose/`
+- `404`
 
-Use the validated C0032/C0034/C0035 design language:
-- preserve C0031 information hierarchy;
-- selective navy/cyan depth only at major decision anchors;
-- one strong primary accent family;
-- grouped decision/pricing surfaces;
-- avoid bright multi-color gradients, glow-heavy buttons, billboard typography and independent-card repetition.
+Classify each surface as:
+- KEEP
+- MINOR_FIX
+- MIGRATE
+- UNVERIFIED
+
+Build a new Candidate only where a material task, trust, accessibility or visual inconsistency is actually reproduced.
 
 ## Mandatory regression gate
 
+- C0036 YouTube + Editing unchanged;
 - C0035 Rescue + Stream Ready unchanged;
 - C0034 PC + Apply unchanged;
 - C0032 Home + Creator Hub unchanged;
 - C0033 safety acknowledgement runtime remains mandatory;
-- non-target Desktop/Mobile pixel comparison: zero changed pixels;
 - application options 23;
 - application links 86;
 - prices/service IDs/Apply URLs preserved;
-- target horizontal overflow zero.
+- non-target Desktop/Mobile pixel parity zero;
+- any changed target horizontal overflow zero.
 
 ## Stop conditions
 
-- Creator-detail pages become visually heavier without clearer decisions;
-- color identity becomes multi-accent again;
+- no material inconsistency is found → `HOLD — 새 결론 없음`;
+- change is decorative only;
+- multi-accent identity returns;
 - any C0033 safety behavior regression;
-- any non-target visual regression;
-- accessibility or route/data regression.
+- accessibility, route or business-data regression.
 
 ## Promotion boundary
 
-C0035/C0036 remain Review Candidates. Do not promote or deploy without `/upgrade-auto`.
+C0036 and any future C0037 build remain Review Candidates. Do not promote or deploy without `/upgrade-auto`.
