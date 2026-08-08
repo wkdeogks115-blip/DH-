@@ -6,62 +6,62 @@
 2. [`AGENTS.md`](AGENTS.md)
 3. [`ai/SOURCE_REGISTRY.json`](ai/SOURCE_REGISTRY.json)
 4. [`ai/SOURCE_OF_TRUTH.md`](ai/SOURCE_OF_TRUTH.md)
-5. [`continuation/PROJECT_SNAPSHOT_R34.md`](continuation/PROJECT_SNAPSHOT_R34.md)
-6. [`continuation/A30_HANDOFF.md`](continuation/A30_HANDOFF.md)
+5. [`continuation/PROJECT_SNAPSHOT_R35.md`](continuation/PROJECT_SNAPSHOT_R35.md)
+6. [`continuation/A31_HANDOFF.md`](continuation/A31_HANDOFF.md)
 7. [`current-c0038/README.md`](current-c0038/README.md)
-8. [`current-c0038/DIAGNOSE_RESULT_FOCUS_CONTRACT.md`](current-c0038/DIAGNOSE_RESULT_FOCUS_CONTRACT.md)
+8. [`current-c0038/PROMOTION_READINESS_R35.md`](current-c0038/PROMOTION_READINESS_R35.md)
 9. [`ai/NEXT_ACTION.md`](ai/NEXT_ACTION.md)
 
 ## 절대 혼동 금지
 
 - Active Control은 **R0003**이다.
 - Active Preview는 **C0009A D2**다.
-- **C0038은 Review Candidate이며 Active가 아니다.**
-- C0037은 C0038의 Direct Parent이자 즉시 Rollback이다.
-- C0034는 PC + Apply rollback이다.
+- **C0038은 아직 Review Candidate이며 Active가 아니다.**
+- C0039 사이트 Candidate는 만들지 않았다. C0039는 통합 승격 준비 Audit ID다.
+- C0037은 C0038 Direct Parent/즉시 Rollback이다.
 - C0033은 안전 확인 검증 invariant의 원본이다.
-- C0032는 Brand Depth 방향 원형이다.
-- C0031은 초절제 디자인 Rollback이다.
-- C0022는 Functional Rollback이다.
 - `/upgrade-auto` 없이는 승격하지 않는다.
 - Production은 HOLD다.
-- 실제 외부 URL Browser Runtime은 UNVERIFIED다.
-- 결제 기능은 구현되지 않았다.
+- 실제 외부 Preview URL Runtime은 UNVERIFIED다.
 
-## C0038 핵심 결론
+## R35 통합 결론
 
-C0037 이후 광범위한 디자인 확장은 중단했다. C0038은 사이트 전체 Production-Blocker 감사를 수행했고, `diagnose/`에서 실제 접근성 Material Delta 한 건을 재현했다.
+Active Preview `C0009A D2`부터 현재 `C0038`까지 승격 준비 감사를 새로 실행했다.
 
-Parent C0037에서는 유효한 진단 결과가 표시돼도 keyboard focus가 `추천 범위 확인` 제출 버튼에 남았고, 결과 영역에 named region/live semantics가 없었다.
+- accepted C0016→C0038 lineage artifacts: 23, CRC PASS
+- superseded `C0033_PC_APPLY` intermediate: lineage에서 제외
+- Active runtime routes 14 → Current 15
+- 가격 value set: Active D2와 동일
+- application options 23
+- application links 86
+- service IDs 23
+- 15 routes × Desktop/Mobile Chromium: PASS 30/30
+- horizontal overflow 0
+- page errors 0
+- static local refs/fragments/IDs/Alt/JSON-LD/ARIA/form labels PASS
+- Apply safety/form Runtime PASS
+- Diagnose result focus/semantics Runtime PASS
+- external executable script/stylesheet dependencies 0
+- Preview noindex guard PASS
 
-C0038은 Diagnose 결과에만 다음을 추가했다.
+판정: **`READY_FOR_EXPLICIT_UPGRADE_AUTO_PREVIEW_PROMOTION_PRODUCTION_HOLD`**.
 
-- `role="region"`
-- `aria-labelledby="diagnose-result-title"`
-- `aria-live="polite"`
-- `aria-atomic="true"`
-- `tabindex="-1"`
-- 유효 결과 생성 직후 `focus({preventScroll:true})`
+즉 C0038은 명시적 `/upgrade-auto`에 제출할 준비가 됐지만, Production 승인은 아니다.
 
-실제 self-contained Chromium 결과:
-- Parent valid result focus defect: REPRODUCED
-- Candidate result focus: PASS
-- Candidate result semantics: PASS
-- 필수 항목 누락 시 native browser focus: PASS
-- Diagnose resting visual parity: 2/2 zero changed pixels
-- 다른 14페이지 Desktop/Mobile: 28/28 zero changed pixels
-- C0033 안전 invariant: PASS
-- application options 23 / application links 86
-- 가격, service IDs, Apply URLs 유지
-- Apply JS는 C0037과 byte-identical
+## Production HOLD 항목
 
-## 디자인 방향
-
-추가 광범위 디자인 마이그레이션은 하지 않는다. 앞으로는 실제 기능·신뢰·접근성·Route·Data 결함이 재현될 때만 별도 Candidate를 만든다.
+- 실제 배포 Preview Runtime: UNVERIFIED
+- 사업자 신원정보/최종 공개정보/최종 약관: HOLD
+- Production noindex 해제: HOLD
+- 최종 Production 도메인: USER_CONFIRMATION_REQUIRED
+- 실제 물리 기기: NOT_EXECUTED
+- 실제 보조기술/스크린리더: NOT_EXECUTED
+- 외부 후기/사례 증거 링크 Runtime: UNVERIFIED
+- 실제 결제 실행/통합 증거: NOT_IMPLEMENTED_OR_NOT_EVIDENCED
 
 ## 다음 작업
 
-C0039는 **통합 승격 준비 감사**다. Active Preview `C0009A D2`와 최신 통합 Review Candidate `C0038` 사이의 전체 Material Delta와 Production blocker를 검증한다. 새 결함이 없으면 새 디자인 Candidate를 만들지 않는다. `/upgrade-auto` 없이는 승격하지 않는다.
+새 디자인 Candidate를 만들지 않는다. 상태를 바꾸려면 사용자가 **`/upgrade-auto`**를 명시해야 한다. 같은 C0038과 같은 증거로 `계속 진행`을 반복하면 `HOLD — 새 결론 없음`으로 종료한다.
 
 ## Binary 주의
 
