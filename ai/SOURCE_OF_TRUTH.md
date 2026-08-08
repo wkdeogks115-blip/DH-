@@ -6,61 +6,58 @@
 |---|---|---|
 | Active Control | R0003 | LOCKED |
 | Active Preview | C0009A D2 | unchanged |
-| Current Review Candidate | C0036 | READY_NOT_PROMOTED |
-| Direct parent / immediate rollback | C0035 | preserved |
+| Current Review Candidate | C0038 | READY_NOT_PROMOTED |
+| Direct parent / immediate rollback | C0037 | preserved |
 | PC/Apply rollback | C0034 | preserved |
 | Safety rollback / invariant source | C0033 | preserved |
 | Brand-depth direction parent | C0032 | preserved |
 | Secondary design rollback | C0031 | preserved |
 | Functional rollback | C0022 | preserved |
-| Latest Answer Pack | R32 | current review pack |
-| Latest Handoff | A28 | current handoff |
+| Latest Answer Pack | R34 | current review pack |
+| Latest Handoff | A30 | current handoff |
 | Production | HOLD | blocker remains |
 
-## C0036 material result
+## C0038 material result
 
-C0036 extends the validated selective Brand Depth language only to `creator/youtube/` and `creator/editing/`, using C0035 as the direct parent.
+C0038 is not a new visual migration. It is a focused accessibility repair produced by the site-wide Production-Blocker audit.
 
-### Design outcome
+### Reproduced Parent defect
 
-- creator-detail trust / visual anchoring: 80 → 87;
-- package decision clarity: 84 → 88;
-- cross-page brand consistency: 82 → 90;
-- overall Brand Depth direction heuristic: 88 maintained;
-- functional prototype heuristic: 84 maintained;
-- YouTube mobile height: 8,460px → 8,444px (-0.189%);
-- Editing mobile height: 8,524px → 8,497px (-0.317%).
+On C0037 `diagnose/`, a valid form submission made the recommendation result visible and scrolled it into view, but keyboard focus remained on the submit button. The generated result also lacked named region/live semantics.
 
-The Creator Detail pages keep the C0031 information hierarchy. Hero proof, service choice, pricing and route/result areas gain selective depth. Existing purple Creator/Editing primary CTAs are normalized to a restrained Cyan family.
+### C0038 fix
 
-### Mandatory C0033 safety gate
+The Diagnose result now uses:
+- `role="region"`;
+- `aria-labelledby="diagnose-result-title"`;
+- `aria-live="polite"`;
+- `aria-atomic="true"`;
+- `tabindex="-1"`;
+- valid generation moves focus to the result with `preventScroll:true`.
 
-The actual candidate `apply.js` is byte-identical to C0035 and was executed in self-contained Chromium:
-- empty form → 6 errors + error-summary focus PASS;
-- both `safety_ack` and `scope_ack` unchecked with other required data valid → no summary, errors exactly `safety_ack`, `scope_ack`;
-- safety only → `scope_ack` remains;
-- one availability time → rejected by the 2-time rule;
-- blocked submission → issue/time inputs preserved;
-- both safety acknowledgements + two availability times → summary generated;
-- mobile horizontal overflow → 0.
+### Executed evidence
 
-### Regression / business invariants
-
-- Home + Creator Hub + PC + Apply + Rescue + Stream Ready Desktop/Mobile: 12/12 zero changed pixels;
-- target YouTube/Editing horizontal overflow: 0;
-- application options: 23;
-- application links: 86;
-- prices: preserved;
-- service IDs: preserved;
+- Parent valid-result focus defect: REPRODUCED.
+- Candidate valid-result focus: PASS.
+- Candidate result semantics: PASS.
+- Native invalid-form focus: PASS.
+- Diagnose resting visual parity Desktop/Mobile: 2/2 zero changed pixels.
+- Other 14 pages Desktop/Mobile: 28/28 zero changed pixels.
+- C0033 safety acknowledgement runtime: PASS.
+- application options: 23.
+- application links: 86.
+- prices: preserved.
+- service IDs: preserved.
 - Apply URLs: preserved.
+- Apply JS: byte-identical to C0037.
 
 ## Current hashes
 
-- C0036 Candidate: `ee9bda1f4dfa0ff47e2b155640250a63c270062a61d3c82981f6deb58e33ea87`
-- R32 Answer Pack: `b4a649b8bc7e5de76e85a9795ede06815dad5a4be286144f73bafe6c2d5802ff`
-- C0036 Local Review V30: `5cbb29fab73318899755dc675f851a1974a27ad9d3a8098069b8acf7c8c0f1f7`
-- C0036 Browser Evidence: `829dd2ab2b415f023bd0be11a7a28fa6f4710d204119b5fe6558246668830064`
-- A28 Handoff: `ef8d7a21fefec174ce8364bfc967b28395922e4e5a85dadecc3ab31f57bb69ac`
+- C0038 Candidate: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
+- R34 Answer Pack: `b4be02e2166bb9530bbd56baa569d6f3aed8a851d903830d1d695e6f9291824a`
+- C0038 Local Review V32: `a7da5e00b8f664d81685e722778e8f8259717e6c72bf4e62629cb7b523d1ea63`
+- C0038 Browser Evidence: `cc9ee523b17cdba1c8549c698d69d33bf4c421b94bec7d7296a0702bbac4a268`
+- A30 Handoff: `7291c56e434d981260fc1a1d8b871bbf4b42c911dbf4c7b53b92e02470518662`
 
 ## Unverified
 
@@ -71,8 +68,8 @@ The actual candidate `apply.js` is byte-identical to C0035 and was executed in s
 
 ## Promotion boundary
 
-GitHub storage does not promote C0036. `/upgrade-auto` remains required before Active Control/Preview changes. Production remains HOLD.
+GitHub storage does not promote C0038. `/upgrade-auto` remains required before Active Control/Preview changes. Production remains HOLD.
 
 ## Next
 
-C0037 audits the remaining utility/trust surfaces first: `game/`, `partners/`, `cases/`, `reviews/`, `policies/`, `diagnose/`, `404`. Build only where a material inconsistency is reproduced.
+C0039 is an integrated promotion-readiness audit from Active Preview C0009A D2 through current Review Candidate C0038. Do not create another design Candidate unless a new material defect is reproduced.
