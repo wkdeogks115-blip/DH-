@@ -6,18 +6,18 @@
 2. [`AGENTS.md`](AGENTS.md)
 3. [`ai/SOURCE_REGISTRY.json`](ai/SOURCE_REGISTRY.json)
 4. [`ai/SOURCE_OF_TRUTH.md`](ai/SOURCE_OF_TRUTH.md)
-5. [`continuation/PROJECT_SNAPSHOT_R32.md`](continuation/PROJECT_SNAPSHOT_R32.md)
-6. [`continuation/A28_HANDOFF.md`](continuation/A28_HANDOFF.md)
-7. [`current-c0036/README.md`](current-c0036/README.md)
-8. [`current-c0036/CREATOR_DETAIL_BRAND_DEPTH_CONTRACT.md`](current-c0036/CREATOR_DETAIL_BRAND_DEPTH_CONTRACT.md)
+5. [`continuation/PROJECT_SNAPSHOT_R33.md`](continuation/PROJECT_SNAPSHOT_R33.md)
+6. [`continuation/A29_HANDOFF.md`](continuation/A29_HANDOFF.md)
+7. [`current-c0037/README.md`](current-c0037/README.md)
+8. [`current-c0037/GAME_BRAND_CONSISTENCY_CONTRACT.md`](current-c0037/GAME_BRAND_CONSISTENCY_CONTRACT.md)
 9. [`ai/NEXT_ACTION.md`](ai/NEXT_ACTION.md)
 
 ## 절대 혼동 금지
 
 - Active Control은 **R0003**이다.
 - Active Preview는 **C0009A D2**다.
-- **C0036은 Review Candidate이며 Active가 아니다.**
-- C0035는 C0036의 Direct Parent이자 즉시 Rollback이다.
+- **C0037은 Review Candidate이며 Active가 아니다.**
+- C0036은 C0037의 Direct Parent이자 즉시 Rollback이다.
 - C0034는 PC + Apply Brand Depth rollback이다.
 - C0033은 안전 확인 검증 invariant의 원본이다.
 - C0032는 Brand Depth 방향 원형이다.
@@ -28,19 +28,25 @@
 - 실제 외부 URL Browser Runtime은 UNVERIFIED다.
 - 결제 기능은 구현되지 않았다.
 
-## C0036 핵심 결론
+## C0037 핵심 결론
 
-C0036은 `creator/youtube/`와 `creator/editing/` 두 Creator Detail 페이지만 선택적 Navy/Cyan Brand Depth로 확장했다.
+남은 7개 utility/trust surface를 먼저 감사했다.
 
-- Creator-detail trust heuristic: 80 → 87
-- Package decision clarity: 84 → 88
-- Cross-page brand consistency: 82 → 90
-- YouTube mobile: 8,460px → 8,444px (-0.189%)
-- Editing mobile: 8,524px → 8,497px (-0.317%)
-- 기존 purple Creator/Editing primary CTA는 Cyan 계열로 통일했다.
-- Home/Creator Hub/PC/Apply/Rescue/Stream Desktop+Mobile: 12/12 zero changed pixels.
-- application options 23, application links 86, 가격, service IDs, Apply URLs 유지.
-- Apply JS는 C0035와 byte-identical.
+- `game/`: **MIGRATE** — 한 페이지에 Orange / Mint / Cyan 3계열 Primary Action이 동시에 존재해 현재 단일 Cyan 브랜드 규칙과 충돌했다.
+- `partners/`: KEEP
+- `cases/`: KEEP
+- `reviews/`: KEEP
+- `policies/`: KEEP
+- `diagnose/`: KEEP
+- `404`: KEEP
+
+따라서 C0037은 `game/` 한 페이지만 수정했다.
+
+- Game primary action: Cyan family PASS
+- Game mobile height: 6,444px → 6,384px (-0.931%)
+- 다른 14페이지 Desktop/Mobile: 28/28 zero changed pixels
+- application options 23, application links 86, 가격, service IDs, Apply URLs 유지
+- Apply JS는 C0036과 byte-identical
 
 ## C0033 안전 invariant
 
@@ -56,11 +62,11 @@ C0036은 `creator/youtube/`와 `creator/editing/` 두 Creator Detail 페이지�
 
 ## 디자인 방향
 
-Brand Depth는 장식 확장이 아니다. C0031 정보 구조를 유지하면서 Hero proof, package decision, pricing, route/result 같은 주요 결정 지점에만 깊이를 사용한다. Glow-heavy 버튼, 다색 Gradient, billboard typography, 독립 Card 남발로 돌아가지 않는다.
+광범위한 디자인 마이그레이션은 C0037에서 중단한다. 앞으로는 사이트 전체를 감사하고 실제 기능·신뢰·접근성·Route·Data 또는 눈에 띄는 시각 결함이 재현된 경우에만 Candidate를 만든다.
 
 ## 다음 작업
 
-C0037은 `game/`, `partners/`, `cases/`, `reviews/`, `policies/`, `diagnose/`, `404`를 먼저 감사한다. Material inconsistency가 재현된 페이지에만 Candidate 변경을 허용한다.
+C0038은 **site-wide consistency + production-blocker audit**이다. 장식 목적 변경은 금지한다.
 
 ## Binary 주의
 
