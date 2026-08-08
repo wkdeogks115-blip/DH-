@@ -1,0 +1,22 @@
+{
+  "schema_version":2,
+  "render_mode":"SELF_CONTAINED_CHROMIUM_CSS_LAYOUT_PLUS_ACTUAL_C0034_APPLY_JS",
+  "mobile_height_delta_pct":{"rescue":0.535,"stream_ready":-0.973},
+  "non_target_parity":"PASS_12_OF_12_ZERO_CHANGED_PIXELS",
+  "mandatory_c0033_safety_gate":{
+    "empty_error_count":6,
+    "error_summary_focus":"PASS",
+    "both_unchecked_errors":["safety_ack","scope_ack"],
+    "both_unchecked_summary":false,
+    "input_preservation":"PASS",
+    "safety_only_errors":["scope_ack"],
+    "one_availability_time_rejected":true,
+    "both_checked_two_times_summary":true,
+    "mobile_horizontal_overflow":0
+  },
+  "target_primary_accent_family":"CYAN_PASS",
+  "intermediate_visual_issue":"STREAM_READY_PURPLE_PRIMARY_CTA_CORRECTED",
+  "target_horizontal_overflow":0,
+  "actual_external_url_runtime":"UNVERIFIED",
+  "decision":"PASS_C0035_VISUAL_SAFETY_AND_ACCENT_CONSISTENCY"
+}
