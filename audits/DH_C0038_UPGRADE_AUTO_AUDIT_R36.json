@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "audit_id": "C0038_UPGRADE_AUTO_R36",
+  "generated_at": "2026-08-09T04:54:00+09:00",
+  "control_chain": {
+    "status": "PASS_R0001_R0002_R0003",
+    "r0001_sha256": "db26995e4f06bed5c84bf8bd6f17578e4263df31dd5bf2574bd39a3666cbb835",
+    "r0002_sha256": "ce20fbcdb680d8bc64983e91a1cf03c0cf575949278b9a4d492bf40974877d56",
+    "r0003_sha256": "b6546f8bf2968f666713073dca5dd6253ee9363ed985ff5e5c54ecfd272c3704"
+  },
+  "baseline": {
+    "active_control": "R0003",
+    "active_preview": "C0009A D2",
+    "active_sha256": "d799a0622159989afc7009d17d47d35a711ebcd3369ee760ec998b86c339b22e"
+  },
+  "candidate": {
+    "id": "C0038",
+    "sha256": "b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114",
+    "crc": "PASS",
+    "unsafe_paths": [],
+    "entries": 161,
+    "deterministic_rebuild": true,
+    "manifest": "PASS",
+    "inventory": "PASS"
+  },
+  "static": {
+    "routes": 15,
+    "missing_refs": 0,
+    "broken_fragments": 0,
+    "duplicate_ids": 0,
+    "missing_alt": 0,
+    "jsonld_errors": 0,
+    "aria_ref_errors": 0,
+    "unlabeled_controls": 0,
+    "noindex_routes": 15,
+    "js_syntax": "PASS_9",
+    "css_structure": "PASS_19",
+    "external_executable_dependencies": 0
+  },
+  "browser": {
+    "routes_viewports": 30,
+    "render": "PASS_30_OF_30",
+    "horizontal_overflow": 0,
+    "page_errors": 0
+  },
+  "apply_runtime": {
+    "empty_count": 6,
+    "empty_focus": true,
+    "both_off_errors": ["safety_ack", "scope_ack"],
+    "both_off_result": false,
+    "preserved": true,
+    "safety_only_errors": ["scope_ack"],
+    "one_time_rejected": true,
+    "valid_result": true
+  },
+  "diagnose_runtime": {
+    "invalid_focus": "issue",
+    "focused": true,
+    "role": "region",
+    "labelledby": "diagnose-result-title",
+    "live": "polite",
+    "atomic": "true",
+    "tabindex": "-1"
+  },
+  "business_invariants": {
+    "price_value_set_equal_active_d2": true,
+    "application_options": 23,
+    "application_links": 86,
+    "service_ids": 23
+  },
+  "preview_indexing_guard": "PASS",
+  "production_blockers": [
+    "EXTERNAL_PREVIEW_RUNTIME",
+    "FINAL_PUBLICATION_IDENTITY_AND_TERMS",
+    "PRODUCTION_INDEXING",
+    "PRODUCTION_DOMAIN_CONFIRMATION",
+    "REAL_DEVICE",
+    "ASSISTIVE_TECHNOLOGY",
+    "EXTERNAL_EVIDENCE_LINK_RUNTIME",
+    "PAYMENT_EXECUTION"
+  ],
+  "decision": "PASS_PROMOTE_C0038_TO_ACTIVE_PREVIEW_R0004_PRODUCTION_HOLD"
+}
