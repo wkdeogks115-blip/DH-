@@ -6,54 +6,49 @@
 2. `AGENTS.md`
 3. `ai/SOURCE_REGISTRY.json`
 4. `ai/SOURCE_OF_TRUTH.md`
-5. `continuation/A35_HANDOFF.md`
-6. `current-c0038/README.md`
+5. `continuation/PROJECT_SNAPSHOT_R38.md`
+6. `continuation/A36_HANDOFF.md`
 7. `current-c0041/README.md`
-8. `current-c0041/CONTROL_REVIEW_R37.md`
-9. `audits/DH_C0041_CONTROL_REVIEW_R37.json`
-10. `ai/NEXT_ACTION.md`
+8. `audits/DH_C0041_UPGRADE_AUTO_AUDIT_R38.json`
+9. `ai/NEXT_ACTION.md`
 
 ## 현재 잠금 상태
 
-- Active Control: **R0004**
-- Active Preview: **C0038**
-- Active SHA: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
-- Active Rollback: **C0009A D2**
-- Current Review Candidate: **C0041**
-- C0041 SHA: `cfc16576777f8da9b46d54ce174bd496e1c85bc56b9030c155713aa7e2ddfe23`
-- C0041 status: **READY_FOR_EXPLICIT_UPGRADE_AUTO**
-- Latest Control Review: **R37 PASS**
-- Latest Handoff: **A35**
-- External Preview deployment/runtime: **DEFERRED / UNVERIFIED**
+- Active Control: **R0005**
+- Active Preview: **C0041**
+- Active SHA: `cfc16576777f8da9b46d54ce174bd496e1c85bc56b9030c155713aa7e2ddfe23`
+- Active Rollback: **C0038**
+- C0038 SHA: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
+- Latest Promotion Audit: **R38 PASS**
+- Latest Handoff: **A36**
+- External Preview: **NOT DEPLOYED / Runtime UNVERIFIED**
 - Production: **HOLD**
 
-## 중요 구분
+## R38 `/upgrade-auto`
 
-C0038은 현재 논리적 Active Preview Baseline이다.
-C0041은 R37 Control Review까지 통과했지만 아직 Active가 아니다.
-C0040은 C0041의 직접 Parent이며 검토 우선순위는 C0041이다.
-
-## R37 Control Review
-
-Fresh Control gates:
+C0041 was promoted logically after fresh verification:
 
 - CRC PASS / unsafe paths 0
-- Manifest 166 / Inventory 165 integrity PASS
-- 15 runtime routes
-- static refs/fragments/IDs/Alt/JSON-LD/ARIA PASS
-- JS/CSS structural PASS
-- Home/PC/Apply 1440 + 390 + 320 = 9/9 no overflow, no page errors
-- Apply safety/error/focus/value-preservation/availability/valid-summary PASS
-- application options 23 / application links 86 / service IDs 23
-- prices preserved vs C0038 and C0040
-- Apply URLs preserved
-- Apply JS byte-identical to C0038 and C0040
-- Diagnose HTML/JS byte-identical to C0038
+- deterministic rebuild PASS
+- Manifest 166 / Inventory 165 PASS
+- 15 routes × Desktop/Mobile = 30/30 PASS
+- Home/PC/Apply 320px = 3/3 PASS
+- non-target 12 route HTML files byte-identical to C0038; prior R37 pixel parity remains 24/24 zero changed pixels
+- Apply runtime PASS
+- Diagnose runtime PASS
+- 23 application options / 86 application links / 23 service IDs
+- price value set / service IDs / Apply URLs preserved vs C0038
+- Apply JS / Diagnose JS byte-identical to C0038
 - Preview noindex guard PASS
 
-Semantic C0040 → C0041 change is limited to Home/PC/Apply plus `human-craft-c0041.css`. No new C0042 was created.
+## Role transition
+
+- C0041 → Active Preview
+- C0038 → Active Rollback
+- C0009A D2 → Archive Candidate
+- R0002 Runtime R1 → Archive Retained
 
 ## 다음 작업
 
-The next state-changing command is explicit **`/upgrade-auto`** for C0041.
-Do not create another design Candidate from the same evidence. Do not deploy Preview or Production before the promotion decision.
+C0041을 **Preview 환경에만** 배포하고 noindex를 유지한 뒤 실제 Preview URL로 external Runtime QA를 실행한다.
+Production 배포는 하지 않는다.
