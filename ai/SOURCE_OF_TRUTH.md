@@ -9,70 +9,78 @@
 | Active Preview | **C0038** | ACTIVE_PREVIEW_NOT_DEPLOYED |
 | Active Preview SHA | `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114` | locked |
 | Active Rollback | C0009A D2 | ACTIVE_ROLLBACK_NOT_EXECUTED |
-| Previous Rollback | R0002 Runtime R1 | ARCHIVE_CANDIDATE |
-| Upgrade Audit | R36 | PASS |
-| Latest Handoff | A32 | current |
-| Promotion | EXECUTED_LOGICAL_PREVIEW_BASELINE | complete |
-| External Preview Runtime | UNVERIFIED | not deployed |
+| Current Review Candidate | **C0041** | READY_FOR_CONTROL_PLANE_REVIEW_NOT_PROMOTED |
+| C0041 SHA | `cfc16576777f8da9b46d54ce174bd496e1c85bc56b9030c155713aa7e2ddfe23` | locked for review |
+| Direct Parent | C0040 | superseded by C0041 for review |
+| Latest Handoff | **A34** | Delivery → Control |
+| Promotion | C0041 NOT_EXECUTED | explicit `/upgrade-auto` required |
+| External Preview Runtime | UNVERIFIED | deployment deferred |
 | Production | HOLD | blockers remain |
 
-## `/upgrade-auto` result
+## Active R0004 truth
 
-C0038 was revalidated against Active Control R0003 / Active Preview C0009A D2 and passed the explicit promotion gate.
+R0004 promoted C0038 as the logical Preview Baseline after R36 PASS. That remains unchanged.
 
-Fresh R36 evidence:
-
-- R0001→R0002→R0003 control lineage: PASS
-- C0038 SHA/CRC: PASS
-- unsafe ZIP paths: 0
-- deterministic rebuild: PASS
-- manifest / inventory: PASS
-- runtime HTML routes: 15
-- local refs/fragments/IDs/Alt/JSON-LD/ARIA/form labels: PASS
-- JS syntax: 9/9
-- CSS structure: 19/19
-- 15 routes × Desktop/Mobile Chromium: PASS 30/30
-- horizontal overflow: 0
-- browser page errors: 0
-- Apply safety/form runtime: PASS
-- Diagnose focus/semantics runtime: PASS
-- price value set vs previous Active D2: preserved
 - application options: 23
 - application links: 86
 - service IDs: 23
-- external executable dependencies: 0
+- Apply safety/form runtime: PASS
+- Diagnose focus/semantics runtime: PASS
 - Preview noindex guard: PASS
 
-Decision: `PASS_PROMOTE_C0038_TO_ACTIVE_PREVIEW_R0004_PRODUCTION_HOLD`.
+## C0041 Delivery Candidate
 
-## Rollback transition
+A fresh visual review after C0040 reproduced residual AI/SaaS-template grammar. C0041 changes only Home/PC/Apply visual treatment:
 
-- C0038 → `SITE_PREVIEW_BASELINE_ACTIVE`
-- C0009A D2 → `SITE_ROLLBACK_ACTIVE`
-- R0002 Runtime R1 → `ARCHIVE_CANDIDATE`
+- Home: flat Service Ledger instead of rounded dashboard-style Hero object;
+- PC: desktop integrated Diagnostic Scale and mobile flat paper diagnostic strip;
+- Apply: plain metadata and rule-based journey rail instead of decorative pills / rounded progress card;
+- calmer Hero typography.
 
-No external website deployment, website-source commit/push, Production release or deletion was executed by this promotion.
+Executed C0041 evidence:
 
-## Production HOLD
+- Candidate CRC: PASS
+- deterministic rebuild: PASS
+- static gate: PASS
+- runtime routes: 15
+- Apply safety/form runtime: PASS
+- 320px Home/PC/Apply overflow: 0
+- non-target 12 pages × Desktop/Mobile: PASS 24/24 zero changed pixels
+- application options: 23
+- application links: 86
+- service IDs: 23
+- price value set: preserved
+- Apply URLs: preserved
+- Apply JS: byte-identical to C0040
+- Preview noindex guard: PASS
 
-- deployed external Preview Runtime: UNVERIFIED
+Visual heuristic: Home 94 / PC 92 / Apply 95 / direction 93.7. This is not conversion evidence.
+
+Decision: `PASS_C0041_READY_FOR_CONTROL_PLANE_REVIEW_NOT_PROMOTED`.
+
+## Preview / Production boundary
+
+C0041 is **not Active** and has not been deployed. External Preview deployment remains deferred until Control Plane review and any later explicit promotion.
+
+Production HOLD items remain:
+
+- external deployed Preview Runtime: UNVERIFIED
 - final business identity/disclosure and final terms: HOLD
-- Production noindex/robots flip: HOLD
+- Production indexing flip: HOLD
 - final Production domain: USER_CONFIRMATION_REQUIRED
 - real physical device: NOT_EXECUTED
 - real assistive technology/screen reader: NOT_EXECUTED
 - external Review/Case evidence-link Runtime: UNVERIFIED
 - payment execution/integration evidence: NOT_IMPLEMENTED_OR_NOT_EVIDENCED
 
-The current Preview package intentionally retains noindex. Do not interpret R0004 as Production approval.
-
 ## Canonical hashes
 
 - R0004 Source-ready bundle: `f77dfca2f99fb32d5c94fb5175ae5c2fe18d0dea964e65e960ad78188ad4f963`
 - C0038 Active Preview: `b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114`
 - C0009A D2 Rollback: `d799a0622159989afc7009d17d47d35a711ebcd3369ee760ec998b86c339b22e`
-- R36 Upgrade Audit: `030aabab158c0b358e446df6f657bf522072a9d4e5359fcf7e2d26faa6e12b97`
+- C0041 Candidate: `cfc16576777f8da9b46d54ce174bd496e1c85bc56b9030c155713aa7e2ddfe23`
+- C0041 Delivery Audit: `e49d16dd169a729a36a8c72e072766568b9542364bdfae8df57ceb5990bfe23f`
 
 ## Next state-changing scope
 
-Manually deploy C0038 to a **Preview environment only**, then run actual URL Runtime QA. Until a deployed Preview URL or other new material evidence exists, do not create another design Candidate.
+Control Plane reviews C0041 against Active C0038 and parent C0040. No new design Candidate should be created without new material evidence. Promotion is prohibited until explicit `/upgrade-auto`.
