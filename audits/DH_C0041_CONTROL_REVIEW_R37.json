@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "audit_id": "C0041_CONTROL_REVIEW_R37",
+  "active_control": "R0004",
+  "active_preview": {
+    "candidate": "C0038",
+    "sha256": "b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114"
+  },
+  "active_rollback": "C0009A D2",
+  "candidate": {
+    "id": "C0041",
+    "sha256": "cfc16576777f8da9b46d54ce174bd496e1c85bc56b9030c155713aa7e2ddfe23",
+    "direct_parent": "C0040",
+    "direct_parent_sha256": "7bc9e35da20e8c06d802b9435527698d027529af6b3bb0446da6fd985237df11"
+  },
+  "classification": [
+    "DESIGN_CHANGE",
+    "HUMAN_CRAFT_REFINEMENT",
+    "AI_TEMPLATE_REDUCTION"
+  ],
+  "material_delta": {
+    "semantic_added": ["css/human-craft-c0041.css"],
+    "semantic_changed": ["apply/index.html", "index.html", "pc/index.html"],
+    "semantic_removed": [],
+    "expected_metadata_replacement": {
+      "added": ["C0041_FILE_INVENTORY.json", "C0041_MANIFEST.json"],
+      "removed": ["C0040_FILE_INVENTORY.json", "C0040_MANIFEST.json"]
+    }
+  },
+  "gates": {
+    "candidate_crc": "PASS",
+    "unsafe_paths": 0,
+    "manifest_entries": 166,
+    "manifest_bad": [],
+    "inventory_entries": 165,
+    "inventory_bad": [],
+    "runtime_routes": 15,
+    "static_refs_fragments_ids_alt_jsonld_aria": "PASS",
+    "js_syntax": "PASS",
+    "css_braces": "PASS",
+    "target_render_1440_390_320": "PASS_9_OF_9_NO_OVERFLOW_NO_PAGE_ERRORS",
+    "apply_runtime": "PASS",
+    "preview_noindex_guard": "PASS",
+    "diagnose_invariant": "PASS_BYTE_IDENTICAL_TO_ACTIVE_C0038",
+    "apply_js_invariant": "PASS_BYTE_IDENTICAL_TO_ACTIVE_C0038_AND_C0040"
+  },
+  "business_invariants": {
+    "application_options": 23,
+    "application_links": 86,
+    "service_ids": 23,
+    "prices_equal_active_c0038": true,
+    "prices_equal_parent_c0040": true,
+    "service_ids_equal_active_c0038": true,
+    "apply_urls_equal_parent_c0040": true
+  },
+  "apply_runtime": {
+    "empty_count": 6,
+    "empty_focus": true,
+    "both_off_errors": ["safety_ack", "scope_ack"],
+    "both_off_result": false,
+    "preserved": true,
+    "safety_only_errors": ["scope_ack"],
+    "one_time_error": "가능한 시간을 2개 이상 적어주세요. 줄바꿈이나 쉼표로 구분할 수 있습니다.",
+    "one_time_result": false,
+    "valid_result": true,
+    "summary_len": 408
+  },
+  "external_preview": "DEFERRED_NOT_DEPLOYED",
+  "browser_url_runtime": "UNVERIFIED",
+  "real_device": "NOT_EXECUTED",
+  "assistive_technology": "NOT_EXECUTED",
+  "conversion_test": "NOT_EXECUTED",
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD",
+  "new_candidate_created_by_control_review": false,
+  "decision": "PASS_R37_C0041_READY_FOR_EXPLICIT_UPGRADE_AUTO_NO_PROMOTION"
+}
