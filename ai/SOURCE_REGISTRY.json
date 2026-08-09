@@ -1,5 +1,5 @@
 {
-  "schema_version":"2.2",
+  "schema_version":"2.3",
   "repository":"wkdeogks115-blip/DH-",
   "current":{
     "ai_entry":"AI_START_HERE.md",
@@ -7,9 +7,12 @@
     "machine_state":"ai/STATE.json",
     "source_of_truth":"ai/SOURCE_OF_TRUTH.md",
     "project_snapshot":"continuation/PROJECT_SNAPSHOT_R36.md",
-    "latest_handoff":"continuation/A32_HANDOFF.md",
+    "latest_handoff":"continuation/A34_HANDOFF.md",
     "next_action":"ai/NEXT_ACTION.md",
     "active_candidate_record":"current-c0038/README.md",
+    "current_review_candidate_record":"current-c0041/README.md",
+    "current_review_audit":"audits/DH_C0041_DELIVERY_AUDIT_V1.json",
+    "current_review_scorecard":"delivery/C0041_VISUAL_SCORECARD_V1.md",
     "promotion_audit":"audits/DH_C0038_UPGRADE_AUTO_AUDIT_R36.json",
     "control_snapshot_reference":"control/00_DH_CONTROL_SNAPSHOT_R0001.md",
     "active_control_update":"control/R0004_PROMOTION_RECORD.md"
@@ -17,14 +20,15 @@
   "active_control":{"revision":"R0004","source_bundle_sha256":"f77dfca2f99fb32d5c94fb5175ae5c2fe18d0dea964e65e960ad78188ad4f963","github_mirror":"control/R0004_PROMOTION_RECORD.md"},
   "active_preview":{"id":"C0038","artifact":"DH_SITE_PREVIEW_ACTIVE_C0038_R0004.zip","sha256":"b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114","status":"ACTIVE_PREVIEW_NOT_DEPLOYED"},
   "active_rollback":{"id":"C0009A_D2","sha256":"d799a0622159989afc7009d17d47d35a711ebcd3369ee760ec998b86c339b22e"},
-  "archive_candidate":{"id":"R0002_RUNTIME_R1","sha256":"f5f86f4e544b5e86186f7b7bcd5ab6f73f3bc0913776c506e717871a66aff6da"},
+  "current_review_candidate":{"id":"C0041","sha256":"cfc16576777f8da9b46d54ce174bd496e1c85bc56b9030c155713aa7e2ddfe23","direct_parent":"C0040","status":"READY_FOR_CONTROL_PLANE_REVIEW_NOT_PROMOTED"},
   "accepted_lineage":{"start":"C0016","end":"C0038","artifacts":23,"final_audit_hash_matches":"23/23","excluded":"C0033_PC_APPLY_PROTOTYPE"},
   "promotion":{"audit":"R36","audit_sha256":"030aabab158c0b358e446df6f657bf522072a9d4e5359fcf7e2d26faa6e12b97","status":"EXECUTED_LOGICAL_PREVIEW_BASELINE"},
-  "business_invariants":{"application_options":23,"application_links":86,"service_ids":23,"price_value_set_equal_previous_active_d2":true},
-  "preview_gate":{"routes_viewports":"PASS_30_OF_30","horizontal_overflow":0,"apply_runtime":"PASS","diagnose_runtime":"PASS","indexing_guard":"PASS","external_executable_dependencies":0},
-  "external_source_repository":{"repository":"wkdeogks115-blip/dh-setup-center-web","role":"actual website source and deploy candidate history","warning":"The control/archive repository promotion does not deploy or modify the website source repository."},
-  "binary_artifacts":{"active_preview_sha256":"b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114","rollback_sha256":"d799a0622159989afc7009d17d47d35a711ebcd3369ee760ec998b86c339b22e","r35_answer_pack_sha256":"6ace60c7b8bd5770173e7eec1f7ca18747ee808201cee4d0c03bdb25ac2448e1","r36_promotion_audit_sha256":"030aabab158c0b358e446df6f657bf522072a9d4e5359fcf7e2d26faa6e12b97","status":"HASH_AND_AUDIT_REGISTERED_NOT_ALL_BINARY_BYTES_MIRRORED"},
-  "source_ui_action":"REPLACE_R0003_WITH_R0004__REPLACE_A31_WITH_A32__REROLE_C0009A_TO_ROLLBACK__R0002_TO_ARCHIVE_CANDIDATE",
+  "business_invariants":{"application_options":23,"application_links":86,"service_ids":23,"price_values":"PRESERVED","apply_urls":"PRESERVED"},
+  "c0041_gate":{"candidate_crc":"PASS","deterministic_rebuild":"PASS","static":"PASS","apply_runtime":"PASS","width320":"PASS_3_OF_3","non_target_parity":"PASS_24_OF_24_ZERO_CHANGED_PIXELS","preview_indexing_guard":"PASS"},
+  "external_source_repository":{"repository":"wkdeogks115-blip/dh-setup-center-web","role":"actual website source and deploy candidate history","warning":"Control/archive updates do not deploy or modify Production website source."},
+  "google_drive_archive":{"root":"https://drive.google.com/drive/folders/1dujaH1PatDjctStbRM7LwmDttit0flk1","c0041":"https://drive.google.com/drive/folders/15d_9iP-TC12AhLWJfQjrKvJPCTObNc6T"},
+  "binary_artifacts":{"active_preview_sha256":"b1c2628e02de28c3ccabc1247513bab4db93d2a6ee04427c1fd951025bde1114","rollback_sha256":"d799a0622159989afc7009d17d47d35a711ebcd3369ee760ec998b86c339b22e","c0041_candidate_sha256":"cfc16576777f8da9b46d54ce174bd496e1c85bc56b9030c155713aa7e2ddfe23","c0041_delivery_audit_sha256":"e49d16dd169a729a36a8c72e072766568b9542364bdfae8df57ceb5990bfe23f","c0041_evidence_sha256":"2d096cc36e8fc147a7939d7c187413112554e3b5ff57cc999152453cab1f9091","c0041_local_review_sha256":"2f8cad14f7449cce42706b2cc3effd9a5aed551866df617be05c1e93d59b31f0","c0041_delivery_pack_sha256":"0214a5b97fa518877f05474a5e65566c93a68112891c99a119d53d373d4b3be1","status":"HASH_REGISTERED_BINARY_BYTES_IN_GOOGLE_DRIVE"},
+  "source_ui_action":"R0004_ACTIVE_UNCHANGED__C0038_ACTIVE_UNCHANGED__A34_DELIVERY_TO_CONTROL_HANDOFF",
   "source_budget":{"expected_persistent":15,"actual_ui_count":"USER_CONFIRMATION_REQUIRED","status":"WARNING"},
   "production":"HOLD"
 }
