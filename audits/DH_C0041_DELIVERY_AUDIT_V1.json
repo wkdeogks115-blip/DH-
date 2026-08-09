@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "candidate": "C0041",
+  "direct_parent": "C0040",
+  "classification": ["DESIGN_CHANGE", "HUMAN_CRAFT_REFINEMENT", "AI_TEMPLATE_REDUCTION"],
+  "candidate_artifact": {
+    "file": "DH_SITE_CANDIDATE_C0041_HUMAN_CRAFT_REFINEMENT_REVIEW.zip",
+    "sha256": "cfc16576777f8da9b46d54ce174bd496e1c85bc56b9030c155713aa7e2ddfe23",
+    "crc": "PASS",
+    "unsafe_paths": [],
+    "deterministic_rebuild": true
+  },
+  "scope": ["home hero", "pc hero", "apply hero/progress visual treatment"],
+  "static_gate": "PASS",
+  "static": {
+    "runtime_routes": 15,
+    "missing_refs": [],
+    "broken_fragments": [],
+    "duplicate_ids": [],
+    "missing_alt": [],
+    "jsonld_errors": [],
+    "aria_reference_errors": [],
+    "js_syntax_all_pass": true,
+    "css_braces_all_pass": true,
+    "metadata_replacement_classification": "PASS_EXPECTED_C0040_TO_C0041_MANIFEST_INVENTORY_REPLACEMENT"
+  },
+  "business": {
+    "application_options": 23,
+    "application_links": 86,
+    "service_ids": 23,
+    "service_ids_equal_parent": true,
+    "apply_urls_equal_parent": true,
+    "price_value_set_equal_parent": true,
+    "apply_js_byte_identical": true
+  },
+  "apply_runtime": {
+    "empty_error_count": 6,
+    "empty_error_summary_focus": true,
+    "both_safety_unchecked_errors": ["safety_ack", "scope_ack"],
+    "both_safety_unchecked_result": false,
+    "failed_submit_values_preserved": true,
+    "safety_only_errors": ["scope_ack"],
+    "one_availability_time_rejected": true,
+    "valid_two_times_result": true,
+    "mobile_390_overflow": false
+  },
+  "width320": {"home": "PASS_NO_OVERFLOW", "pc": "PASS_NO_OVERFLOW", "apply": "PASS_NO_OVERFLOW"},
+  "non_target_pixel_parity": {"expected": 24, "actual": 24, "all_zero_changed_pixels": true},
+  "visual_metrics": {
+    "home": {"desktop_dark": "63.3_to_53.6", "mobile_dark": "75.6_to_69.2"},
+    "pc": {"desktop_dark": "57.0_to_62.2", "mobile_dark": "69.8_to_63.9"},
+    "apply": {"desktop_dark": "46.0_to_44.6", "mobile_dark": "42.7_to_42.1"}
+  },
+  "design_score": {"pages": {"Home": 94, "PC": 92, "Apply": 95}, "direction_average": 93.7},
+  "preview_noindex_guard": true,
+  "external_preview": "NOT_DEPLOYED",
+  "promotion": "NOT_EXECUTED",
+  "production": "HOLD",
+  "decision": "PASS_C0041_READY_FOR_CONTROL_PLANE_REVIEW_NOT_PROMOTED"
+}
