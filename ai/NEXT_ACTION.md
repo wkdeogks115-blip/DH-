@@ -1,4 +1,4 @@
-# NEXT ACTION — C0041 CONTROL PLANE REVIEW
+# NEXT ACTION — C0041 EXPLICIT UPGRADE AUTO
 
 ## Current state
 
@@ -9,45 +9,37 @@
 - Current Review Candidate: **C0041**
 - C0041 SHA: `cfc16576777f8da9b46d54ce174bd496e1c85bc56b9030c155713aa7e2ddfe23`
 - Direct parent: C0040
-- Latest Handoff: A34
-- External Preview: DEFERRED_PENDING_C0041_CONTROL_REVIEW
+- Latest Control Review: **R37 PASS**
+- Latest Handoff: **A35**
+- C0041 status: **READY_FOR_EXPLICIT_UPGRADE_AUTO**
+- External Preview: DEFERRED / NOT_DEPLOYED
 - Production: HOLD
 
-## Delivery result
+## Fresh Control result
 
-C0040 corrected the large dark/AI-template problem, then a second A/B review reproduced residual template grammar. C0041 removes only those residual patterns:
+R37 re-ran the minimum sufficient gates rather than relying only on Delivery evidence:
 
-- Home rounded dashboard Hero → flat Service Ledger;
-- PC repeated white Hero Card → desktop integrated Diagnostic Scale + mobile flat paper diagnostic strip;
-- Apply decorative status pills / rounded progress card → plain metadata + rule-based journey rail;
-- calmer Hero typography.
-
-Executed gates:
-
-- CRC / deterministic rebuild PASS
-- static gate PASS
+- CRC PASS / unsafe paths 0
+- Manifest 166 entries / 0 bad hashes
+- Inventory 165 entries / 0 mismatches
 - 15 runtime routes
-- Apply safety/form runtime PASS
-- 320px Home/PC/Apply overflow 0
-- non-target 12 pages × Desktop/Mobile = PASS 24/24 zero changed pixels
-- application options 23 / links 86 / service IDs 23
-- prices and Apply URLs preserved
-- Apply JS byte-identical to C0040
+- static refs/fragments/IDs/Alt/JSON-LD/ARIA PASS
+- JS syntax / CSS structural PASS
+- Home/PC/Apply at 1440 + 390 + 320: **9/9 no overflow, no page errors**
+- Apply safety/error/focus/value-preservation/availability/valid-summary runtime PASS
+- 23 application options / 86 application links / 23 service IDs
+- prices preserved vs Active C0038 and C0040
+- Apply URLs preserved vs C0040
+- Apply JS byte-identical to Active C0038 and C0040
+- Diagnose HTML/JS byte-identical to Active C0038
 - Preview noindex guard PASS
 
-Visual heuristic: Home 94 / PC 92 / Apply 95 / direction 93.7. This is not conversion evidence.
+Semantic C0040 → C0041 delta is limited to `index.html`, `pc/index.html`, `apply/index.html` plus `css/human-craft-c0041.css`. No semantic removal.
 
 ## Next meaningful action
 
-Control Plane (`00_인프라·검증·릴리스`) reviews **C0041** against:
+Explicit **`/upgrade-auto`** may now be run for C0041.
 
-1. Active R0004 / C0038;
-2. parent C0040;
-3. A34 handoff;
-4. C0041 Delivery Audit.
-
-Do not create another design Candidate unless the Control review reproduces a new material defect.
-Do not deploy Preview yet.
-Do not promote automatically.
-
-If Control review passes and C0041 is ready, explicit `/upgrade-auto` remains required for logical promotion.
+Do not create C0042 from the same evidence.
+Do not deploy Preview or Production before promotion is separately completed.
+Production blockers remain unchanged.
